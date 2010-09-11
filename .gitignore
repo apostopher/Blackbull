@@ -1,2 +1,4 @@
 *.bak
 *_log
+*.zip
+site.manifest
