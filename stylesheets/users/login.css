@@ -1,0 +1,151 @@
+div#login {
+	width:900px;
+} 
+
+div#login h1 {
+	color: #D13236;
+	font: normal normal normal 30px/54px Cambria, Georgia, 'Times New Roman', Times, serif;
+	margin: 36px 0px 18px;
+}
+
+div#login p {
+	color: #333;
+	font: normal normal normal 18px/26px Cambria, Georgia, 'Times New Roman', Times, serif;
+}
+div#formholder{
+	padding:40px 10px;
+	margin-bottom:50px;
+	background:#fafafa;
+	border:1px solid #eee;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	display:inline-block;
+}
+
+#loginformdiv {
+	padding:40px 0px;
+	display:block;
+	width:425px;
+	float:left;
+	padding-right:20px;
+	border-right:1px solid #ddd;
+}
+
+div#newmember {
+	padding:90px 20px;
+	display:block;
+	height:100px;
+	margin-left:445px;
+	text-align:center;
+}
+
+a.registeruser {
+	display:block;
+	width:117px;
+	height:36px;
+	background:url("../../images/highbutton_matrix.png") no-repeat center top;
+	font: normal normal normal 24px/30px Cambria, Georgia, 'Times New Roman', Times, serif;
+	color: white;
+	text-shadow: #333 1px 1px 0px;
+	margin:0 auto;
+}
+
+a.over {
+	background-position:0 -37px;
+}
+
+div#login #login p {
+	font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 20px;
+	text-align:right;
+}
+#loginform label, #loginform input, #resendpass label, #resendpass input{
+	color: #333;
+	font: normal normal normal 18px/26px Cambria, Georgia, 'Times New Roman', Times, serif;
+
+}
+
+#resendpass {
+	margin-top:20px;
+}
+
+#loginform label, #resendpass label {
+	text-align:right;
+	width:150px;
+	display:inline-block;
+}
+
+#loginform input, #resendpass input {
+	background:#FFF;
+	border:1px solid #ababab;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	padding:5px;
+}
+
+#loginform input.long {
+	width:250px;
+	margin:0px 0px 20px 4px;
+}
+
+#resendpass input.long{
+	width:250px;
+	margin:0px 0px 0px 4px;
+}
+
+#loginform input.check {
+	margin-left:157px;
+}
+
+#loginform label.simple {
+	text-align: left;
+	width: auto;
+}
+
+#loginform input.submitbutton, #resendpass input.submitbutton {
+	margin: 10px 10px 5px 157px;
+	width:114px;
+	height:30px;
+	border:0;
+	background:url("../../images/signin.png") no-repeat top left;
+	background-position:0px -30px;
+	text-shadow: #FFF 1px 1px 0px;
+	padding:0;
+	line-height:30px;
+	text-align:center;
+	vertical-align:middle;
+}
+
+#loginform input.hovered, #resendpass input.hovered {
+	background-position:0px -60px;
+	text-shadow: #333 1px 1px 0px;
+	color:#fff;
+}
+
+#loginform input.disabled {
+	background-position:0px 0px;
+	text-shadow: #333 1px 1px 0px;
+	color:#fff;
+}
+
+div#loginerror{
+	color: #D13236;
+	font: normal normal normal 18px/26px Cambria, Georgia, 'Times New Roman', Times, serif;
+	margin-left:157px;
+}
+#resendpass span {
+    color:#666;
+    text-shadow:#FFF 1px 1px 0px;
+    font-size:12px;
+    line-height:14px;
+    display:inline-block;
+    margin-bottom:0px;
+    margin-left:157px;
+    text-align:left;
+}
+form.hide{
+	display:none;
+}

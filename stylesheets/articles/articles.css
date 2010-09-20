@@ -1,0 +1,60 @@
+div#article {
+	padding:36px 0px;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+div#article h1 {
+	color: #D13236;
+	font: normal normal normal 40px/60px Cambria, Georgia, 'Times New Roman', Times, serif;
+	margin:54px 0;
+	width:50%
+}
+
+div#article aside#leftpane{
+	float: left;
+	margin: 0px;
+	padding: 0px 10px 0px 0px;
+	width: 190px;
+}
+
+div#article article#rightpane{
+	float: left;
+	padding: 0px 0px 0px 20px;
+	border-left:1px solid #eee;
+	width: 724px;
+}
+
+div#article p{
+	font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+	font-size:14px;
+	line-height:24px;
+	color:#333;
+	margin-bottom:24px;
+	text-align:justify;
+}
+
+div#article ul{
+	list-style: disc;
+	margin-left: 20px;
+}
+
+div#article h3{
+	color: #D13236;
+	font: normal normal normal 18px/26px Cambria, Georgia, 'Times New Roman', Times, serif;
+}
+
+span.dropcap {
+	float: left;
+	font-family: Cambria, Georgia, 'Times New Roman', Times, serif;
+	font-size: 3.5em;
+	line-height: 0.95em;
+	padding-right: 5px;
+	padding-top: 1px;
+	color:#000;
+}
+
+a.button {
+	background-color:#F6F5EA;
+	border:1px solid #BCB79C;
+}

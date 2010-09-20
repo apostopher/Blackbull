@@ -1,0 +1,310 @@
+body{
+	margin:0;
+	padding:0;
+	font-family:"Segoe UI",Arial,Helvetica,sans-serif;
+	font-size:12px;
+	line-height:20px;
+        vertical-align: baseline;
+        background:#f3f3f3;
+        font-smooth:always;
+}
+a {
+	text-decoration:none;
+	border:0;
+}
+
+ul{
+	margin:0;
+	padding:0;
+}
+
+img{
+	border:0;
+}
+
+table{
+	border-spacing:0;
+	border-collapse: collapse;
+}
+
+div#content{
+	margin:0;
+	padding:16px 0px 10px 24px;
+	background:#FFF;
+}
+div.spacer {
+	clear:both;
+	font-size:0em;
+	line-height:0;
+	padding:0;
+	margin:0;
+	border:0;
+}
+div#content p{
+	text-align:justify;
+	color: #15100F;
+	font-size: 14px;
+	line-height: 24px;
+	margin-bottom: 20px;
+}
+
+div#leftpane{
+    float:left;
+    width:634px;
+    margin-right:16px;
+    clear:both;
+    padding:0;
+}
+
+div#scrollable{
+    display:block;
+    border:5px solid #EEE;
+    background:#EEE;
+    margin-bottom:5px;
+    height:400px;
+    padding:0px;
+    position:relative;
+    z-index:30;
+    overflow:hidden;
+    width:624px;
+    -moz-border-radius:5px;
+   border-radius:5px;
+   -webkit-border-radius:5px;
+}
+
+article#slides{
+    position:absolute;
+    width:2000em;
+    background:#FFF;
+}
+
+article#slides section{
+    display:block;
+    float:left;
+    width:624px;
+    height:400px;
+}
+
+aside#rightpane{
+    float:left;
+    width:300px;
+    padding:0;
+    margin:0;
+}
+aside#rightpane blockquote{
+   display:block;
+   padding:10px;
+   border:1px solid #ddd;
+   background:#F3F6FA;
+   -moz-border-radius:5px;
+   border-radius:5px;
+   -webkit-border-radius:5px;
+   margin:0;
+   margin-bottom:20px;
+   color:#000;
+}
+
+aside#rightpane blockquote p{
+   font: normal normal normal 21px/30px Cambria, Georgia, 'Times New Roman', Times, serif;
+   margin: 0px;
+   text-align: center;
+   color:#000;
+}
+
+aside#rightpane blockquote p span#returns {
+   color:#D13236;
+   font-weight:bold;
+}
+
+section.bbinfo{
+    display:block;
+    border-left:1px solid #EEE;
+    margin-bottom:20px;
+    padding:10px;
+}
+section.bbfolio{
+    display:block;
+    margin-bottom:20px;
+    padding:0px;
+    position:relative;
+}
+
+ul.portfolio {
+	margin-top:20px;
+	float:left;
+	clear:right;
+	padding-left:10px;
+}
+
+ul.portfolio li.tab {
+    float:left;
+    margin-right:5px;
+    border:1px solid #ddd;
+    border-radius:5px;
+    border-bottom-right-radius:0px;
+    border-bottom-left-radius:0px;
+    -moz-border-radius:5px;
+    -moz-border-radius-bottomright:0px;
+    -moz-border-radius-bottomleft:0px;
+    -webkit-border-radius:5px;
+    -webkit-border-bottom-right-radius:0px;
+    -webkit-border-bottom-left-radius:0px;
+    background:#F3F6FA;
+    border-bottom:0;
+    list-style:none;
+    position:relative;
+    text-align:center;
+    width:100px;
+    clear:right;
+    z-index:30;
+}
+
+ul.portfolio li.active{
+    background:#FFF;
+}
+
+ul.portfolio li.tab a{
+    font: normal normal normal 16px/22px Cambria, Georgia, 'Times New Roman', Times, serif;
+    color:#000;
+    display:block;
+    padding:5px;
+}
+
+span.filler{
+    dispaly:block;
+    margin:0;
+    padding:0;
+    border:0;
+    background:#FFF;
+    position:absolute;
+    z-index:9;
+    width:100%;
+    font-size:2px;
+    line-height:2px;
+    left:0;
+}
+
+span.invisible{
+   display:none;
+}
+
+div#tradingcontent, div#investcontent{
+    position:relative;
+    z-index:35;
+    background:#fff;
+    border:1px solid #ddd;
+    padding:5px 5px 0px;
+    width:288px;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+}
+
+div#tradingcontent table, div#investcontent table{
+   dispaly:block;
+   width:100%;
+   background:#FFF;
+}
+
+div#tradingcontent table tbody tr, div#investcontent table tbody tr{
+   border-bottom:1px solid #EEE;
+}
+
+div#tradingcontent table td, div#investcontent table td{
+   padding: 8px;
+   font-size: 14px;
+   line-height: 24px;
+}
+
+div#tradingcontent table tr.last, div#investcontent table tr.last{
+   border-bottom:0;
+}
+
+td.scripname{
+   overflow:hidden;
+   text-align:left;
+   width:70%;
+   height:20px;
+}
+
+td.scripreturn{
+   font-weight:bold;
+   text-align:right;
+   color:#5aaa23;
+}
+td.red{
+   color:#D13236;
+}
+div#tradingcontent table td.loading, div#investcontent table td.loading{
+   background:url("../images/black_loader.gif") no-repeat center top;
+   padding:12px;
+   text-align:center;
+}
+div#tradingcontent{
+    left:-11px;
+    z-index:7;
+}
+
+div#investcontent{
+    left:-118px;
+    z-index:6;
+}
+
+section.bbinfo span.goto{
+    text-align:right;
+    letter-spacing:1px;
+    font-size:14px;
+    font-variant:small-caps;
+    display:block;
+}
+article#news{
+    display:block;
+    padding:0;
+    margin:0;
+    margin-top:10px;
+}
+
+section.bbnews{
+    display:block;
+    padding:0;
+    margin:0 10px;
+    float:left;
+    width:307px;
+}
+
+section.bbnews h2, section.bbinfo h2, section.bbfolio h2{
+    color: #D13236;
+    font: normal normal normal 21px/24px Cambria, Georgia, 'Times New Roman', Times, serif;
+    margin: 0px;
+}
+
+section#news1{
+    clear:both;
+    margin-left:0;
+}
+
+section#news2{
+    margin-right:0;
+}
+
+div.goto{
+	clear: both;
+	margin:0px auto;
+	width:250px;
+	text-align:center;
+	border:1px solid #ddd;
+	border-radius:5px;
+	border-top-right-radius:0px;
+	border-top-left-radius:0px;
+	-moz-border-radius:5px;
+	-moz-border-radius-topright:0px;
+	-moz-border-radius-topleft:0px;
+	-webkit-border-radius:5px;
+	-webkit-border-top-right-radius:0px;
+	-webkit-border-top-left-radius:0px;
+	padding:10px;
+	background:#F9F9F9;
+	color:#000;
+	font-size:14px;
+	border-top:0;
+}

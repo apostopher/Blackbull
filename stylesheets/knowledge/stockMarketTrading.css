@@ -1,0 +1,19 @@
+table#bid {
+	border:1px solid #EEE;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+
+table#bid tr th {
+	padding:10px;
+	background: #F9F9F9;
+	border-bottom: 1px solid #ddd;
+	font: normal normal normal 14px/21px Cambria, Georgia, 'Times New Roman', Times, serif;
+	text-align: left;
+}
+
+table#bid tr td {
+	padding:10px 20px;
+	text-align:center;
+}

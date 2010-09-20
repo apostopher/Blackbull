@@ -1,0 +1,7 @@
+<div>another div with static position</div>
+<div style="position:relative;border:1px solid #ddd;padding:5px;padding-bottom:25px;">
+<div style="position:relative;top:20px;border:1px solid #ddd;">
+A quick brown fox jumps over a lazy dog.A quick brown fox jumps over a lazy dog.A quick brown fox jumps over a lazy dog.A quick brown fox jumps over a lazy dog.A quick brown fox jumps over a lazy dog.A quick brown fox jumps over a lazy dog.A quick brown fox jumps over a lazy dog.A quick brown fox jumps over a lazy dog.A quick brown fox jumps over a lazy dog.A quick brown fox jumps over a lazy dog.A quick brown fox jumps over a lazy dog.A quick brown fox jumps over a lazy dog.A quick brown fox jumps over a lazy dog.A quick brown fox jumps over a lazy dog.A quick brown fox jumps over a lazy dog.A quick brown fox jumps over a lazy dog.A quick brown fox jumps over a lazy dog.A quick brown fox jumps over a lazy dog.A quick brown fox jumps over a lazy dog.A quick brown fox jumps over a lazy dog.A quick brown fox jumps over a lazy dog.A quick brown fox jumps over a lazy dog.A quick brown fox jumps over a lazy dog.A quick brown fox jumps over a lazy dog.A quick brown fox jumps over a lazy dog.A quick brown fox jumps over a lazy dog.
+</div>
+</div>
+<div>another div with static position</div>

@@ -1,0 +1,84 @@
+div#queries {
+	width:925px;
+}
+
+div#queries a{
+	color:#4575B4;
+}
+
+div#queries a:hover{
+	border-bottom:1px dotted #666;
+	color:#ff6633;
+}
+
+div#queries h1 {
+	color: #D13236;
+	font: normal normal normal 30px/54px Cambria, Georgia, 'Times New Roman', Times, serif;
+	margin: 36px 0px 18px 0px;
+}
+
+#table_queries td, #table_queries th {
+	padding:12px;
+	/*font-size:12px;
+	line-height:20px;*/
+}
+
+#table_queries{
+	border:1px solid #aaa;
+	color: #333;
+	font: normal normal normal 14px/24px Cambria, Georgia, 'Times New Roman', Times, serif;
+	
+}
+
+div#queries p {
+	color: #333;
+	font: normal normal normal 18px/26px Cambria, Georgia, 'Times New Roman', Times, serif;
+}
+
+div#queries p.highlight{
+	background-color:#FDFFCE;
+}
+
+#table_queries th {
+	border-bottom:1px solid #aaa;
+	font: normal normal normal 18px/27px Cambria, Georgia, 'Times New Roman', Times, serif;
+	text-align:left;
+	background:#F9F9F9;
+}
+
+#table_queries tr {
+	background:#FFF;
+}
+
+#table_queries td {
+	border-bottom:1px solid #eee;
+}
+
+#table_queries tfoot td {
+	background:#F9F9F9;
+	border-top:1px solid #aaa;
+	border-bottom:0;
+}
+
+#table_queries td a, #table_queries td a:visited{
+	color:#333;
+}
+
+td.qquestion  {
+  color:#000;
+}
+
+td.qowner {
+  color:#4575B4;
+  font-style:italic;
+}
+
+td.qlastreply {
+  color:#aaa;
+  font-size:0.95em;
+}
+td.qreply {
+  color:#D13236;
+  text-align:center;
+  font-weight:bold;
+}

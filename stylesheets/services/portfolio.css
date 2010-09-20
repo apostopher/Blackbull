@@ -1,0 +1,193 @@
+div#portfolio {
+	padding:18px 0px;
+	font-size:13px;
+	line-height:24px;
+	width:925px;
+}
+
+div#portfolio h1 {
+	color: #D13236;
+	font: normal normal normal 30px/54px Cambria, Georgia, 'Times New Roman', Times, serif;
+	margin:36px 0;
+}
+
+div#portfolio p{
+	font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+	color:#15100F;
+	margin-bottom:24px;
+	text-align:justify;
+}
+
+div#investment_positions{
+	float:left;
+	width:450px;
+}
+
+div#trading_positions{
+	float:right;
+	width:450px;
+}
+
+table.invisible{
+	display:none;
+}
+
+div#portfolio td.loading, #facebox .scripdetails td.loading{
+	background:url("../../images/black_loader.gif") no-repeat center 5px;
+	padding:12px;
+	text-align:center;
+}
+
+table.portfolio_list td{
+	border-bottom:1px solid #eee;
+	/*background:url("../../images/portfolio_table_td.png") bottom left repeat-x;*/
+	padding:10px 5px;
+	color:#222;
+}
+
+table.portfolio_list td.name{
+	width:250px;
+	text-align:left;
+	font-weight:bold;
+}
+
+table.portfolio_list td.returns{
+	width:80px;
+	text-align:center;
+	color:#5AAA23;
+	font-weight:bold;
+}
+
+table.portfolio_list td.red{
+	color:#D13236;
+}
+
+table.portfolio_list thead th{
+	border-bottom:1px solid #EEE;
+}
+
+table.portfolio_list td.details{
+	width:80px;
+	text-align:center;
+}
+table.portfolio_list td.details a{
+	background: url("../../images/button_matrix.png") no-repeat 0px -23px;
+	border:0;
+	color: #333;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 11px;
+	font-weight: bold;
+	height: 23px;
+	overflow: visible;
+	padding: 0px 0px 0px 3px;
+	text-shadow: #fff 1px 1px 0px;
+}
+
+table.portfolio_list td.details a.hovered{
+	background-position:0 -69px;
+	color:#FFFFFF;
+	text-decoration:none;
+	text-shadow:-1px -1px 0 rgba(0, 0, 0, 0.3);
+}
+
+table.portfolio_list td.details a.mousedown{
+	background-position:0 -115px;
+}
+
+table.portfolio_list td.details a > span{
+	background: url("../../images/button_matrix.png") no-repeat 100% 0px;
+	display: block;
+	height: 23px;
+	line-height: 23px;
+	padding: 0px 10px 0px 8px;
+}
+
+table.portfolio_list td.details a > span.hovered{
+	background-position:100% -46px;
+}
+table.portfolio_list td.details a > span.mousedown{
+	background-position:100% -92px;
+}
+
+#facebox {
+	left:50%;
+	margin-left:-212px;
+	position:absolute;
+	text-align:left;
+	top:50%;
+	z-index:300;
+}
+
+#facebox .popup {
+	-moz-border-radius:5px;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-box-shadow:0 0 18px rgba(0, 0, 0, 0.4);
+	box-shadow:0 0 18px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow:0 0 18px rgba(0, 0, 0, 0.4);
+	border:3px solid transparent;
+	position:relative;
+}
+
+#facebox .scripdetails {
+	width:425px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	padding:10px;
+	background:#F9F9F9;
+}
+
+#facebox .scripdetails h2{
+	text-align:center;
+	font:normal normal normal 24px/30px Cambria, Georgia, 'Times New Roman', Times, serif;
+	color: #D13236;
+	margin:bottom:30px;
+	padding-bottom:10px;
+}
+
+#facebox .scripdetails div.details{
+	width:350px;
+	margin:10px auto;
+}
+
+#facebox .scripdetails table{
+	width:350px;
+	font-size:14px;
+	border:1px solid #ddd;
+	background:#FFF;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+}
+
+#facebox .scripdetails table td{
+	padding:10px;
+	border-bottom:1px solid #ddd;
+	text-align:right;
+	font-weight:bold;
+}
+
+#facebox .scripdetails table td.legend{
+	text-align:left;
+}
+
+#facebox .details table td.red{
+	color:#D13236;
+}
+
+#facebox .details table td.green{
+	color:#5AAA23;
+}
+
+#facebox_overlay {
+	height:100%;
+	left:0;
+	position:fixed;
+	top:0;
+	width:100%;
+	opacity:0.2;
+	background:#000;
+	z-index:299;
+}

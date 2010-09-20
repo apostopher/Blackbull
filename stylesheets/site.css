@@ -1,0 +1,405 @@
+/* =============================== Header CSS styles - Start ================= */
+header#siteheader {
+        background:url("../images/header_back.png") repeat-x;
+	background-color:#000;
+	display:block;
+	font-size:1em;
+	padding:12px 24px;
+        position:relative;
+}
+
+header#siteheader a#logo{
+	display:inline-block;
+	height:40px;
+}
+
+header#siteheader a#logo img{
+	border:0;
+        margin-top:8px;
+}
+
+div#light {
+        display:block;
+        height:1px;
+        line-height:1px;
+        font-size:1px;
+        overflow:none;
+        margin:0;
+        padding:0;
+        background: #000 url("../images/light.png") no-repeat center center;
+}
+
+nav#sitenavigation{
+	display:block;
+	padding:0px 24px;
+	background-color:#242b3b;
+	height:32px;
+}
+nav#sitenavigation ul#mainnav {
+        margin:0;
+        padding:0;
+        height:32px;
+}
+nav#sitenavigation ul li.menuitem{
+        float:left;
+        display:inline-block;
+        margin:0;
+        color:#fff;
+        height:32px;
+        line-height:32px;
+        padding:0 18px;
+        font-size:14px;
+        cursor:pointer;
+        width:80px;
+        letter-spacing:1px;
+        position:relative;
+        z-index: 50;
+}
+nav#sitenavigation ul li.wall{
+        background:url("../images/menu_wall.png") no-repeat right center;
+}
+nav#sitenavigation ul li.selected{
+        background:#FFF;
+        color:#000;
+}
+
+nav#sitenavigation ul li#sitemap {
+        float:right;
+        text-align:right;
+        margin:0;
+        padding-right:0;
+        display:inline-block;
+        color:#fff;
+        height:32px;
+        line-height:32px;
+        padding:0 5px;
+        font-size:14px;
+        cursor:pointer;
+        width:80px;
+        letter-spacing:1px;
+        position:relative;
+}
+
+nav#sitenavigation ul li#sitemap span {
+       text-align:right;
+}
+
+nav#sitenavigation ul li span.liname {
+        display:block;
+        text-align:center;
+}
+
+nav#sitenavigation ul li span.hide, nav ul li span.invisible{
+        display:none;
+}
+
+ul.submenu {
+        margin:0;
+        list-style:none;
+        border:1px solid #ddd;
+        border-top:0;
+        left:-1px;
+        background:#FFF;
+        position:absolute;
+        padding:10px 4px 4px;
+        width:250px;
+        z-index:48;
+}
+
+ul.hide{
+        display:none;
+}
+
+html>body nav ul li span.active {
+        background:url("../images/spotlight.png") no-repeat center top;    
+}
+
+html>body .arrow{
+        position:absolute;
+        z-index:5;
+        display:block;
+        top:32px;
+        height:6px;
+        width:100%;
+        background:url("../images/arrow_down.gif") no-repeat center center;
+        margin-left:-18px;
+}
+
+ul.submenu li {
+        margin:0;
+        padding:4px 8px;
+        border-top:1px solid #E3E3E3;
+}
+
+ul.submenu li h6 {
+        font-size:14px;
+        line-height:16px;
+        color:#4575B4;
+        font-weight:normal;
+        letter-spacing:1px;
+        margin:0 0 2px 0;
+}
+ul.submenu li p {
+        color:#bbb;
+        font-style:italic;
+        margin:0;
+        margin-bottom:2px;
+        font-size:12px;
+        line-height:14px;
+}
+/* =============================== Header CSS styles - Stop ================== */
+
+/* =============================== Footer CSS styles - Start ================= */
+footer#sitefooter {
+    display:block;
+    float:left;
+    clear:both;
+    width:100%;
+    padding:24px 0px;
+    color:#666;
+    height:16px;
+    border-top:1px solid #aaa;
+    background:url("../images/footer_back.png") top left repeat-x;
+    padding-bottom:64px;
+}
+
+footer#sitefooter div#copy{
+   padding:0 24px;
+   display:block;
+   text-align:center;
+   letter-spacing:1px;
+}
+/* =============================== Footer CSS styles - Stop ================= */
+
+/* =============================== Login CSS styles - Start ================= */
+#opaque {
+    background-color:black;
+    height:100%;
+    left:0;
+    position:absolute;
+    top:0;
+    width:100%;
+    z-index:199;
+}
+
+#header_login_nav {
+    padding:0px;
+    text-align:right;
+    color:#eee;
+    height:32px;
+    line-height:24px;
+    position:absolute;
+    top:32px;
+    margin-top:-16px;
+    right:24px;
+    z-index:200;
+    font-weight:bold;
+}
+
+#header_login_nav a {
+        color:#FFFFFF;
+}
+
+#header_login_nav ul{
+   float:left;
+   padding:0;
+   margin:0;
+   list-style:none;
+}
+
+#header_login_nav ul li.first{
+  margin-right:2px;
+}
+#header_login_nav ul li.second{
+  line-height:14px;
+  padding-top:6px;
+}
+#header_login_nav ul li.limenu{
+  margin-left:2px;
+  cursor:pointer;
+}
+
+#header_login_nav ul li{
+    position:relative;
+    float:left;
+    display:block;
+    padding:4px 6px;
+    text-decoration:none;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    border-bottom:0;
+}
+
+#header_login_nav ul li.hovered{
+    background:#F9F9F9;
+}
+
+#header_login_nav ul li.hovered a{
+    color:#333;
+}
+
+#signin_menu, #settings_menu {
+    -moz-border-radius-topleft:5px;
+    -moz-border-radius-bottomleft:5px;
+    -moz-border-radius-bottomright:5px;
+    -webkit-border-top-left-radius:5px;
+    -webkit-border-bottom-left-radius:5px;
+    -webkit-border-bottom-right-radius:5px;
+    behavior: url(ie-css3.htc);
+    background-color:#F9F9F9;
+    position:absolute;
+    z-index:200;
+    text-align:left;
+    border:0;
+    margin-top:0px;
+    color:#333;
+    font-size:11px;
+}
+
+#signin_menu {
+   width:210px;
+   right:0;
+   padding:12px;
+}
+
+#settings_menu{
+   width:120px;
+   right:0;
+   padding:3px 10px;
+}
+
+div#loadingdiv{
+   color:#FFF;
+   padding-left:24px;
+   background:url("../images/loader.gif") no-repeat left center;
+}
+
+div.hide{
+    display:none;
+}
+
+#signin_menu p.forgot a#forgot {
+    color:#27B;
+}
+#signin_menu p {
+    margin:0;
+}
+#signin_menu a {
+    color:#6AC;
+}
+#signin_menu label {
+    font-weight:normal;
+}
+#signin_menu p.remember {
+    padding:10px 0;
+}
+#signin_menu p.forgot, #signin_menu p.complete {
+    clear:both;
+    margin:5px 0;
+}
+#signin_submit {
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    behavior: url(ie-css3.htc);
+    background:#444;
+    border:1px solid #444;
+    color:#fff;
+    padding:4px 10px 5px;
+    font-size:11px;
+    margin:0 5px 0 0;
+    font-weight:bold;
+}
+#signin_submit:hover, #signin_submit:focus {
+    background:#111;
+    border:1px solid #111;
+    cursor:pointer;
+}
+input.txtbox {
+    display:block;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+        behavior: url(ie-css3.htc);
+    border:1px solid #DEDEDE;
+    font-size:13px;
+    margin:0 0 5px;
+    padding:5px;
+    width:203px;
+}
+
+#settings_menu ul{
+    float:none;
+}
+
+#settings_menu ul li{
+   float:none;
+   text-align:right;
+   padding:5px;
+}
+#settings_menu ul li a{
+   color:#333;
+}
+#settings_menu ul li.bottomborder, #settings_menu ul li#lisave, #settings_menu ul li#lipreview {
+   border-bottom:1px solid #ddd;
+}
+ul.invisible, #settings_menu ul li.invisible {
+   display:none;
+}
+/* =============================== Login CSS styles - Stop ================= */
+
+/* =============================== Common CSS styles - Start =============== */
+body{
+	margin:0;
+	padding:0;
+	font-family:"Segoe UI",Arial,Helvetica,sans-serif;
+	font-size:12px;
+	line-height:20px;
+        vertical-align: baseline;
+        border-bottom:1px solid #aaa;
+        background:#f3f3f3 url("../images/body_back.png") bottom left repeat-x;
+        font-smooth:always;
+}
+a {
+	text-decoration:none;
+	border:0;
+}
+
+ul{
+	margin:0;
+	padding:0;
+}
+
+img{
+	border:0;
+}
+
+table{
+	border-spacing:0;
+	border-collapse: collapse;
+}
+
+div#content{
+	margin:0;
+	padding:16px 0px 10px 24px;
+	background:#FFF;
+}
+div.spacer {
+	clear:both;
+	font-size:0em;
+	line-height:0;
+	padding:0;
+	margin:0;
+	border:0;
+}
+div#content p{
+	text-align:justify;
+	color: #15100F;
+	font-size: 14px;
+	line-height: 24px;
+	margin-bottom: 20px;
+}
+p.last::after{
+	content: url("../images/stop.gif");
+	margin-left:4px;
+}
+/* =============================== Common CSS styles - Stop =============== */

@@ -1,0 +1,241 @@
+div#registration {
+	width:900px;
+}
+
+div#registration h1 {
+	color: #D13236;
+	font: normal normal normal 30px/54px Cambria, Georgia, 'Times New Roman', Times, serif;
+	margin: 36px 0px 18px;
+}
+
+div#registration p {
+	color: #333;
+	font: normal normal normal 18px/26px Cambria, Georgia, 'Times New Roman', Times, serif;
+}
+
+#registrationform {
+	padding:20px 10px;
+	margin-bottom:50px;
+	background:#fafafa;
+	border:1px solid #eee;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	position:relative;
+}
+
+#registrationform span {
+	color:#666;
+	text-shadow:#FFF 1px 1px 0px;
+	font-size:12px;
+	line-height:14px;
+	display:inline-block;
+	margin-bottom:20px;
+	text-align:left;
+}
+
+div#registration #registrationform p {
+	font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 20px;
+	text-align:right;
+}
+#registrationform label, #registrationform input, #registrationform button{
+	color: #333;
+	font: normal normal normal 18px/26px Cambria, Georgia, 'Times New Roman', Times, serif;
+
+}
+
+#registrationform label {
+	text-align:right;
+	width:150px;
+	display:inline-block;
+	text-shadow:#fff 1px 1px 0px;
+}
+
+#registrationform input {
+	background:#FFF;
+	border:1px solid #ababab;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	padding:5px;
+}
+
+#registrationform input.short {
+	width:200px;
+	margin:0px 0px 0px 4px;
+}
+
+#registrationform input.long {
+	width:250px;
+	margin:0px 0px 20px 4px;
+}
+
+#registrationform input.longlegend {
+	width:250px;
+	margin:0px 0px 0px 4px;
+}
+
+div#registration #registrationform p#terms {
+	text-align:left;
+	margin:0;
+	margin-left:157px;
+	color: #333;
+	font: normal normal normal 18px/26px Cambria, Georgia, 'Times New Roman', Times, serif;
+}
+
+#registrationform input.submitbutton, button.captchaSubmit {
+	margin-left:157px;
+	margin-top:20px;
+	margin-right:10px;
+	width:81px;
+	height:31px;
+	border:0;
+	background:url("../../images/normalbutton_matrix.png") no-repeat top left;
+	background-position:0px -62px;
+	text-shadow: #FFF 1px 1px 0px;
+	padding:0;
+	line-height:30px;
+	text-align:center;
+	vertical-align:middle;
+}
+
+#registrationform input.hovered, #registrationform button.hovered{
+	background-position:0px -31px;
+	text-shadow: #333 1px 1px 0px;
+	color:#fff;
+}
+
+#registrationform input#resetform {
+	margin-left:0;
+}
+
+div.tooltip {
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	font-size:14px;
+	line-height:14px;
+	font-family: Cambria, Georgia, 'Times New Roman', Times, serif;
+	border:1px solid #eee27a;
+	padding:11px;
+	background:#fff8c1 url("../../images/tooltip_bg.png") repeat-x bottom left;
+	display:inline-block;
+	margin:0;
+}
+div.errortip {
+	border:1px solid #E5A3A3;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	font-size:14px;
+	line-height:21px;
+	font-family: Cambria, Georgia, 'Times New Roman', Times, serif;
+	background:#FFCFCF;
+	display:inline-block;
+}
+
+span#captcharesult{
+	margin-left:4px;
+	color: #D13236;
+	margin-bottom:0;
+}
+
+span#firstnameresult{
+	margin-left:157px;
+	width:210px;
+}
+
+span#lastnameresult{
+	margin-left:159px;
+	width:210px;
+}
+
+span#emailresult{
+	margin-left:157px;
+}
+
+span#passresult{
+	margin:4px 0px 4px 157px;
+	width:250px;
+	color:#D13236;
+}
+
+#registrationform span.error {
+	color:#D13236;
+}
+
+#registrationform span.success {
+	color:#5AAA23;
+}
+
+div#captchaholder{
+	position:absolute;
+	-moz-box-shadow:0 0 18px rgba(0, 0, 0, 0.4);
+	box-shadow:0 0 18px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow:0 0 18px rgba(0, 0, 0, 0.4);
+	border-radius: 5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	padding:3px;
+	background:#666;
+	left:50%;
+	top:50%;
+}
+
+div#verifyhuman {
+	border-radius: 5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	background:#FAFAFA;
+	padding:20px;
+}
+
+div#verifyhuman h3{
+	color:#333;
+	font: normal normal normal 18px/26px Cambria, Georgia, 'Times New Roman', Times, serif;
+	margin-top:0;
+	margin-bottom:5px;
+}
+
+div#recaptcha_image {
+	border-radius: 5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border:1px solid #eee;
+	padding:5px;
+	background:#fff;
+}
+
+#registrationform label.recaptcha {
+	width:auto;
+	display:block;
+	text-align:left;
+	padding-left:5px;
+	margin-top:10px;
+}
+button#captchaSubmit {
+	margin:0;
+	height:30px;
+}
+
+input#recaptcha_response_field {
+	line-height:18px;
+	height:18px;
+}
+a#closePopup {
+	text-indent:-1000em;
+	display:inline-block;
+	float:right;
+	width:21px;
+	height:21px;
+	min-height:21px;
+	background: url("../../images/closecross.png") no-repeat right top;
+	margin-right:-11px;
+	margin-top:-11px;
+}
+
+a#closePopup:hover{
+	background-position:0 -21px;
+}

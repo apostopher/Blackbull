@@ -1,0 +1,57 @@
+@charset "utf-8";
+body {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	line-height: 20px;
+	font-weight:bold;
+	color: #aaaaaa;
+	padding:0;
+	margin:0;
+	padding-bottom:30px;
+}
+
+a {
+	text-decoration:none;
+}
+
+a img {
+	border:0;
+}
+
+#legal_container {
+	width:950px;
+	margin:0 auto;
+	padding:10px;
+}
+
+div.logo_holder {
+	text-align:center;
+	margin-top:60px;
+	margin-bottom:30px;
+}
+
+#legal_holder {
+	text-align:justify;
+}
+
+h1 {
+	font-weight:normal;
+	text-transform:uppercase;
+	letter-spacing:24px;
+	font-size:14px;
+	text-align:center;
+}
+
+h2 {
+	font-size:12px;
+	text-align:center;
+	font-weight:normal;
+}
+
+h4 {
+	text-transform:uppercase;
+}
+
+.allcaps {
+	text-transform:uppercase;
+}
