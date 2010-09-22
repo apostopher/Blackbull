@@ -29,11 +29,11 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass'])){
 <?php require_once("../_partial_header.php"); ?>
 <div id="content">
 <div id="login">
-<h1>Sign in</h1>
+<h1><?php if($_GET['forgot'] == "true"){echo "Forgot password";}else{echo "Sign in";} ?></h1>
 <div id="formholder">
 <div class="spacer">&nbsp;</div>
 <div id="loginformdiv">
-<form id="loginform" method="post">
+<form id="loginform" method="post" <?php if($_GET['forgot'] == "true"){echo "style=\"display:none\"";} ?>>
 <label for="pageusername">Username</label>
 <input type="email" id="pageusername" class="long" placeholder="Your e-mail address."/>
 <br/>
@@ -47,7 +47,7 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass'])){
 <input type="submit" value="Sign in" id="submitform" class="submitbutton"/>
 <div id="loginerror" class="hide">Sign in failed. <a href="" id="showresetpass">Reset password?</a></div>
 </form>
-<form id="resendpass" method="post" class="hide">
+<form id="resendpass" method="post" class="hide" <?php if($_GET['forgot'] == "true"){echo "style=\"display:block\"";} ?>>
 <label for="newpass">E-mail address</label>
 <input type="email" id="newpass" class="long"/>
 <br/>

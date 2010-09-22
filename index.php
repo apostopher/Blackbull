@@ -33,7 +33,7 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass'])){
 <a class="next hide"></a>
 <div id="scrollable">
 <article id="slides">
-<section class="items"><a href="articles/cocktail.php"><img src="assets/articleCocktail.jpg" height="400" width="624"/></a></section>
+<!--section class="items"><a href="articles/cocktail.php"><img src="assets/articleCocktail.jpg" height="400" width="624"/></a></section-->
 <section class="items"><a href="articles/dragonEmpire.php"><img src="assets/articleChina.jpg" height="400" width="624"/></a></section>
 <section class="items"><a href="articles/unlockTheCycle.php"><img src="assets/articleCycle.jpg" height="400" width="624"/></a></section>
 </article>

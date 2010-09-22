@@ -149,7 +149,8 @@ $("#opaque").css('height', $(document).height());
 					type: "POST",
 					url: "/serverscripts/login.php",
 					data:({'username':$("#username").val(),
-						'password':$("#encrypted").val()}),
+						'password':$("#encrypted").val(),
+						'remember':$("#remember").attr('checked')?1:0}),
 					dataType: "json",
 					success: function(response){
 						if(response.id != '0'){

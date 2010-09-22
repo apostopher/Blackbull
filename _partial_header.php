@@ -9,7 +9,7 @@
 <li class="limenu signout"><a class="settings signout" href='#'>Settings</a>
 <div id="settings_menu" class="hide">
 <ul>
-<li class="bottomborder"><a href="/changepass.php">Change Password</a></li>
+<li class="bottomborder"><a href="/users/changepassword.php">Change Password</a></li>
 <li <?php if($_SESSION['user'] != "Admin"){echo "class=\"invisible\"";}?> id="lipreview"><a id="previewdigest" href="#">Preview</a></li>
 <li <?php if($_SESSION['user'] != "Admin"){echo "class=\"invisible\"";}?> id="lisave"><a id="savedigest" href="#">Save</a></li>
 <li><a href="#" class="lisignout">Log Out</a></li>
@@ -18,7 +18,7 @@
 </li>
 </ul>
 <ul id="login_menu" <?php if($_SESSION['user']){echo "class=\"invisible\"";} ?>>
-<li class="first"><a href="users/registration.php">Register</a></li>
+<li class="first"><a href="/users/registration.php">Register</a></li>
 <li class="second">|</li>
 <li class="limenu signin">
 <a class="signin" href="/login.php">Sign in</a>
@@ -38,7 +38,7 @@
         <input id="remember" name="remember_me" value="1" tabindex="7" type="checkbox" class="chkbox" />
         <label for="remember">Remember me</label>
       </p>
-      <p class="forgot"><a id="forgot" href="/resetpass.php">Forgot your password?</a> </p>
+      <p class="forgot"><a id="forgot" href="/users/login.php?forgot=true">Forgot your password?</a> </p>
     </form>
 </div>
 </li>
@@ -61,7 +61,7 @@
 <span class="arrow hide"></span>
 <ul class="submenu hide">
 <li><a href="/articles/dragonEmpire.php"><h6>Dragon Empire</h6><p>US-China trade relations.</p></a></li>
-<li><h6>Mix the perfect cocktail</h6><p>Use of fundamental &amp; technical analysis in investment decisions.</p></li>
+<!-- li><h6>Mix the perfect cocktail</h6><p>Use of fundamental &amp; technical analysis in investment decisions.</p></li -->
 <li><a href="/articles/unlockTheCycle.php"><h6>Unlock the cycle</h6><p>The cyclic nature of stocks</p></a></li>
 <li><a href="/articles/smallIsBeautiful.php"><h6>Small is beautiful</h6><p>Investment techniques in smallcaps.</p></a></li>
 </ul>
@@ -78,12 +78,12 @@
 <li><a href="/knowledge/stockMarketTrading.php"><h6>The stock market trading</h6><p>trading fundamentals.</p></a></li>
 </ul>
 </li>
-<li class="menuitem" data-tab-name="Tools">
+<!-- li class="menuitem" data-tab-name="Tools">
 <span class="liname">Tools</span>
 <span class="arrow hide"></span>
 <ul class="submenu hide">
 <li><h6>The options spread</h6><p>Hawk eye view of options trading.</p></li>
 </ul>
-</li>
+</li -->
 </ul>
 </nav>

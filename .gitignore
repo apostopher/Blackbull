@@ -2,3 +2,5 @@
 *_log
 *.zip
 site.manifest
+*.lnk
+*.csv

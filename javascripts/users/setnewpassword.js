@@ -9,18 +9,36 @@ $(function(){
 			$(this).removeClass("hovered");
 		}
 	});
+	$("email").focus(function(){
+		if($("#emailresult").hasClass("error")){
+			$("#emailresult").removeClass("error");
+		}
+		$("#emailresult").html("Your e-mail is your <b>USERNAME</b>.");
+	});
+	$("#upassword").focus(function(){
+		$("#passresult").html("&nbsp;");
+	});
+	$("#upassword").tooltip({ position: "center right", effect:"toggle"});
 	
 	$("#setnewpassform").submit(function(){
 		var validEMail = /^[\_]*([a-z0-9]+(\.|\_*)?)+@([a-z][a-z0-9\-]+(\.|\-*\.))+[a-z]{2,6}$/;
-		var username = $("#email").val();
+		var username = $("#email").val().toLowerCase();
 		var tpassword = $("#tpassword").val();
 		var upassword = $("#upassword").val();
 		var rpassword = $("#repassword").val();
 		if(!validEMail.test(username)){
+			if(!$("#emailresult").hasClass("error")){
+				$("#emailresult").addClass("error");
+			}
+			$("#emailresult").html("Invalid e-mail address.");
 			return false;
 		}
 		if(upassword != rpassword){
 			$("#passresult").html("Passwords do not match.");
+			return false;
+		}
+		if(upassword.length > 16 || upassword.length < 1){
+			upassword.focus();
 			return false;
 		}
 		$.ajax({

@@ -1,10 +1,14 @@
 <?php
 session_start();
-if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass'])){
+if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE['cookid'])){
       $_SESSION['user'] = $_COOKIE['cookname'];
       $_SESSION['pass'] = $_COOKIE['cookpass'];
-   }
-
+      $_SESSION['id'] = $_COOKIE['cookid'];
+}
+if(!isset($_SESSION['user'])){
+        $_SESSION['redirect'] = $_SERVER['PHP_SELF'];
+	header( "Location: http://www.blackbull.in/users/login.php" );
+}
 ?>
 <!DOCTYPE html>
 <html class="no-js">

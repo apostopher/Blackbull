@@ -45,7 +45,7 @@ $(function(){
 	});
 	//Submit login
 	$("#loginform").submit(function(){
-		var username = $("#pageusername").val();
+		var username = $("#pageusername").val().toLowerCase();
 		var upassword = $("#pagepassword").val();
 		var validEMail = /^[\_]*([a-z0-9]+(\.|\_*)?)+@([a-z][a-z0-9\-]+(\.|\-*\.))+[a-z]{2,6}$/;
 		$("#loginerror").hide();
@@ -75,7 +75,7 @@ $(function(){
 					url: "/serverscripts/login.php",
 					data:({'username':username,
 						'password':encrypted,
-						'remember':$("#pageremember").checked}),
+						'remember':$("#pageremember").attr('checked')?1:0}),
 					dataType: "json",
 					success: function(response){
 						$("#submitform").attr("disabled", false);
@@ -107,7 +107,7 @@ $(function(){
 		return false;
 	});
 	$("#resendpass").submit(function(){
-		var username = $("#newpass").val();
+		var username = $("#newpass").val().toLowerCase();
 		var validEMail = /^[\_]*([a-z0-9]+(\.|\_*)?)+@([a-z][a-z0-9\-]+(\.|\-*\.))+[a-z]{2,6}$/;
 		if(!validEMail.test(username)){
 			return false;

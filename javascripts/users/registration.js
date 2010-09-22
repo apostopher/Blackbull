@@ -137,7 +137,7 @@ $(function(){
 				"userinput":userinput,
 				"fname":$("#firstname").val(),
 				"lname":$("#lastname").val(),
-				"email":$("#email").val(),
+				"email":$("#email").val().toLowerCase(),
 				"password":$("#upassword").val()}),
 			dataType:"json",
 			beforeSend:function(){
@@ -184,7 +184,7 @@ $(function(){
 		}
 		if($(this).val()){
 			var validEMail = /^[\_]*([a-z0-9]+(\.|\_*)?)+@([a-z][a-z0-9\-]+(\.|\-*\.))+[a-z]{2,6}$/;
-			if(!validEMail.test($(this).val())){
+			if(!validEMail.test($(this).val().toLowerCase())){
 				if(!resultspan.hasClass("error")){
 					resultspan.addClass("error");
 				}

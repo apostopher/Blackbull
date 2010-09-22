@@ -221,6 +221,7 @@ footer#sitefooter div#copy{
 
 #header_login_nav ul li{
     position:relative;
+    z-index:200;
     float:left;
     display:block;
     padding:4px 6px;
@@ -355,9 +356,8 @@ body{
 	font-size:12px;
 	line-height:20px;
         vertical-align: baseline;
-        border-bottom:1px solid #aaa;
-        background:#f3f3f3 url("../images/body_back.png") bottom left repeat-x;
         font-smooth:always;
+        background:#f3f3f3;
 }
 a {
 	text-decoration:none;

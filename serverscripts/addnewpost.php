@@ -8,7 +8,7 @@
 
 $query = "INSERT INTO queries VALUES (NULL, '$posttext', NOW(),'$owner',true,$isprivate,'')";
 $result = mysql_query($query);
-if($result || 1){
+if($result){
    $getnew = "select q_id, date, fname, text, isprivate from queries, users where q_id = '".mysql_insert_id()."' AND id = '$owner'";
    $result1 = mysql_query($getnew);
    while($row = mysql_fetch_array($result1)) {

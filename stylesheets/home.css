@@ -131,9 +131,10 @@ section.bbfolio{
 
 ul.portfolio {
 	margin-top:20px;
-	float:left;
-	clear:right;
+	/*float:left;
+	clear:right;*/
 	padding-left:10px;
+	margin-bottom:325px;
 }
 
 ul.portfolio li.tab {
@@ -155,8 +156,8 @@ ul.portfolio li.tab {
     position:relative;
     text-align:center;
     width:100px;
-    clear:right;
     z-index:30;
+    display:inline-block;
 }
 
 ul.portfolio li.active{
@@ -189,7 +190,7 @@ span.invisible{
 }
 
 div#tradingcontent, div#investcontent{
-    position:relative;
+    position:absolute;
     z-index:35;
     background:#fff;
     border:1px solid #ddd;

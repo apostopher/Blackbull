@@ -23,13 +23,16 @@ $(function(){
 		}
 	});
 	$("#newpostform").submit(function(){
+		var querytext = $("#querytext").val();
+		var isprivate = $("#privatepost").attr('checked')?1:0;
+		var ownername = $("#ownername").val();
 		$.ajax({
 			type:"POST",
 			url:"../serverscripts/addnewpost.php",
 			dataType:"json",
-			data:({"text": $("#querytext").val(),
-				"private": $("#privatepost").checked,
-				"owner" : $("#ownername").val()}),
+			data:({"text": querytext,
+				"private": isprivate,
+				"owner" : ownername}),
 			beforeSend: function(){
 				if(sending){
 					return false;
@@ -44,8 +47,8 @@ $(function(){
 				if(response.error == "0"){
 					var html_content = "";
 					html_content = html_content + "<tr id='p" + response.posts[0].id + "'>";
-					html_content = html_content + "<td class='qquestion'><a class='ellipsis' href='/services/query.php?id="+ response.posts[0].id +"'><span class='posttext'>" + response.posts[count].text + "</span></a></td>";
-					html_content = html_content + "<td class='qreply'>" + response.posts[0].replies + "</td>";
+					html_content = html_content + "<td class='qquestion'><a class='ellipsis' href='/services/query.php?id="+ response.posts[0].id +"'><span class='posttext'>" + response.posts[0].text + "</span></a></td>";
+					html_content = html_content + "<td class='qreply'>0</td>";
 					if(response.posts[0].private == "0"){
 						html_content = html_content + "<td class='qowner'>"+ response.posts[0].owner + "</td>";
 					}else{
@@ -63,7 +66,7 @@ $(function(){
 						$("#formresult").hide();
 						$("#formresult").html("");
 						$("#querytext").val("");
-						$("#privatepost").checked = false;
+						$("#privatepost").attr("checked","0");
 						$("#postquerybtn").val("Submit query");
 						$("#postquerybtn").removeAttr("disabled");
 					});
