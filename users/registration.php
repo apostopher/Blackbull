@@ -19,7 +19,7 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass'])){
         <script src="../javascripts/lib/modernizr-1.5.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
+        <!--script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script-->
         <script src="http://cdn.jquerytools.org/1.2.4/tiny/jquery.tools.min.js"></script>
         <script src="../javascripts/lib/jquery.jcryption-1.1.min.js"></script>
         <script src="../javascripts/site.js"></script>
@@ -73,7 +73,7 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass'])){
 <label for="repassword">Retype password</label>
 <input type="password" id="repassword" class="long"/>
 <br/>
-<p id="terms">By clicking on "Submit" below, you are agreeing to the <a href="../legal.php">terms &amp; conditions</a>.</p>
+<p id="terms">By clicking on "Submit" below, you are agreeing to the <a rel="license" href="../legal.php">terms &amp; conditions</a>.</p>
 <input type="submit" value="Submit" id="submitform" class="submitbutton"/>
 <input type="reset" value="Reset" id="resetform" class="submitbutton"/>
 <input type="hidden" value="0" id="emailverify"/>

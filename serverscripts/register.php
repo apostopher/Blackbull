@@ -30,7 +30,7 @@ if(mysql_num_rows($idexists)){
 $query = "SELECT id FROM pending WHERE id='".trim($_POST['email'])."'";
 $pendingid = mysql_query($query);
 if(mysql_num_rows($pendingid)){
-	$response = array("status" => "pending");
+	$response = array("status" => "pending", "id" => $_POST['email']);
 	echo json_encode($response);
 	mysql_close($con);
 	return;

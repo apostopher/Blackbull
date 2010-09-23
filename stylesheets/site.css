@@ -11,6 +11,7 @@ header#siteheader {
 header#siteheader a#logo{
 	display:inline-block;
 	height:40px;
+	border:0;
 }
 
 header#siteheader a#logo img{
@@ -360,8 +361,14 @@ body{
         background:#f3f3f3;
 }
 a {
+	color:blue;
 	text-decoration:none;
 	border:0;
+}
+
+a:hover {
+	border-bottom: 1px dotted #333;
+	color: #FE581A;
 }
 
 ul{

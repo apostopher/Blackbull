@@ -1,6 +1,6 @@
 *.bak
 *_log
 *.zip
-site.manifest
-*.lnk
 *.csv
+*.lnk
+site.manifest

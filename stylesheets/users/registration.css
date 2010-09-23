@@ -13,6 +13,17 @@ div#registration p {
 	font: normal normal normal 18px/26px Cambria, Georgia, 'Times New Roman', Times, serif;
 }
 
+div#registration a, div#registration a:visited {
+	color:blue;
+	text-decoration:none;
+	border-bottom:1px dotted #999;
+}
+
+div#registration a:hover {
+	color:#fe581a;
+	border-bottom:1px dotted #333;
+}
+
 #registrationform {
 	padding:20px 10px;
 	margin-bottom:50px;

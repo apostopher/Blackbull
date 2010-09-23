@@ -1,5 +1,17 @@
 $(function(){
 	var postid = jQuery.url.param("id");
+	
+	$("#postquerybtn").hover(function(){
+		if(!$(this).hasClass("hovered")){
+			$(this).addClass("hovered");
+		}
+	},
+	function(){
+		if($(this).hasClass("hovered")){
+			$(this).removeClass("hovered");
+		}
+	});
+	
 	$.ajax({
 		type:"GET",
 		url:"../serverscripts/getQA.php",
@@ -46,20 +58,24 @@ $(function(){
 		}
 	});
 	$("#newpostform").submit(function(){
+		var querytext = $("#querytext").val();
+		var ownername =  $("#ownername").val();
+		var qid = $("#qn_id").attr('rel');
+		var isprivate = $("#privatepost").attr('checked')?1:0;
 		$.ajax({
 			type:"POST",
 			url:"../serverscripts/addnewans.php",
 			dataType:"json",
-			data:({"text" : $("#querytext").val(),
-                               "private" : $("#privatepost").checked,
+			data:({"text" : querytext,
+                               "private" : isprivate,
                                "open" : "1",
-                               "owner" : $('ownername').val(),
-                               "id" : $('qn_id').attr('rel')}),
+                               "owner" : ownername,
+                               "id" : qid}),
 			success: function(response){
 				if(response.error !="0"){
 					return false;
 				}
-				var answer_content = "";
+				var answers_content = "";
 				answers_content = answers_content + "<div id='a"+ response.answer.a_id +"' class='ans_holder'>";
 				if(response.answer.private == "0"){
 					answers_content = answers_content + "<div class='ans_head'><span class='res_type'>a :</span><span class='ans_owner'>"+ response.answer.owner +" says:</span><span class='ans_date'>on ";

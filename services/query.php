@@ -23,7 +23,7 @@ if(!isset($_SESSION['user'])){
         <script src="../javascripts/lib/modernizr-1.5.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
+        <!-- script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script-->
         <script src="../javascripts/lib/jquery.tools.min.js"></script>
         <script src="../javascripts/lib/jquery.jcryption-1.1.min.js"></script>
         <script src="../javascripts/lib/jquery.dateFormat-1.0.js"></script>

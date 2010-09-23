@@ -141,7 +141,7 @@ $(function(){
 				"password":$("#upassword").val()}),
 			dataType:"json",
 			beforeSend:function(){
-				$("#captcharesult").html("&nbsp;");
+				$("#captcharesult").html("Please wait&hellip;");
 				return true;
 			},
 			success: function(response){
@@ -157,6 +157,12 @@ $(function(){
 				}else if(response.status == "captchafailed"){
 					Recaptcha.create("6LdNJ70SAAAAAArTCag4zONUTF9wvyd99qj5Km0F","verifyhuman",{theme: "custom"});
 					$("#captcharesult").html("Please try to match the 2 words shown above.");
+				}else if(response.status == "idexists"){
+					$("#registration").html("<h1>Registration Failed</h1><p>This e-mail address is already registered. <a href=\"/users/login.php?forgot=true\">Click here</a> if you have lost your password.</p>");
+				}else if(response.status == "pending"){
+					$("#registration").html("<h1>Registration Failed</h1><p>This e-mail address is already registered but not activated. The activation key was sent to this e-mail address. <a id=\"resendid\" href=\"#\">Click here</a> if you want to receive a new activation key</p><span id=\"activationResult\">&nbsp;</span>");
+					var resultspan = $("#activationResult");
+					$("a#resendid").bind("click",{resultspan:resultspan, emailid:response.id}, resendid);
 				}else{
 					humandiv.hide();
 					$("#registration").html("<h1>Registration Failed</h1><p>We are sorry. An error occured during registration. Try to register after some time. If the problem persists, contact <a href='mailto:support@blackbull.in'>support@blackbull.in</a> for further assistance.</p>");
@@ -192,6 +198,7 @@ $(function(){
 				verifyinput.val("0");
 				return false;
 			}
+			verifyinput.val("1");
 			resultspan.html("Verifying availability&hellip;");
 			$.ajax({
 				type:"GET",
@@ -207,7 +214,7 @@ $(function(){
 							message = "Username is unavailable.";
 						}else if(response.type == "pendingid"){
 							// Confirmation is pending
-							message = "Pending confirmation. <a id=\"resendid\" href=\"\">Resend key?</a>";
+							message = "Pending confirmation. <a id=\"resendid\" href=\"#\">Resend key?</a>";
 						}
 						if(!resultspan.hasClass("error")){
 							resultspan.addClass("error");
@@ -221,41 +228,7 @@ $(function(){
 						message = "Available.";
 					}
 					resultspan.html(message);
-					$("a#resendid").click(function(){
-						$.ajax({
-							type:"GET",
-							url:"../serverscripts/resendkey.php",
-							dataType:"json",
-							data:({"resend":response.id}),
-							beforeSend:function(){
-								resultspan.html("Sending a new activation key.");
-							},
-							success: function(result){
-								if(result){
-									if(result.success == "1"){
-										$("#registration").html("<p>A new activation code has been sent to " + response.id + ". Kindly activate your account within 10 days.</p>");
-									}else{
-										if(!resultspan.hasClass("error")){
-											resultspan.addClass("error");
-										}
-										resultspan.html("Failed to send new key.");
-									}
-								}else{
-									if(!resultspan.hasClass("error")){
-										resultspan.addClass("error");
-									}
-									resultspan.html("Failed to send new key.");
-								}
-							},
-							failure: function(){
-								if(!resultspan.hasClass("error")){
-									resultspan.addClass("error");
-								}
-								resultspan.html("Failed to send new key.");
-							}
-						});
-						return false;
-					});
+					$("a#resendid").bind("click",{resultspan:resultspan, emailid:response.id}, resendid);
 				},
 				failure: function(){
 					if(!resultspan.hasClass("error")){
@@ -284,4 +257,42 @@ function showCaptcha(){
 	var humandiv = $("div#captchaholder");
 	humandiv.css({"margin-left":"-"+ Math.round(humandiv.width()/2 + 6) + "px", "margin-top":"-"+ Math.round(humandiv.height()/2 + 6) + "px"});
 	humandiv.show();
+}
+
+function resendid(event){
+	var emailid = event.data.emailid;
+	var resultspan= event.data.resultspan;
+	$.ajax({
+		type:"GET",
+		url:"../serverscripts/resendkey.php",
+		dataType:"json",
+		data:({"resend":emailid}),
+		beforeSend:function(){
+			resultspan.html("Sending a new activation key.");
+		},
+		success: function(result){
+			if(result){
+				if(result.success == "1"){
+					$("#registration").html("<p>A new activation code has been sent to " + emailid + ". Kindly activate your account within 10 days.</p>");
+				}else{
+					if(!resultspan.hasClass("error")){
+						resultspan.addClass("error");
+					}
+					resultspan.html("Failed to send new key.");
+				}
+			}else{
+				if(!resultspan.hasClass("error")){
+					resultspan.addClass("error");
+				}
+				resultspan.html("Failed to send new key.");
+			}
+		},
+		failure: function(){
+			if(!resultspan.hasClass("error")){
+				resultspan.addClass("error");
+			}
+			resultspan.html("Failed to send new key.");
+		}
+	});
+	return false;
 }

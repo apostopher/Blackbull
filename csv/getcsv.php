@@ -147,8 +147,11 @@ if ($zip->open('test.zip') === TRUE) {
     echo "EQ data is up to date.\n";
 }
 
-$deleteoldcm = "DELETE FROM cmbhav where DATEDIFF( CURRENT_DATE( ) , timestamp ) > 90";
+$deleteoldcm = "DELETE FROM cmbhav where DATEDIFF( CURRENT_DATE( ) , timestamp ) > 230";
 $del_cm_result = mysql_query($deleteoldcm);
+
+$optimize = "OPTIMIZE TABLE cmbhav";
+$optimize_result = mysql_query($optimize);
 
 $deletepending = "DELETE FROM pending where DATEDIFF( CURRENT_DATE( ) , date ) > 10";
 $del_result = mysql_query($deletepending);
@@ -160,4 +163,3 @@ function url_exists($url) {
     return is_array($hdrs) ? preg_match('/^HTTP\\/\\d+\\.\\d+\\s+2\\d\\d\\s+.*$/',$hdrs[0]) : false;
 }
 ?>
-

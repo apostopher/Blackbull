@@ -6,8 +6,8 @@ RewriteRule .* - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)accounts\/activate\/(.*)$ /serverscripts/activate.php?key=$2 [PT]
-RewriteRule ^(.*)accounts\/resetpass(.*)$ /setnewpass.php [PT]
-RewriteRule ^(.*)accounts\/setnewpassword(.*)$ /setnewpass.php [PT]
+RewriteRule ^(.*)accounts\/resetpass(.*)$ /users/setnewpassword.php [PT]
+RewriteRule ^(.*)accounts\/setnewpassword(.*)$ /users/setnewpassword.php [PT]
 RewriteRule ^(.*)query\/(.*)$ /showquery.php?id=$2 [PT]
 ErrorDocument 404 /nopage.php 
 

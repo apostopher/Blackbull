@@ -59,7 +59,7 @@ $message = "<html><body style=\"background-color:#F9F9F9; font-family: Arial, He
 $message = $message."<p>Dear ".$row['fname']." ".$row['lname'].",</p>";
 $message = $message."<p>This e-mail is a response to a password change request initiated by you.</p><p>Your account password has been temporarily set to <b>$newpass</b></p>";
 $message = $message."<p>Please click on the link below to set a new password for your BlackBull Investment Company account.</p>";
-$message = $message."<p><b><a href=\"http://www.blackbull.in/setnewpass.php\">http://www.blackbull.in/accounts/setnewpassword/</a></b></p>";
+$message = $message."<p><b><a href=\"http://www.blackbull.in/accounts/setnewpassword/\">http://www.blackbull.in/accounts/setnewpassword/</a></b></p>";
 $message = $message."<p>We look forward to having a long, trusted and rewarding relationship with you.</p>";
 $message = $message."<p>Regards,</p>";
 $message = $message."<p><b>Blackbull Investment Company</b></p>";
