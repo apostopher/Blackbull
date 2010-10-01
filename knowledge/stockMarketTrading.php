@@ -1,10 +1,10 @@
 <?php
 session_start();
-if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass'])){
+if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE['cookid'])){
       $_SESSION['user'] = $_COOKIE['cookname'];
       $_SESSION['pass'] = $_COOKIE['cookpass'];
-   }
-
+      $_SESSION['id'] = $_COOKIE['cookid'];
+}
 ?>
 <!DOCTYPE html>
 <html class="no-js">
@@ -13,16 +13,7 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass'])){
 	<title>Blackbull Investment Company</title>
 	<link rel="stylesheet" href="../stylesheets/site.css" media="screen">
 	<link rel="stylesheet" href="../stylesheets/knowledge/knowledge.css" media="screen">
-	<link rel="stylesheet" href="../stylesheets/knowledge/stockMarketTrading.css" media="screen">
-        <!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-        <script src="../javascripts/lib/modernizr-1.5.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js"></script>
-        <!--script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script-->
-        <script src="../javascripts/lib/jquery.jcryption-1.1.min.js"></script>
-        <script src="../javascripts/site.js"></script>
+	<script src="../javascripts/lib/modernizr-1.5.min.js"></script>
 </head>
 <body>
 <?php require_once("../_partial_header.php"); ?>
@@ -111,7 +102,7 @@ For example, if you wanted to buy a stock at 100 Rs, you could enter a limit ord
 <p>Subsequently, the exchange receives the orders from the traders and then it matches appropriately to generate the trade.</p>
 <p>There are five Best bids and Offer bids for a RIL in the market picture screen. The concept of matching the orders can be realised by the below table:-</p>
 <p>The Best five bids and offers are displayed as follows:</p>
-<table id="bid" cellspacing="0" cellpadding="0">
+<table class="datatable" cellspacing="0" cellpadding="0">
 <thead>
 <tr>
 <th>Best Bid Quantity</th>
@@ -188,9 +179,9 @@ The best match for any buy order received in the system will be <span class="cha
 <li><span class="lihead">Circuit filters</span><p>Circuit filter is a real-time surveillance tool to control excessive volatility of particular scrip.  The Exchange decides the circuit filter percentage from time to time. The present Circuit filter percentage is given below to indicate that the price for particular scrip in a particular group should not vary beyond the specified percentage of the previous day's closing price (plus or minus) in a day.</p></li>
 <li><span class="lihead">Daily Circuit Filters</span><p>These Daily Circuit Filters are applied to control the volatility of scrip in a day.  They are expressed on percentage on previous day's closing price.  For example, if a particular scrip has Rs. 30/- as last day's closing price and the Daily Circuit Filter limit is 20%, then the price can vary between Rs. 33/- (Rs.30/- + 3/-) or Rs.27/- (Rs. 30/- - 3/-).</p></li>
 </ul>
-<table class="chapter_table" cellspacing="0" cellpadding="0">
+<table class="datatable" cellspacing="0" cellpadding="0">
 <thead>
-<tr class="grid_header">
+<tr>
 <th>Scrip Price</th>
 <th>Circuit Filter %</th>
 <th>Relaxation</th>
@@ -228,5 +219,23 @@ The best match for any buy order received in the system will be <span class="cha
 </div>
 </div>
 <?php require_once("../_partial_footer.php"); ?>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js"></script>
+<!--script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script-->
+<script src="../javascripts/lib/jquery.jcryption-1.1.min.js"></script>
+<script src="../javascripts/site.js"></script>
+<script>
+   var _gaq = [['_setAccount', 'UA-11011315-1'], ['_trackPageview']];
+   (function(d, t) {
+    var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+    g.async = true;
+    g.src = '//www.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g, s);
+   })(document, 'script');
+</script>
 </body>
 </html>

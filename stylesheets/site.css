@@ -356,10 +356,12 @@ body{
 	font-family:"Segoe UI",Arial,Helvetica,sans-serif;
 	font-size:12px;
 	line-height:20px;
+	color: #333;
         vertical-align: baseline;
         font-smooth:always;
         background:#f3f3f3;
 }
+
 a {
 	color:blue;
 	text-decoration:none;

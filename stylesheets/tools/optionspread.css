@@ -1,0 +1,93 @@
+div#optionspread {
+	padding:36px 0px;
+	font-size: 14px;
+	line-height: 24px;
+	width:950px;
+}
+
+div#optionspread h1 {
+	color: #D13236;
+	font: normal normal normal 30px/45px Cambria, Georgia, 'Times New Roman', Times, serif;
+	margin:0 0 45px 230px;
+	width:50%
+}
+
+div#optionspread form{
+	float:left;
+	width:200px;
+}
+
+div#optionspread form input {
+    background:#FFF;
+    border:1px solid #ababab;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    padding:5px;
+    width:188px;
+    margin-bottom:10px;
+}
+
+div#optionspread form label, div#optionspread form input, div#optionspread form button{
+    color: #333;
+    font: 14px;
+    line-height:24px;
+
+}
+
+td.green {
+	color: #6C9B48;
+}
+
+table#spread_info {
+	width:708px;
+	border-bottom:1px solid #ddd;
+	margin-bottom:20px;
+	margin-left:230px;
+	display:block;
+}
+table#spread_info td {
+	padding:5px 10px;
+}
+
+table#spread_info td.legend{
+	color:#666;
+	text-align:left;
+	width:180px;
+}
+table#spread_info td.colon{
+	text-align:center;
+	width:10px;
+}
+
+td#updatedate {
+	font-style:italic;
+	color:#666;
+}
+
+table#tbl_optionspread{
+	margin-left:230px;
+	display:block;
+}
+
+table#tbl_optionspread th{
+	font-weight:normal;
+	background:#F9F9F9;
+}
+
+table#tbl_optionspread th, table#tbl_optionspread td{
+	width:100px;
+	border:1px solid #ddd;
+	text-align:center;
+}
+
+table#tbl_optionspread td.stk, table#tbl_optionspread th.stk {
+	color: #D13236;
+}
+
+table#tbl_optionspread td{
+	padding:5px 0px;
+	font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:14px;
+}

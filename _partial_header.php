@@ -76,15 +76,16 @@
 <ul class="submenu hide">
 <li><a href="/knowledge/introStockMarket.php"><h6>The stock market</h6><p>The basics of stock market.</p></a></li>
 <li><a href="/knowledge/stockMarketTrading.php"><h6>The stock market trading</h6><p>trading fundamentals.</p></a></li>
+<li><a href="/knowledge/auction.php"><h6>The auction trading</h6><p>Basics of auctions.</p></a></li>
 </ul>
 </li>
-<!-- li class="menuitem" data-tab-name="Tools">
+<li class="menuitem" data-tab-name="Tools">
 <span class="liname">Tools</span>
 <span class="arrow hide"></span>
 <ul class="submenu hide">
-<li><h6>The options spread</h6><p>Hawk eye view of options trading.</p></li>
+<li><a href="/tools/fiidii.php"><h6>Institutional investments</h6><p>A chart of foreign &amp; domestic investments.</p></a></li>
 </ul>
-</li -->
+</li>
 </ul>
 </nav>
 <?php require_once("serverscripts/lastlogin.php");?>

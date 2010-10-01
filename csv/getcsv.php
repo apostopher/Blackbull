@@ -147,6 +147,44 @@ if ($zip->open('test.zip') === TRUE) {
     echo "EQ data is up to date.\n";
 }
 
+//http://www.nseindia.com/content/equities/temp_csv/eq_fiidii_23-09-201023-09-2010.csv
+$baseurl = 'http://www.nseindia.com/content/equities/temp_csv/';
+$filename = 'eq_fiidii_'.$csvdate.$csvdate.'.csv';
+$url = $baseurl.$filename;
+if(url_exists($url)){
+	$file = fopen($url,"r");
+	$fiidii = fgetcsv($file);
+	while($fiidii = fgetcsv($file)) {
+		if(strtoupper($fiidii[0]) == "FII"){
+			$fii = intval($fiidii[4]);
+		}
+		if(strtoupper($fiidii[0]) == "DII"){
+			$dii = intval($fiidii[4]);
+		}
+	}
+	$fiidiiquery = "SELECT fii, dii from fiidii WHERE 1 ORDER BY fiidii_date DESC LIMIT 1";
+	$fiidiiresult = mysql_query($fiidiiquery);
+	if($fiidiiresult){
+		$fiidiirow = mysql_fetch_array($fiidiiresult);
+		$newfii = $fii + $fiidiirow['fii'];
+		$newdii = $dii + $fiidiirow['dii'];
+		
+		$addfiidii = "INSERT INTO fiidii VALUES(NOW(),".$newfii.",".$newdii.")";
+		$addfiidiiresult = mysql_query($addfiidii);
+		if($addfiidiiresult){
+			echo "FII update successful.\n";
+		}else{
+			echo "FII update failed.\n";
+		}
+	}
+	fclose($file);
+}else{
+	$updatetimefo = "UPDATE updatestatus SET timestamp= NOW() WHERE tablename='fiidii'";
+    	$updatetimeforesult = mysql_query($updatetimefo);
+	echo "FII/DII data is up to date.\n";
+}
+
+
 $deleteoldcm = "DELETE FROM cmbhav where DATEDIFF( CURRENT_DATE( ) , timestamp ) > 230";
 $del_cm_result = mysql_query($deleteoldcm);
 

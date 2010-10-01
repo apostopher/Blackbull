@@ -1,0 +1,25 @@
+div#fiidii {
+	padding:36px 24px 0px 0px;
+	font-size: 14px;
+	line-height: 24px;
+	width:900px;
+}
+
+div#fiidii h1 {
+	color: #D13236;
+	font: normal normal normal 32px/48px Cambria, Georgia, 'Times New Roman', Times, serif;
+	margin:0 0 48px 0;
+	width:50%
+}
+
+div#fiidii p{
+	color: #333;
+    	font: normal normal normal 18px/26px Cambria, Georgia, 'Times New Roman', Times, serif;
+	text-align:justify;
+}
+
+div#fiidii h3{
+	color: #D13236;
+    	font: normal normal normal 21px/24px Cambria, Georgia, 'Times New Roman', Times, serif;
+    	margin-bottom:0.5em;
+}

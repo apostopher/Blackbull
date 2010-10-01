@@ -1,0 +1,33 @@
+div#container {
+color:#D5D5D5;
+font-size:20px;
+left:50%;
+margin:-200px 0 0 -225px;
+position:absolute;
+text-shadow:1px 1px 2px #000000;
+top:50%;
+width:450px;
+}
+
+h1 {
+color:#FFF;
+font-size:34px;
+font-weight:bold;
+display:block;
+margin:0.67em 0;
+}
+
+body {
+background-color:#1C1C1C;
+color:#444444;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+a {
+color:#4575b4;
+text-decoration:none;
+}
+
+a:hover {
+color:#fe581a;
+}

@@ -55,9 +55,9 @@ if($rowCheck > 0){
 		// Set cookies if user has selected 'remember me' option on login form
 		if(isset($_POST['remember'])){
 			if($_POST['remember'] == "1"){
-				setcookie("cookid", $_SESSION['id'], time()+60*60*24*100, "/");
-				setcookie("cookname", $_SESSION['user'], time()+60*60*24*100, "/");
-				setcookie("cookpass", $_SESSION['pass'], time()+60*60*24*100, "/");
+				setcookie("cookid", $_SESSION['id'], time()+60*60*24*100, "/","www.blackbull.in");
+				setcookie("cookname", $_SESSION['user'], time()+60*60*24*100, "/","www.blackbull.in");
+				setcookie("cookpass", $_SESSION['pass'], time()+60*60*24*100, "/","www.blackbull.in");
 			}
 		}
 		// If redirect session variable is set, add it to response JSON data

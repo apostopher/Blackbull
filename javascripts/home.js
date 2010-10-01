@@ -18,7 +18,7 @@ $(function() {
 		autopause: true
 	});
 	// Google chrome frame check
-	CFInstall.check({mode: "overlay"});
+	//CFInstall.check({mode: "overlay"});
 	// Set the Edit options
 	$("article#news section.bbnews").blur(function(){
 		if($(this).attr("contenteditable") == "true"){

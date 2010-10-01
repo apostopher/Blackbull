@@ -4,7 +4,7 @@
     <head>
     	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     	<meta name="robots" content="noindex"/>
-    	<link href="/styles/pagenotfound.css" rel="stylesheet" type="text/css">
+    	<link href="/stylesheets/pagenotfound.css" rel="stylesheet" type="text/css">
     	<title>Blackbull Investment Company - Not Found</title>
     </head>
     <body>

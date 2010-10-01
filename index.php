@@ -1,10 +1,10 @@
 <?php
 session_start();
-if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass'])){
+if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE['cookid'])){
       $_SESSION['user'] = $_COOKIE['cookname'];
       $_SESSION['pass'] = $_COOKIE['cookpass'];
+      $_SESSION['id'] = $_COOKIE['cookid'];
    }
-   if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip')) ob_start("ob_gzhandler"); else ob_start();
 ?>
 <!DOCTYPE html>
 <html class="no-js">
@@ -13,17 +13,7 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass'])){
 	<title>Blackbull Investment Company</title>
         <link rel="stylesheet" href="stylesheets/site.css" media="screen">
         <link rel="stylesheet" href="stylesheets/home.css" media="screen">
-        <!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
         <script src="javascripts/lib/modernizr-1.5.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js"></script>
-        <!--script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script-->
-        <script src="javascripts/lib/jquery.tools.min.js"></script>
-        <script src="javascripts/lib/jquery.jcryption-1.1.min.js"></script>
-        <script src="javascripts/site.js"></script>
-        <script src="javascripts/home.js"></script>
 </head>
 <body>
 <?php require_once("_partial_header.php"); ?>
@@ -33,9 +23,9 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass'])){
 <a class="next hide"></a>
 <div id="scrollable">
 <article id="slides">
-<!--section class="items"><a href="articles/cocktail.php"><img src="assets/articleCocktail.jpg" height="400" width="624"/></a></section-->
-<section class="items"><a href="articles/dragonEmpire.php"><img src="assets/articleChina.jpg" height="400" width="624"/></a></section>
-<section class="items"><a href="articles/unlockTheCycle.php"><img src="assets/articleCycle.jpg" height="400" width="624"/></a></section>
+<!--section class="items"><a href="articles/cocktail.php"><img src="http://assets.blackbull.in/articleCocktail.jpg" height="400" width="624"/></a></section-->
+<section class="items"><a href="articles/dragonEmpire.php"><img src="http://assets.blackbull.in/articleChina.jpg" height="400" width="624"/></a></section>
+<section class="items"><a href="articles/unlockTheCycle.php"><img src="http://assets.blackbull.in/articleCycle.jpg" height="400" width="624"/></a></section>
 </article>
 </div>
 <a class="prev hide"></a>
@@ -84,13 +74,33 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass'])){
 <div class="goto"><a href="services/portfolio.php">For details visit Blackbull portfolio</a></div>
 </section>
 <section class="bbinfo">
-<h2>Blackbull Queries</h2>
-<p>Our new Blackbull queries is specially made available to answer your queries related to stocks and investments. Feel free to post your queries and we will get back to you as soon as possible.</p>
-<span class="goto"><a href="services/queries.php">Go to Blackbull Queries &raquo;</a></span>
+<h2>Blackbull Tools</h2>
+<p>Blackbull provides tools that will help you take your investment decisions. The institutional investments chart shows foreign and domestic investments in NSE. This graph will tell you the market perspective of big investors.</p>
+<span class="goto"><a href="tools/fiidii.php">Go to Blackbull Tools &raquo;</a></span>
 </section>
 </aside>
 <div class="spacer">&nbsp;</div>
 </div>
 <?php require_once("_partial_footer.php"); ?>
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js"></script>
+<!--script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script-->
+<script src="javascripts/lib/jquery.tools.min.js"></script>
+<script src="javascripts/lib/jquery.jcryption-1.1.min.js"></script>
+<script src="javascripts/site.js"></script>
+<script src="javascripts/home.js"></script>
+<script>
+   var _gaq = [['_setAccount', 'UA-11011315-1'], ['_trackPageview']];
+   (function(d, t) {
+    var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+    g.async = true;
+    g.src = '//www.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g, s);
+   })(document, 'script');
+</script>
 </body>
 </html>

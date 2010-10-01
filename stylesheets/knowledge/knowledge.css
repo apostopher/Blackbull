@@ -26,8 +26,8 @@ div#knowledge article#rightpane{
 }
 
 div#knowledge article#rightpane aside p.impact, div#knowledge article#rightpane aside ul li{
+	font: 18px/26px "chaparral-pro-1", "chaparral-pro-2", Georgia, "Times New Roman", Times, serif;
 	color: #333;
-    	font: normal normal normal 18px/26px Cambria, Georgia, 'Times New Roman', Times, serif;
 }
 
 div#knowledge article#rightpane aside{
@@ -85,4 +85,32 @@ span.dropcap {
 a.button {
 	background-color:#F6F5EA;
 	border:1px solid #BCB79C;
+}
+table.formula td{
+	text-align:center;
+	padding:5px;
+}
+
+table.formula td.numerator{
+	border-bottom:1px solid #333;
+}
+
+table.datatable {
+	border:1px solid #EEE;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+
+table.datatable tr th {
+	padding:10px;
+	background: #F9F9F9;
+	border-bottom: 1px solid #ddd;
+	font: normal normal normal 14px/21px Cambria, Georgia, 'Times New Roman', Times, serif;
+	text-align: left;
+}
+
+table.datatable tr td {
+	padding:10px 20px;
+	text-align:center;
 }
