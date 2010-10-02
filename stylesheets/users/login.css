@@ -1,18 +1,18 @@
-div#login {
+#login {
 	width:900px;
 } 
 
-div#login h1 {
+#login h1 {
 	color: #D13236;
 	font: normal normal normal 30px/54px Cambria, Georgia, 'Times New Roman', Times, serif;
 	margin: 36px 0px 18px;
 }
 
-div#login p {
+#login p {
 	color: #333;
 	font: normal normal normal 18px/26px Cambria, Georgia, 'Times New Roman', Times, serif;
 }
-div#formholder{
+#formholder{
 	padding:40px 10px;
 	margin-bottom:50px;
 	background:#fafafa;
@@ -32,7 +32,7 @@ div#formholder{
 	border-right:1px solid #ddd;
 }
 
-div#newmember {
+#newmember {
 	padding:90px 20px;
 	display:block;
 	height:100px;
@@ -55,7 +55,7 @@ a.over {
 	background-position:0 -37px;
 }
 
-div#login #login p {
+#login p {
 	font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
 	font-size: 12px;
 	line-height: 20px;

@@ -52,8 +52,8 @@
 <span class="liname">Services</span>
 <span class="arrow hide"></span>
 <ul class="submenu hide">
-<li><a href="/services/queries.php"><h6>Blackbull Queries</h6><p>Get your questions answered.</p></a></li>
-<li><a href="/services/portfolio.php"><h6>Blackbull Portfolio</h6><p>The market positions that we have.</p></a></li>
+<li><a href="/services/queries.php" rel="prefetch"><h6>Blackbull Queries</h6><p>Get your questions answered.</p></a></li>
+<li><a href="/services/portfolio.php" rel="prefetch"><h6>Blackbull Portfolio</h6><p>The market positions that we have.</p></a></li>
 </ul>
 </li>
 <li class="menuitem wall" data-tab-name="Articles">

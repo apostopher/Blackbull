@@ -173,15 +173,15 @@ if(url_exists($url)){
 		$addfiidiiresult = mysql_query($addfiidii);
 		if($addfiidiiresult){
 			echo "FII update successful.\n";
+			$updatetimefo = "UPDATE updatestatus SET timestamp= NOW() WHERE tablename='fiidii'";
+    			$updatetimeforesult = mysql_query($updatetimefo);
 		}else{
 			echo "FII update failed.\n";
 		}
 	}
 	fclose($file);
 }else{
-	$updatetimefo = "UPDATE updatestatus SET timestamp= NOW() WHERE tablename='fiidii'";
-    	$updatetimeforesult = mysql_query($updatetimefo);
-	echo "FII/DII data is up to date.\n";
+	echo "FII/DII data not available.<br/>";
 }
 
 

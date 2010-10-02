@@ -1,5 +1,5 @@
 /* =============================== Header CSS styles - Start ================= */
-header#siteheader {
+#siteheader {
         background:url("../images/header_back.png") repeat-x;
 	background-color:#000;
 	display:block;
@@ -8,18 +8,18 @@ header#siteheader {
         position:relative;
 }
 
-header#siteheader a#logo{
+#logo{
 	display:inline-block;
 	height:40px;
 	border:0;
 }
 
-header#siteheader a#logo img{
+#logo img{
 	border:0;
         margin-top:8px;
 }
 
-div#light {
+#light {
         display:block;
         height:1px;
         line-height:1px;
@@ -30,18 +30,18 @@ div#light {
         background: #000 url("../images/light.png") no-repeat center center;
 }
 
-nav#sitenavigation{
+#sitenavigation{
 	display:block;
 	padding:0px 24px;
 	background-color:#242b3b;
 	height:32px;
 }
-nav#sitenavigation ul#mainnav {
+#mainnav {
         margin:0;
         padding:0;
         height:32px;
 }
-nav#sitenavigation ul li.menuitem{
+.menuitem{
         float:left;
         display:inline-block;
         margin:0;
@@ -56,45 +56,20 @@ nav#sitenavigation ul li.menuitem{
         position:relative;
         z-index: 50;
 }
-nav#sitenavigation ul li.wall{
+.wall{
         background:url("../images/menu_wall.png") no-repeat right center;
 }
-nav#sitenavigation ul li.selected{
+.selected{
         background:#FFF;
         color:#000;
 }
 
-nav#sitenavigation ul li#sitemap {
-        float:right;
-        text-align:right;
-        margin:0;
-        padding-right:0;
-        display:inline-block;
-        color:#fff;
-        height:32px;
-        line-height:32px;
-        padding:0 5px;
-        font-size:14px;
-        cursor:pointer;
-        width:80px;
-        letter-spacing:1px;
-        position:relative;
-}
-
-nav#sitenavigation ul li#sitemap span {
-       text-align:right;
-}
-
-nav#sitenavigation ul li span.liname {
+.liname {
         display:block;
         text-align:center;
 }
 
-nav#sitenavigation ul li span.hide, nav ul li span.invisible{
-        display:none;
-}
-
-ul.submenu {
+.submenu {
         margin:0;
         list-style:none;
         border:1px solid #ddd;
@@ -107,11 +82,7 @@ ul.submenu {
         z-index:48;
 }
 
-ul.hide{
-        display:none;
-}
-
-html>body nav ul li span.active {
+html>body .active {
         background:url("../images/spotlight.png") no-repeat center top;    
 }
 
@@ -126,13 +97,16 @@ html>body .arrow{
         margin-left:-18px;
 }
 
-ul.submenu li {
+html>body .hide{
+	display:none;
+}
+.submenu li {
         margin:0;
         padding:4px 8px;
         border-top:1px solid #E3E3E3;
 }
 
-ul.submenu li h6 {
+.submenu li h6 {
         font-size:14px;
         line-height:16px;
         color:#4575B4;
@@ -140,7 +114,7 @@ ul.submenu li h6 {
         letter-spacing:1px;
         margin:0 0 2px 0;
 }
-ul.submenu li p {
+.submenu li p {
         color:#bbb;
         font-style:italic;
         margin:0;
@@ -151,7 +125,7 @@ ul.submenu li p {
 /* =============================== Header CSS styles - Stop ================== */
 
 /* =============================== Footer CSS styles - Start ================= */
-footer#sitefooter {
+#sitefooter {
     display:block;
     float:left;
     clear:both;
@@ -164,7 +138,7 @@ footer#sitefooter {
     padding-bottom:64px;
 }
 
-footer#sitefooter div#copy{
+#copy{
    padding:0 24px;
    display:block;
    text-align:center;
@@ -208,14 +182,14 @@ footer#sitefooter div#copy{
    list-style:none;
 }
 
-#header_login_nav ul li.first{
+#header_login_nav .first{
   margin-right:2px;
 }
-#header_login_nav ul li.second{
+#header_login_nav .second{
   line-height:14px;
   padding-top:6px;
 }
-#header_login_nav ul li.limenu{
+#header_login_nav .limenu{
   margin-left:2px;
   cursor:pointer;
 }
@@ -233,7 +207,7 @@ footer#sitefooter div#copy{
     border-bottom:0;
 }
 
-#header_login_nav ul li.hovered{
+#header_login_nav .hovered{
     background:#F9F9F9;
 }
 
@@ -271,17 +245,17 @@ footer#sitefooter div#copy{
    padding:3px 10px;
 }
 
-div#loadingdiv{
+#loadingdiv{
    color:#FFF;
    padding-left:24px;
    background:url("../images/loader.gif") no-repeat left center;
 }
 
-div.hide{
-    display:none;
+.hide, .invisible{
+        display:none;
 }
 
-#signin_menu p.forgot a#forgot {
+#forgot {
     color:#27B;
 }
 #signin_menu p {
@@ -387,12 +361,12 @@ table{
 	border-collapse: collapse;
 }
 
-div#content{
+#content{
 	margin:0;
 	padding:16px 0px 10px 24px;
 	background:#FFF;
 }
-div.spacer {
+.spacer {
 	clear:both;
 	font-size:0em;
 	line-height:0;
@@ -400,7 +374,7 @@ div.spacer {
 	margin:0;
 	border:0;
 }
-div#content p{
+#content p{
 	text-align:justify;
 	color: #15100F;
 	font-size: 14px;

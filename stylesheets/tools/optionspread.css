@@ -1,23 +1,23 @@
-div#optionspread {
+#optionspread {
 	padding:36px 0px;
 	font-size: 14px;
 	line-height: 24px;
 	width:950px;
 }
 
-div#optionspread h1 {
+#optionspread h1 {
 	color: #D13236;
 	font: normal normal normal 30px/45px Cambria, Georgia, 'Times New Roman', Times, serif;
 	margin:0 0 45px 230px;
 	width:50%
 }
 
-div#optionspread form{
+#optionspread form{
 	float:left;
 	width:200px;
 }
 
-div#optionspread form input {
+#optionspread form input {
     background:#FFF;
     border:1px solid #ababab;
     border-radius:5px;
@@ -28,7 +28,7 @@ div#optionspread form input {
     margin-bottom:10px;
 }
 
-div#optionspread form label, div#optionspread form input, div#optionspread form button{
+#optionspread form label, #optionspread form input, #optionspread form button{
     color: #333;
     font: 14px;
     line-height:24px;
@@ -46,46 +46,46 @@ table#spread_info {
 	margin-left:230px;
 	display:block;
 }
-table#spread_info td {
+#spread_info td {
 	padding:5px 10px;
 }
 
-table#spread_info td.legend{
+#spread_info td.legend{
 	color:#666;
 	text-align:left;
 	width:180px;
 }
-table#spread_info td.colon{
+#spread_info td.colon{
 	text-align:center;
 	width:10px;
 }
 
-td#updatedate {
+#updatedate {
 	font-style:italic;
 	color:#666;
 }
 
-table#tbl_optionspread{
+#tbl_optionspread{
 	margin-left:230px;
 	display:block;
 }
 
-table#tbl_optionspread th{
+#tbl_optionspread th{
 	font-weight:normal;
 	background:#F9F9F9;
 }
 
-table#tbl_optionspread th, table#tbl_optionspread td{
+#tbl_optionspread th, table#tbl_optionspread td{
 	width:100px;
 	border:1px solid #ddd;
 	text-align:center;
 }
 
-table#tbl_optionspread td.stk, table#tbl_optionspread th.stk {
+#tbl_optionspread td.stk, table#tbl_optionspread th.stk {
 	color: #D13236;
 }
 
-table#tbl_optionspread td{
+#tbl_optionspread td{
 	padding:5px 0px;
 	font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
 	font-weight:bold;

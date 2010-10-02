@@ -1,25 +1,25 @@
-div#registration {
+#registration {
 	width:900px;
 }
 
-div#registration h1 {
+#registration h1 {
 	color: #D13236;
 	font: normal normal normal 30px/54px Cambria, Georgia, 'Times New Roman', Times, serif;
 	margin: 36px 0px 18px;
 }
 
-div#registration p {
+#registration p {
 	color: #333;
 	font: normal normal normal 18px/26px Cambria, Georgia, 'Times New Roman', Times, serif;
 }
 
-div#registration a, div#registration a:visited {
+#registration a, div#registration a:visited {
 	color:blue;
 	text-decoration:none;
 	border-bottom:1px dotted #999;
 }
 
-div#registration a:hover {
+#registration a:hover {
 	color:#fe581a;
 	border-bottom:1px dotted #333;
 }
@@ -45,7 +45,7 @@ div#registration a:hover {
 	text-align:left;
 }
 
-div#registration #registrationform p {
+#registrationform p {
 	font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
 	font-size: 12px;
 	line-height: 20px;
@@ -147,27 +147,27 @@ div.errortip {
 	display:inline-block;
 }
 
-span#captcharesult{
+#captcharesult{
 	margin-left:4px;
 	color: #D13236;
 	margin-bottom:0;
 }
 
-span#firstnameresult{
+#firstnameresult{
 	margin-left:157px;
 	width:210px;
 }
 
-span#lastnameresult{
+#lastnameresult{
 	margin-left:159px;
 	width:210px;
 }
 
-span#emailresult{
+#emailresult{
 	margin-left:157px;
 }
 
-span#passresult{
+#passresult{
 	margin:4px 0px 4px 157px;
 	width:250px;
 	color:#D13236;
@@ -181,7 +181,7 @@ span#passresult{
 	color:#5AAA23;
 }
 
-div#captchaholder{
+#captchaholder{
 	position:absolute;
 	-moz-box-shadow:0 0 18px rgba(0, 0, 0, 0.4);
 	box-shadow:0 0 18px rgba(0, 0, 0, 0.4);
@@ -195,7 +195,7 @@ div#captchaholder{
 	top:50%;
 }
 
-div#verifyhuman {
+#verifyhuman {
 	border-radius: 5px;
 	-webkit-border-radius:5px;
 	-moz-border-radius:5px;
@@ -203,14 +203,14 @@ div#verifyhuman {
 	padding:20px;
 }
 
-div#verifyhuman h3{
+#verifyhuman h3{
 	color:#333;
 	font: normal normal normal 18px/26px Cambria, Georgia, 'Times New Roman', Times, serif;
 	margin-top:0;
 	margin-bottom:5px;
 }
 
-div#recaptcha_image {
+#recaptcha_image {
 	border-radius: 5px;
 	-webkit-border-radius:5px;
 	-moz-border-radius:5px;
@@ -226,16 +226,16 @@ div#recaptcha_image {
 	padding-left:5px;
 	margin-top:10px;
 }
-button#captchaSubmit {
+#captchaSubmit {
 	margin:0;
 	height:30px;
 }
 
-input#recaptcha_response_field {
+#recaptcha_response_field {
 	line-height:18px;
 	height:18px;
 }
-a#closePopup {
+#closePopup {
 	text-indent:-1000em;
 	display:inline-block;
 	float:right;
@@ -247,6 +247,6 @@ a#closePopup {
 	margin-top:-11px;
 }
 
-a#closePopup:hover{
+#closePopup:hover{
 	background-position:0 -21px;
 }

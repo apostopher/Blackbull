@@ -1,5 +1,5 @@
 /* ------------   Post a Query ----- */
-div#postquery{
+#postquery{
 	display:inline-block;
 	clear:both;
 	margin:0px 0px 20px 0px;
@@ -11,13 +11,13 @@ div#postquery{
   	border:1px solid #eee;
 }
 
-div#postquery h3 {
+#postquery h3 {
 	color: #333;
 	font: normal normal normal 18px/26px Cambria, Georgia, 'Times New Roman', Times, serif;
 	margin:0;
 }
 
-div#charsleft {
+#charsleft {
 	float:right;
 	line-height:26px;
 	color:#666;
@@ -50,7 +50,7 @@ input.hovered{
 	background-position: 0px -28px;
 }
 
-div#privatetip{
+#privatetip{
   position:absolute;
   top:2em;
   left:1px;
@@ -66,16 +66,16 @@ div#privatetip{
   -webkit-box-shadow:0.25em 0.25em 1em rgba(0, 0, 0, 0.25);
 }
 
-span#tip{
+#tip{
 	padding:5px 0px;
 	position:relative;
 }
 
-input#privatepost {
+#privatepost {
 	margin-top:8px;
 }
 
-div#formresult{
+#formresult{
 	padding:0px 10px;
 	background-color:#FDFFCE;
 	display:none;

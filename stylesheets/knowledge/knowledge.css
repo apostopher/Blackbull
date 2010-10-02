@@ -1,42 +1,42 @@
-div#knowledge {
+#knowledge {
 	padding:36px 0px;
 	font-size: 14px;
 	line-height: 24px;
 }
 
-div#knowledge h1 {
+#knowledge h1 {
 	color: #D13236;
 	font: normal normal normal 40px/60px Cambria, Georgia, 'Times New Roman', Times, serif;
 	margin:54px 0;
 	width:50%
 }
 
-div#knowledge aside#leftpane{
+#leftpane{
 	float: left;
 	margin: 0px;
 	padding: 0px 10px 0px 0px;
 	width: 190px;
 }
 
-div#knowledge article#rightpane{
+#rightpane{
 	float: left;
 	padding: 0px 0px 0px 20px;
 	border-left:1px solid #eee;
 	width: 724px;
 }
 
-div#knowledge article#rightpane aside p.impact, div#knowledge article#rightpane aside ul li{
+#rightpane aside p.impact, #rightpane aside ul li{
 	font: 18px/26px "chaparral-pro-1", "chaparral-pro-2", Georgia, "Times New Roman", Times, serif;
 	color: #333;
 }
 
-div#knowledge article#rightpane aside{
+#rightpane aside{
 	margin-bottom:50px;
 	border-bottom:1px solid #eee;
 	padding-bottom:18px;
 }
 
-div#knowledge article#rightpane aside.know {
+#rightpane aside.know {
 	background: #fff8c1;
 	border:1px solid #eee27a;
 	margin:5px 0 5px 10px;
@@ -46,14 +46,14 @@ div#knowledge article#rightpane aside.know {
 	color:#666;
 }
 
-div#knowledge article#rightpane footer{
+#rightpane footer{
 	border-top: 1px dashed #999;
 	padding:10px 0px;
 	font-size:12px;
 	line-height:18px;
 }
 
-div#knowledge p{
+#knowledge p{
 	font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
 	font-size:14px;
 	line-height:24px;
@@ -62,12 +62,12 @@ div#knowledge p{
 	text-align:justify;
 }
 
-div#knowledge ul{
+#knowledge ul{
 	list-style: disc;
 	margin-left: 20px;
 }
 
-div#knowledge h3{
+#knowledge h3{
 	color: #D13236;
 	font: normal normal normal 18px/26px Cambria, Georgia, 'Times New Roman', Times, serif;
 }

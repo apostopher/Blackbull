@@ -1,17 +1,17 @@
-div#queries {
+#queries {
 	width:925px;
 }
 
-div#queries a{
+#queries a{
 	color:#4575B4;
 }
 
-div#queries a:hover{
+#queries a:hover{
 	border-bottom:1px dotted #666;
 	color:#ff6633;
 }
 
-div#queries h1 {
+#queries h1 {
 	color: #D13236;
 	font: normal normal normal 30px/54px Cambria, Georgia, 'Times New Roman', Times, serif;
 	margin: 36px 0px 18px 0px;
@@ -30,12 +30,12 @@ div#queries h1 {
 	
 }
 
-div#queries p {
+#queries p {
 	color: #333;
 	font: normal normal normal 18px/26px Cambria, Georgia, 'Times New Roman', Times, serif;
 }
 
-div#queries p.highlight{
+#queries p.highlight{
 	background-color:#FDFFCE;
 }
 

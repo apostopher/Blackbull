@@ -1,4 +1,4 @@
-div#query {
+#query {
 	width:900px;
 	padding-left:20px;
 	padding-top:30px;
@@ -56,7 +56,7 @@ left:-30px;
 top:-6px;
 }
 
-div#query div.qn_body p{
+#query div.qn_body p{
 	color: #333;
 	font: normal normal normal 18px/26px Cambria, Georgia, 'Times New Roman', Times, serif;
 }

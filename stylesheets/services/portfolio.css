@@ -1,29 +1,29 @@
-div#portfolio {
+#portfolio {
 	padding:18px 0px;
 	font-size:13px;
 	line-height:24px;
 	width:925px;
 }
 
-div#portfolio h1 {
+#portfolio h1 {
 	color: #D13236;
 	font: normal normal normal 30px/54px Cambria, Georgia, 'Times New Roman', Times, serif;
 	margin:36px 0;
 }
 
-div#portfolio p{
+#portfolio p{
 	font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
 	color:#15100F;
 	margin-bottom:24px;
 	text-align:justify;
 }
 
-div#investment_positions{
+#investment_positions{
 	float:left;
 	width:450px;
 }
 
-div#trading_positions{
+#trading_positions{
 	float:right;
 	width:450px;
 }
@@ -32,7 +32,7 @@ table.invisible{
 	display:none;
 }
 
-div#portfolio td.loading, #facebox .scripdetails td.loading{
+#portfolio td.loading, #facebox .scripdetails td.loading{
 	background:url("../../images/black_loader.gif") no-repeat center 5px;
 	padding:12px;
 	text-align:center;
