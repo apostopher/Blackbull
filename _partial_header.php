@@ -79,7 +79,7 @@
 <li><a href="/knowledge/auction.php"><h6>The auction trading</h6><p>Basics of auctions.</p></a></li>
 </ul>
 </li>
-<li class="menuitem" data-tab-name="Tools">
+<li class="menuitem wall" data-tab-name="Tools">
 <span class="liname">Tools</span>
 <span class="arrow hide"></span>
 <ul class="submenu hide">

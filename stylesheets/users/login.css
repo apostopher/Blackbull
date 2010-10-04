@@ -44,7 +44,8 @@ a.registeruser {
 	display:block;
 	width:117px;
 	height:36px;
-	background:url("../../images/highbutton_matrix.png") no-repeat center top;
+	background:url("http://images.blackbull.in/all_button_matrix.png") no-repeat center top;
+	background-position:-227px 0px;
 	font: normal normal normal 24px/30px Cambria, Georgia, 'Times New Roman', Times, serif;
 	color: white;
 	text-shadow: #333 1px 1px 0px;
@@ -52,15 +53,9 @@ a.registeruser {
 }
 
 a.over {
-	background-position:0 -37px;
+	background-position:-227px -37px;
 }
 
-#login p {
-	font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
-	font-size: 12px;
-	line-height: 20px;
-	text-align:right;
-}
 #loginform label, #loginform input, #resendpass label, #resendpass input{
 	color: #333;
 	font: normal normal normal 18px/26px Cambria, Georgia, 'Times New Roman', Times, serif;
@@ -110,8 +105,8 @@ a.over {
 	width:114px;
 	height:30px;
 	border:0;
-	background:url("../../images/signin.png") no-repeat top left;
-	background-position:0px -30px;
+	background:url("http://images.blackbull.in/all_button_matrix.png") no-repeat top left;
+	background-position:-605px -30px;
 	text-shadow: #FFF 1px 1px 0px;
 	padding:0;
 	line-height:30px;
@@ -120,13 +115,13 @@ a.over {
 }
 
 #loginform input.hovered, #resendpass input.hovered {
-	background-position:0px -60px;
+	background-position:-605px -60px;
 	text-shadow: #333 1px 1px 0px;
 	color:#fff;
 }
 
 #loginform input.disabled {
-	background-position:0px 0px;
+	background-position:-605px 0px;
 	text-shadow: #333 1px 1px 0px;
 	color:#fff;
 }

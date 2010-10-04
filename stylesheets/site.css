@@ -1,6 +1,6 @@
 /* =============================== Header CSS styles - Start ================= */
 #siteheader {
-        background:url("../images/header_back.png") repeat-x;
+        background:url("http://images.blackbull.in/all_button_matrix.png") repeat-x 0px -148px;
 	background-color:#000;
 	display:block;
 	font-size:1em;
@@ -27,7 +27,7 @@
         overflow:none;
         margin:0;
         padding:0;
-        background: #000 url("../images/light.png") no-repeat center center;
+        background: #000 url("http://images.blackbull.in/all_button_matrix.png") no-repeat center -330px;
 }
 
 #sitenavigation{
@@ -57,7 +57,7 @@
         z-index: 50;
 }
 .wall{
-        background:url("../images/menu_wall.png") no-repeat right center;
+        background:url("http://images.blackbull.in/all_button_matrix.png") no-repeat -514px -106px;
 }
 .selected{
         background:#FFF;
@@ -74,16 +74,16 @@
         list-style:none;
         border:1px solid #ddd;
         border-top:0;
-        left:-1px;
         background:#FFF;
         position:absolute;
         padding:10px 4px 4px;
         width:250px;
         z-index:48;
+        left:1px;
 }
 
 html>body .active {
-        background:url("../images/spotlight.png") no-repeat center top;    
+        background:url("http://images.blackbull.in/all_button_matrix.png") no-repeat center -100px;    
 }
 
 html>body .arrow{
@@ -93,7 +93,7 @@ html>body .arrow{
         top:32px;
         height:6px;
         width:100%;
-        background:url("../images/arrow_down.gif") no-repeat center center;
+        background:url("http://images.blackbull.in/all_button_matrix.png") no-repeat center -320px;
         margin-left:-18px;
 }
 
@@ -134,7 +134,7 @@ html>body .hide{
     color:#666;
     height:16px;
     border-top:1px solid #aaa;
-    background:url("../images/footer_back.png") top left repeat-x;
+    background:url("http://images.blackbull.in/all_button_matrix.png") 0px -341px repeat-x;
     padding-bottom:64px;
 }
 
@@ -336,6 +336,9 @@ body{
         background:#f3f3f3;
 }
 
+article, aside, figure, footer, header, 
+hgroup, nav, section { display:block; }
+
 a {
 	color:blue;
 	text-decoration:none;
@@ -382,7 +385,9 @@ table{
 	margin-bottom: 20px;
 }
 p.last::after{
-	content: url("../images/stop.gif");
+	content: url("http://images.blackbull.in/stop.gif");
 	margin-left:4px;
+	width:10px;
+	height:10px;
 }
 /* =============================== Common CSS styles - Stop =============== */

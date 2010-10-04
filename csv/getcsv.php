@@ -156,10 +156,10 @@ if(url_exists($url)){
 	$fiidii = fgetcsv($file);
 	while($fiidii = fgetcsv($file)) {
 		if(strtoupper($fiidii[0]) == "FII"){
-			$fii = intval($fiidii[4]);
+			$fii = floatval($fiidii[4]);
 		}
 		if(strtoupper($fiidii[0]) == "DII"){
-			$dii = intval($fiidii[4]);
+			$dii = floatval($fiidii[4]);
 		}
 	}
 	$fiidiiquery = "SELECT fii, dii from fiidii WHERE 1 ORDER BY fiidii_date DESC LIMIT 1";

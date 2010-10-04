@@ -33,7 +33,7 @@ table.invisible{
 }
 
 #portfolio td.loading, #facebox .scripdetails td.loading{
-	background:url("../../images/black_loader.gif") no-repeat center 5px;
+	background:url("http://images.blackbull.in/black_loader.gif") no-repeat center 5px;
 	padding:12px;
 	text-align:center;
 }
@@ -71,7 +71,8 @@ table.portfolio_list td.details{
 	text-align:center;
 }
 table.portfolio_list td.details a{
-	background: url("../../images/button_matrix.png") no-repeat 0px -23px;
+	background: url("http://images.blackbull.in/all_button_matrix.png") no-repeat;
+	background-position:-117px -23px;
 	border:0;
 	color: #333;
 	cursor: pointer;
@@ -85,18 +86,19 @@ table.portfolio_list td.details a{
 }
 
 table.portfolio_list td.details a.hovered{
-	background-position:0 -69px;
+	background-position:-117px -69px;
 	color:#FFFFFF;
 	text-decoration:none;
 	text-shadow:-1px -1px 0 rgba(0, 0, 0, 0.3);
 }
 
 table.portfolio_list td.details a.mousedown{
-	background-position:0 -115px;
+	background-position:-117px -115px;
 }
 
 table.portfolio_list td.details a > span{
-	background: url("../../images/button_matrix.png") no-repeat 100% 0px;
+	background: url("http://images.blackbull.in/all_button_matrix.png") no-repeat;
+	background-position:-164px 0px;
 	display: block;
 	height: 23px;
 	line-height: 23px;
@@ -104,10 +106,10 @@ table.portfolio_list td.details a > span{
 }
 
 table.portfolio_list td.details a > span.hovered{
-	background-position:100% -46px;
+	background-position:-164px -46px;
 }
 table.portfolio_list td.details a > span.mousedown{
-	background-position:100% -92px;
+	background-position:-164px -92px;
 }
 
 #facebox {
