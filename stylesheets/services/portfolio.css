@@ -11,6 +11,12 @@
 	margin:36px 0;
 }
 
+#portfolio h3 {
+	color: #333;
+    font: normal normal normal 24px/36px Cambria, Georgia, 'Times New Roman', Times, serif;
+    text-align:center;
+}
+
 #portfolio p{
 	font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
 	color:#15100F;

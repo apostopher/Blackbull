@@ -17,7 +17,7 @@ if(!isset($_SESSION['user'])){
 	<title>Blackbull Investment Company</title>
 	<link rel="stylesheet" href="../stylesheets/site.css" media="screen">
 	<link rel="stylesheet" href="../stylesheets/services/portfolio.css" media="screen">
-	<script src="../javascripts/lib/modernizr-1.5.min.js"></script>
+	<!-- script src="../javascripts/lib/modernizr-1.5.min.js"></script -->
 </head>
 <body>
 <div id="facebox_overlay" class="hide"></div>
@@ -42,6 +42,7 @@ if(!isset($_SESSION['user'])){
 <div id="portfolio">
 <h1>Blackbull Portfolio</h1>
 <div id="investment_positions">
+<h3>Investment positions</h3>
 <table id="investment_list_table" class="portfolio_list" cellspacing="0" cellpadding="0">
 <thead>
 <tr><th colspan="3">&nbsp;</th></tr>
@@ -52,6 +53,7 @@ if(!isset($_SESSION['user'])){
 </table>
 </div>
 <div id="trading_positions">
+<h3>Trading positions</h3>
 <table id="trading_list_table" class="portfolio_list" cellspacing="0" cellpadding="0">
 <thead>
 <tr><th colspan="3">&nbsp;</th></tr>

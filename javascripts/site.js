@@ -45,9 +45,7 @@ $("li.menuitem").hover(
 /* ====================== Login Functionality Start =========================*/
 
 $("#opaque").css('height', $(document).height());
-	if (!Modernizr.inputtypes.email) {
-		$("username").attr("type","text");
-	}
+	
 	$("#header_login_nav ul li.limenu").hover(
 		function(){
 			$(this).addClass("dummy");

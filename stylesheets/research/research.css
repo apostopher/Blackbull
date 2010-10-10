@@ -1,0 +1,60 @@
+#analysis{
+	width:900px;
+	margin:0 auto;
+}
+
+#analysis p{
+	font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    font-size:14px;
+    line-height:24px;
+    color:#333;
+    margin-bottom:24px;
+    text-align:justify;
+}
+
+#analysis h1{
+		color: #D13236;
+    font: normal normal normal 40px/60px Cambria, Georgia, 'Times New Roman', Times, serif;
+    margin:54px 0;
+    width:50%
+}
+
+#suggest{
+	float:right;
+	width:100px;
+	text-align:center;
+	border:1px solid #eee27a;
+	background:#fff8c1;
+	padding:5px;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+
+#suggest h3{
+	text-transform:uppercase;
+	letter-spacing:1px;
+	color:#666;
+	font-weight:normal;
+	margin-bottom:0;
+}
+
+#analysis p.buy{
+	color:#6C9B48;
+	font-style:italics;
+	margin:10px 0px;
+	font-weight:bold;
+	font-size:18px;
+	text-align:center;
+	text-shadow:#FFF 1px 1px 0px;
+}
+
+.dropcap {
+    float: left;
+    font-family: Cambria, Georgia, 'Times New Roman', Times, serif;
+    font-size: 3.5em;
+    line-height: 0.95em;
+    padding-right: 5px;
+    padding-top: 1px;
+    color:#000;
+}

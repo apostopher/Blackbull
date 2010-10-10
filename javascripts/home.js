@@ -67,7 +67,7 @@ $(function() {
 		}
 		return false;
 	});
-	if(Modernizr.localstorage){
+	if(supports_local_storage()){
 		$.getScript('/javascripts/admin.js');
 	}
 	// Get the homepage portfolio content
@@ -154,3 +154,11 @@ $(function() {
 		}
 	});
 });
+
+function supports_local_storage() {
+  try {
+    return 'localStorage' in window && window['localStorage'] !== null;
+  } catch(e){
+    return false;
+  }
+}

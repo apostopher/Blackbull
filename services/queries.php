@@ -18,7 +18,7 @@ if(!isset($_SESSION['user'])){
 	<link rel="stylesheet" href="../stylesheets/site.css" media="screen">
 	<link rel="stylesheet" href="../stylesheets/services/queries.css" media="screen">
 	<link rel="stylesheet" href="../stylesheets/services/queryform.css" media="screen">
-	<script src="../javascripts/lib/modernizr-1.5.min.js"></script>
+	<!-- script src="../javascripts/lib/modernizr-1.5.min.js"></script -->
 </head>
 <body>
 <?php require_once("../_partial_header.php"); ?>

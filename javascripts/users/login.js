@@ -79,12 +79,20 @@ $(function(){
 					dataType: "json",
 					success: function(response){
 						$("#submitform").attr("disabled", false);
-						if(response.id != '0'){
-							$("#submitform").val("Redirecting");
-							if(response.redirect != '0'){
-								window.location.replace("http://www.blackbull.in"+ response.redirect);
+						if(response){
+							if(response.id != '0'){
+								$("#submitform").val("Redirecting");
+								if(response.redirect != '0'){
+									window.location.replace("http://www.blackbull.in"+ response.redirect);
+								}else{
+									window.location.replace("http://www.blackbull.in");
+								}
 							}else{
-								window.location.replace("http://www.blackbull.in");
+								$("#submitform").removeClass("disabled");
+					        		$("#submitform").val("Sign in");
+					        		$("#submitform").attr("disabled", false);
+					        		$("#newpass").val(username);
+								$("#loginerror").show();
 							}
 						}else{
 							$("#submitform").removeClass("disabled");

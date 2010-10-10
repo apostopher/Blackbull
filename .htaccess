@@ -46,6 +46,21 @@ AddType font/x-woff                   woff
 
 AddType text/cache-manifest           manifest
 
+# e.g. Inside of script.combined.js you could have
+#   <!--#include file="jquery-1.4.2.js" -->
+#   <!--#include file="jquery.idletimer.js" -->
+# and they would be included into this single file
+
+# this is not in use in the boilerplate as it stands. you may
+#   choose to name your files in this way for this advantage
+#   or concatenate and minify them manually.
+# Disabled by default.
+
+<FilesMatch "\.combined\.(js|css)$">
+         Options +IncludesNOEXEC
+         SetOutputFilter INCLUDES
+</FilesMatch>
+
 # gzip compression.
 <IfModule mod_deflate.c>
 

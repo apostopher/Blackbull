@@ -66,10 +66,13 @@
 <li><a href="/articles/smallIsBeautiful.php"><h6>Small is beautiful</h6><p>Investment techniques in smallcaps.</p></a></li>
 </ul>
 </li>
-<!-- li class="menuitem wall" data-tab-name="Research">
+<li class="menuitem wall" data-tab-name="Research">
 <span class="liname">Research</span>
 <span class="arrow hide"></span>
-</li -->
+<ul class="submenu hide">
+<li><a href="/research/coalindiaIPO.php"><h6>Coal India IPO</h6><p>The IPO analysis.</p></a></li>
+</ul>
+</li>
 <li class="menuitem wall" data-tab-name="Knowledge">
 <span class="liname">Knowledge</span>
 <span class="arrow hide"></span>
