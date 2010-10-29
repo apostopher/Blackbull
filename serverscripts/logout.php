@@ -7,8 +7,9 @@ if(isset($_SESSION['pass'])){
 	unset($_SESSION['pass']);
 }
 if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass'])){
-   setcookie("cookname", "", time()-60*60*24*100, "/");
-   setcookie("cookpass", "", time()-60*60*24*100, "/");
+   setcookie("cookname", "", time()-60*60*24*100, "/", "blackbull.in");
+   setcookie("cookpass", "", time()-60*60*24*100, "/", "blackbull.in");
+   setcookie("cookid", "", time()-60*60*24*100, "/","blackbull.in");
 }
 
 session_destroy();

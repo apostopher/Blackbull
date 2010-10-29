@@ -13,7 +13,7 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 	<title>Blackbull Investment Company</title>
         <link rel="stylesheet" href="stylesheets/site.css" media="screen">
         <link rel="stylesheet" href="stylesheets/home.css" media="screen">
-        <!-- script src="javascripts/lib/modernizr-1.5.min.js"></script -->
+        <script src="/javascripts/lib/modernizr-1.6.min.js?v=1"></script>
 </head>
 <body>
 <?php require_once("_partial_header.php"); ?>
@@ -39,15 +39,33 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 </article>
 </div>
 <aside id="rightpane">
+<div id="flash">Currency options will be launched in NSE &amp BSE from 29 Oct 2010.</div>
+<div id="indices">
+<table cellspacing="0" cellpadding="0">
+<tbody>
+<tr><th class="sensex">SENSEX</th><th class="nifty">NIFTY</th></tr>
+<tr><td id="sprice" class="sensex"></td><td id="nprice" class="nifty"></td></tr>
+<tr><td id="schange" class="sensex"></td><td id="nchange" class="nifty"></td></tr>
+</tbody>
+</table>
+</div>
 <blockquote>
-<p>100 Rs. Invested in Blackbull is <span id="returns"></span> Rs after one year</p>
+<p>100 Rs. Invested in Blackbull is <span id="returns"></span>&nbsp;Rs after one year</p>
 </blockquote>
 <section class="bbfolio">
 <h2>Blackbull Portfolio</h2>
+<div id="porttabholder">
 <div class="spacer">&nbsp;</div>
 <ul class="portfolio">
 <li id="tradingtab" class="tab active"><a href="#">Trading</a>
-<span class="filler">&nbsp;</span> 
+<span class="filler">&nbsp;</span>
+</li>
+<li id="investtab" class="tab"><a href="#">Investment</a>
+<span class="filler invisible">&nbsp;</span>
+</li>
+</ul>
+<div class="spacer">&nbsp;</div>
+</div>
 <div id="tradingcontent">
 <table>
 <tbody id="tradingpositions">
@@ -57,10 +75,7 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 </tbody>
 </table>
 </div>
-</li>
-<li id="investtab" class="tab"><a href="#">Investment</a>
-<span class="filler invisible">&nbsp;</span>
-<div id="investcontent">
+<div id="investcontent" style="display:none;">
 <table>
 <tbody id="investmentpositions">
 <tr class="last">
@@ -69,28 +84,18 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 </tbody>
 </table>
 </div>
-</li>
-</ul>
 <div class="goto"><a href="services/portfolio.php">For details visit Blackbull portfolio</a></div>
 </section>
 <section class="bbinfo">
 <h2>Blackbull Tools</h2>
-<p>Blackbull provides tools that will help you take your investment decisions. The institutional investments chart shows foreign and domestic investments in NSE. This graph will tell you the market perspective of big investors.</p>
+<p>Blackbull provides tools that will help you take your investment decisions. The institutional investments chart shows foreign and domestic investments in indian markets. This graph will tell you the market perspective of big investors.</p>
 <span class="goto"><a href="tools/fiidii.php">Go to Blackbull Tools &raquo;</a></span>
 </section>
 </aside>
 <div class="spacer">&nbsp;</div>
 </div>
 <?php require_once("_partial_footer.php"); ?>
-<!--[if lt IE 9]>
-	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js"></script>
-<!--script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script-->
-<script src="javascripts/lib/jquery.tools.min.js"></script>
-<script src="javascripts/lib/jquery.jcryption-1.1.min.js"></script>
-<script src="javascripts/site.js"></script>
+<?php require_once("jslibs.php"); ?>
 <script src="javascripts/home.js"></script>
 <script>
    var _gaq = [['_setAccount', 'UA-11011315-1'], ['_trackPageview']];

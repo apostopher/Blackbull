@@ -23,6 +23,10 @@ mysql_data_seek($result, 0);
 }else{
 	$response = array("total" => '0', "positions" => '');
 	header('Content-type: application/json');
+	if(strstr($_SERVER["HTTP_USER_AGENT"],"MSIE")==false) {
+  		header("Cache-Control: no-cache");
+  		header("Pragma: no-cache");
+ 	}
 	echo json_encode($response);
 	mysql_free_result($result);
 	mysql_close($con);
@@ -52,6 +56,10 @@ $response = array("total" => $i, "days" => $days/$i, "profit" => $profit, "posit
 
 // Create JSON response
 header('Content-type: application/json');
+if(strstr($_SERVER["HTTP_USER_AGENT"],"MSIE")==false) {
+  		header("Cache-Control: no-cache");
+  		header("Pragma: no-cache");
+ 	}
 echo json_encode($response);
 mysql_free_result($result);
 mysql_close($con);

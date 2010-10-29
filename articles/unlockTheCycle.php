@@ -13,7 +13,7 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 	<title>Blackbull Investment Company</title>
 	<link rel="stylesheet" href="../stylesheets/site.css" media="screen">
 	<link rel="stylesheet" href="../stylesheets/articles/articles.css" media="screen">
-	<!-- script src="../javascripts/lib/modernizr-1.5.min.js"></script -->
+	<script src="../javascripts/lib/modernizr-1.6.min.js"></script>
 </head>
 <body>
 <?php require_once("../_partial_header.php"); ?>
@@ -66,7 +66,7 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 <section>
 <header>
 <h3>Our view</h3>
-<header>
+</header>
 <p>We believe that the Indian economy is still not completely out of the woods. The valuations of most companies look stretched. The monsoon too has played a spoilsport and this again does not portend well for the economy. India also has a huge fiscal deficit which may be injected back into the economy as inflation.</p><p>The country is enjoying a period of low inflation as of now. However, one the inflation starts inching up, which it will; RBI will have no option but to harden the interest rates. This will translate into less lending by the banks and lead to a down cycle.</p><p>We in no way guarantee or predict the outcome but only anticipate the future course of the economy. Given our bearish stance, we will recommend all investors to stay away from the cyclical stocks as of now.</p>
 </section>
 </article>
@@ -74,14 +74,7 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 </div>
 </div>
 <?php require_once("../_partial_footer.php"); ?>
-<!--[if lt IE 9]>
-<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
-<script src="../javascripts/lib/jquery.jcryption-1.1.min.js"></script>
-<script src="../javascripts/site.js"></script>
+<?php require_once("../jslibs.php"); ?>
 <script>
    var _gaq = [['_setAccount', 'UA-11011315-1'], ['_trackPageview']];
    (function(d, t) {

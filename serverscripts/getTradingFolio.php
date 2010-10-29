@@ -34,6 +34,10 @@ if ($file) {
 	fclose($file);
 }
 header('Content-type: text/html');
+if(strstr($_SERVER["HTTP_USER_AGENT"],"MSIE")==false) {
+  	header("Cache-Control: no-cache");
+  	header("Pragma: no-cache");
+}
 echo $response;
 mysql_free_result($result);
 mysql_close($con);

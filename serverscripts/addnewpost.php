@@ -12,6 +12,7 @@ if($result){
    $getnew = "select q_id, date, fname, text, isprivate from queries, users where q_id = '".mysql_insert_id()."' AND id = '$owner'";
    $result1 = mysql_query($getnew);
    while($row = mysql_fetch_array($result1)) {
+    $firstname = $row['fname'];
     $data[$i] = array("id" => $row['q_id'], "date" => $row['date'], "owner" => $row['fname'], "text" => $row['text'], "private" => $row['isprivate']);
     $i++;
   }
@@ -39,7 +40,7 @@ $smtp = Mail::factory('smtp',
          'password' => $password));
 $message = "<html><body style=\"background-color:#F9F9F9; font-family: Arial, Helvetica, sans-serif; font-size:12px; line-height: 20px; color: #3C5768; margin:0; padding:10px;\">";
 $message = $message."<p>$posttext</p>";
-$message = $message."<p><i>by ".$row['fname']."</i><p>";
+$message = $message."<p><i>by ".$firstname."</i><p>";
 $message = $message."</body></html>";
 $mail = $smtp->send("apostopher@gmail.com,pankaj.dalvi@tcs.com,tennis.et.thed@gmail.com", $headers, $message);
 echo json_encode($response);

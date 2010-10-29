@@ -67,14 +67,15 @@ $(function(){
 			$("#loginerror").show();
 			return false;
 		}
-		$.jCryption.getKeys("/serverscripts/login.php?generateKeypair=true",function(keys) {
-			$.jCryption.encrypt(upassword,keys,function(encrypted) {
-				$("#pageencrypted").val(encrypted);
+		/*$.jCryption.getKeys("/serverscripts/login.php?generateKeypair=true",function(keys) {*/
+			/*$.jCryption.encrypt(upassword,keys,function(encrypted) {*/
+				/*$("#pageencrypted").val(encrypted);*/
 				$.ajax({
 					type: "POST",
 					url: "/serverscripts/login.php",
 					data:({'username':username,
-						'password':encrypted,
+						/*'password':encrypted,*/
+						'password' :upassword,
 						'remember':$("#pageremember").attr('checked')?1:0}),
 					dataType: "json",
 					success: function(response){
@@ -110,8 +111,8 @@ $(function(){
 						$("#loginerror").show();
 					}
 				});
-			});
-		});
+			/*});*/
+		/*});*/
 		return false;
 	});
 	$("#resendpass").submit(function(){

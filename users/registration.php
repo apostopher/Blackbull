@@ -13,7 +13,7 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 	<title>Blackbull Investment Company</title>
 	<link rel="stylesheet" href="../stylesheets/site.css" media="screen">
 	<link rel="stylesheet" href="../stylesheets/users/registration.css" media="screen">
-	<!-- script src="../javascripts/lib/modernizr-1.5.min.js"></script -->
+	<script src="/javascripts/lib/modernizr-1.6.min.js?v=1"></script>
 </head>
 <body>
 <?php require_once("../_partial_header.php"); ?>
@@ -71,17 +71,9 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 </div>
 </div>
 <?php require_once("../_partial_footer.php"); ?>
-<!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js"></script>
-        <!--script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script-->
-        <script src="http://cdn.jquerytools.org/1.2.4/tiny/jquery.tools.min.js"></script>
-        <script src="../javascripts/lib/jquery.jcryption-1.1.min.js"></script>
-        <script src="../javascripts/site.js"></script>
-        <script src="../javascripts/users/registration.js"></script>
-        <script>
+<?php require_once("../jslibs.php"); ?>
+<script src="../javascripts/users/registration.js"></script>
+<script>
    var _gaq = [['_setAccount', 'UA-11011315-1'], ['_trackPageview']];
    (function(d, t) {
     var g = d.createElement(t),

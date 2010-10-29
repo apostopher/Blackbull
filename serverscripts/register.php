@@ -18,7 +18,11 @@ if (!$resp->is_valid) {
 	mysql_close($con);
 	return;
 }
-                             
+
+foreach($_POST as $name => $value) {
+	$_POST[$name] = mysql_real_escape_string($value);
+}
+                          
 $query = "SELECT id FROM users WHERE id='".trim($_POST['email'])."'";
 $idexists = mysql_query($query);
 if(mysql_num_rows($idexists)){

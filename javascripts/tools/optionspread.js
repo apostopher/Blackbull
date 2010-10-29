@@ -42,7 +42,7 @@ function getSpread(symbol, expiry){
                                    	$("#sec_name").html(response.name);
                                    	$("#sec_expiry").html(response.expiry);
                                    	$("#sec_val").html(response.value);
-                                   	$("#updatedate").html("Last updated on ");
+                                   	$("#updatedate").html("Last updated on "+ response.date.toLowerCase());
 				}else{
 				}
 			}else{

@@ -17,6 +17,11 @@ if ($result) {
 }
 
 $response = array("total" => $i, "posts" => $data);
+header('Content-type: application/json');
+if(strstr($_SERVER["HTTP_USER_AGENT"],"MSIE")==false) {
+  	header("Cache-Control: no-cache");
+  	header("Pragma: no-cache");
+}
 echo json_encode($response);
 mysql_free_result($result);
 mysql_close($con);

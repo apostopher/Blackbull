@@ -36,7 +36,7 @@
 	padding:90px 20px;
 	display:block;
 	height:100px;
-	margin-left:445px;
+	float:left;
 	text-align:center;
 }
 
@@ -70,6 +70,8 @@ a.over {
 	text-align:right;
 	width:150px;
 	display:inline-block;
+	margin-bottom:20px;
+	height:26px;
 }
 
 #loginform input, #resendpass input {

@@ -3,7 +3,7 @@
 session_start();
 // Include the required scripts
 require_once("dba.php");
-require_once("jCryption-1.1.php");
+/*require_once("jCryption-1.1.php");
 
 $keyLength = 256;
 $jCryption = new jCryption();
@@ -16,7 +16,7 @@ if(isset($_GET["generateKeypair"])) {
 	$_SESSION["n"] = array("int" => $keys["n"], "hex" => $jCryption->dec2string($keys["n"],16));
 	echo '{"e":"'.$_SESSION["e"]["hex"].'","n":"'.$_SESSION["n"]["hex"].'","maxdigits":"'.intval($keyLength*2/16+3).'"}';
         return;
-}
+}*/
 
 // We need to authenticate the user now
 // If username OR password is not set return error
@@ -30,12 +30,13 @@ if (!isset($_POST['username']) || !isset($_POST['password'])) {
 
 // The password is encrypted using jCryption plugin v1.1
 // Call the decrypt method to get plaintext password
-$pass = $jCryption->decrypt($_POST['password'], $_SESSION["d"]["int"], $_SESSION["n"]["int"]);
+/*$pass = $jCryption->decrypt($_POST['password'], $_SESSION["d"]["int"], $_SESSION["n"]["int"]);*/
+$pass = $_POST['password'];
 
 // We dont need the keys now. delete them
-unset($_SESSION["e"]);
+/*unset($_SESSION["e"]);
 unset($_SESSION["d"]);
-unset($_SESSION["n"]);
+unset($_SESSION["n"]);*/
 
 $user = strtolower(addslashes($_POST['username']));
 
@@ -55,9 +56,9 @@ if($rowCheck > 0){
 		// Set cookies if user has selected 'remember me' option on login form
 		if(isset($_POST['remember'])){
 			if($_POST['remember'] == "1"){
-				setcookie("cookid", $_SESSION['id'], time()+60*60*24*100, "/","www.blackbull.in");
-				setcookie("cookname", $_SESSION['user'], time()+60*60*24*100, "/","www.blackbull.in");
-				setcookie("cookpass", $_SESSION['pass'], time()+60*60*24*100, "/","www.blackbull.in");
+				setcookie("cookid", $_SESSION['id'], time()+60*60*24*100, "/","blackbull.in");
+				setcookie("cookname", $_SESSION['user'], time()+60*60*24*100, "/","blackbull.in");
+				setcookie("cookpass", $_SESSION['pass'], time()+60*60*24*100, "/","blackbull.in");
 			}
 		}
 		// If redirect session variable is set, add it to response JSON data

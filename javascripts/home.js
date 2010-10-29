@@ -14,9 +14,10 @@ $(function() {
 		circular:true
 	}).autoscroll({
 		autoplay: true,
-		interval: 5000,
+		interval: 10000,
 		autopause: true
 	});
+	getIndices();
 	// Google chrome frame check
 	//CFInstall.check({mode: "overlay"});
 	// Set the Edit options
@@ -107,7 +108,7 @@ $(function() {
 			totalscrips = response.total;
 			$.ajax({
 				type:"GET",
-				url:"serverscripts/getfoliosummary.php",
+				url:"/serverscripts/getfoliosummary.php",
 				data:({'type':'investment'}),
 				dataType:"json",
 				success: function(response){
@@ -161,4 +162,27 @@ function supports_local_storage() {
   } catch(e){
     return false;
   }
+}
+
+function getIndices(){
+	$.getJSON("/serverscripts/getindices.php",function(response){
+		if(response.error == "0"){
+			if(parseFloat(response.values[0].change) < 0){
+				$("#nchange").css("color","#D13236");
+			}else{
+				$("#nchange").css("color","green");
+			}
+			$("#nprice").html(response.values[0].price);
+			$("#nchange").html(response.values[0].change+" / "+response.values[0].perchange);
+			
+			if(parseFloat(response.values[1].change) < 0){
+                		$("#schange").css("color","#D13236");
+            		}else{
+                		$("#schange").css("color","green");
+            		}
+			$("#sprice").html(response.values[1].price);
+            		$("#schange").html(response.values[1].change+" / "+response.values[1].perchange);
+		}
+		setTimeout(getIndices,10000);
+	});
 }

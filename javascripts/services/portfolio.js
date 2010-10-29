@@ -198,11 +198,11 @@ function getTradingStatus(){
 					},
 					success:function(response){
 						$(".scripdetails div.details").html(response);
-						$("#facebox").animate({'margin-top':"-"+(($("#facebox").height()/2)- $(window).scrollTop()) +"px"}, "slow");
+						$("#facebox").animate({'margin-top':(($("#facebox").height()/2)- $(window).scrollTop())*(-1) +"px"}, "slow");
 					},
 					failure:function(){
 						$(".scripdetails div.details").html("<p class=\"error\">Error occured&hellip;</p>");
-						$("#facebox").animate({'margin-top':"-"+$("#facebox").height()/2 +"px"}, "slow");
+						$("#facebox").animate({'margin-top':(($("#facebox").height()/2)- $(window).scrollTop())*(-1) +"px"}, "slow");
 					}
 				});
 				if($("#facebox").hasClass("hide")){

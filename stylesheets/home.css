@@ -1,12 +1,11 @@
-div#leftpane{
+#leftpane{
     float:left;
     width:634px;
     margin-right:16px;
-    clear:both;
     padding:0;
 }
 
-div#scrollable{
+#scrollable{
     display:block;
     border:5px solid #EEE;
     background:#EEE;
@@ -22,26 +21,26 @@ div#scrollable{
    -webkit-border-radius:5px;
 }
 
-article#slides{
+#slides{
     position:absolute;
     width:2000em;
     background:#FFF;
 }
 
-article#slides section{
+#slides section{
     display:block;
     float:left;
     width:624px;
     height:400px;
 }
 
-aside#rightpane{
+#rightpane{
     float:left;
     width:300px;
     padding:0;
     margin:0;
 }
-aside#rightpane blockquote{
+#rightpane blockquote{
    display:block;
    padding:10px;
    border:1px solid #ddd;
@@ -54,14 +53,14 @@ aside#rightpane blockquote{
    color:#000;
 }
 
-aside#rightpane blockquote p{
+#rightpane blockquote p{
    font: normal normal normal 21px/30px Cambria, Georgia, 'Times New Roman', Times, serif;
    margin: 0px;
    text-align: center;
    color:#000;
 }
 
-aside#rightpane blockquote p span#returns {
+#returns {
    color:#D13236;
    font-weight:bold;
 }
@@ -82,9 +81,8 @@ section.bbfolio{
 ul.portfolio {
 	margin-top:20px;
 	float:left;
-	clear:right;
 	padding-left:10px;
-	/*margin-bottom:329px;*/
+	position:relative;
 }
 
 ul.portfolio li.tab {
@@ -103,11 +101,10 @@ ul.portfolio li.tab {
     background:#F3F6FA;
     border-bottom:0;
     list-style:none;
-    position:relative;
     text-align:center;
     width:100px;
-    z-index:30;
     display:inline-block;
+    position:relative;
 }
 
 ul.portfolio li.active{
@@ -126,26 +123,24 @@ ul.portfolio li.tab a:hover{
 }
 
 span.filler{
-    dispaly:block;
+    display:block;
     margin:0;
     padding:0;
     border:0;
     background:#FFF;
-    position:absolute;
-    z-index:9;
     width:100%;
     font-size:2px;
     line-height:2px;
     left:0;
+    position:absolute;
+    z-index:35;
 }
 
 span.invisible{
    display:none;
 }
 
-div#tradingcontent, div#investcontent{
-    position:relative;
-    z-index:35;
+#tradingcontent, #investcontent{
     background:#fff;
     border:1px solid #ddd;
     padding:5px 5px 0px;
@@ -155,23 +150,23 @@ div#tradingcontent, div#investcontent{
     -webkit-border-radius:5px;
 }
 
-div#tradingcontent table, div#investcontent table{
+#tradingcontent table, #investcontent table{
    dispaly:block;
    width:100%;
    background:#FFF;
 }
 
-div#tradingcontent table tbody tr, div#investcontent table tbody tr{
+#tradingcontent table tbody tr, #investcontent table tbody tr{
    border-bottom:1px solid #EEE;
 }
 
-div#tradingcontent table td, div#investcontent table td{
+#tradingcontent table td, #investcontent table td{
    padding: 8px;
    font-size: 14px;
    line-height: 24px;
 }
 
-div#tradingcontent table tr.last, div#investcontent table tr.last{
+#tradingcontent table tr.last, #investcontent table tr.last{
    border-bottom:0;
 }
 
@@ -190,19 +185,10 @@ td.scripreturn{
 td.red{
    color:#D13236;
 }
-div#tradingcontent table td.loading, div#investcontent table td.loading{
+#tradingcontent table td.loading, #investcontent table td.loading{
    background:url("../images/black_loader.gif") no-repeat center top;
    padding:12px;
    text-align:center;
-}
-div#tradingcontent{
-    left:-11px;
-    z-index:7;
-}
-
-div#investcontent{
-    left:-118px;
-    z-index:6;
 }
 
 section.bbinfo span.goto{
@@ -212,7 +198,7 @@ section.bbinfo span.goto{
     font-variant:small-caps;
     display:block;
 }
-article#news{
+#news{
     display:block;
     padding:0;
     margin:0;
@@ -233,12 +219,12 @@ section.bbnews h2, section.bbinfo h2, section.bbfolio h2{
     margin: 0px;
 }
 
-section#news1{
+#news1{
     clear:both;
     margin-left:0;
 }
 
-section#news2{
+#news2{
     margin-right:0;
 }
 
@@ -262,4 +248,60 @@ div.goto{
 	color:#000;
 	font-size:14px;
 	border-top:0;
+}
+
+#indices{
+	padding:10px;
+   	border:1px solid #ddd;
+   	background:#FFF;
+   	-moz-border-radius:5px;
+   	border-radius:5px;
+   	-webkit-border-radius:5px;
+   	margin:0;
+   	margin-bottom:20px;
+   	background:#FFF;
+}
+
+#indices table{
+	width:100%;
+	border:0;
+}
+
+#indices table td, #indices table th{
+	font: normal normal normal 16px/24px "Segoe UI",Arial,Helvetica,sans-serif;
+	width:50%;
+}
+
+#indices table th{
+	padding:5px 10px;
+	color:#4575B4;
+}
+
+#indices table td{
+	padding:0px 10px;
+}
+
+.nifty{
+	text-align:right;
+}
+
+.sensex{
+	text-align:left;
+	border-right:1px solid #ddd;
+}
+
+#indices table #nprice, #indices table #sprice{
+	color:#000;
+	font-weight:bold;
+}
+
+#indices table #nchange, #indices table #schange{
+	font: normal normal normal 12px/18px "Segoe UI",Arial,Helvetica,sans-serif;
+}
+
+#flash{
+    color: #D13236;
+    font: normal normal normal 18px/26px Cambria, Georgia, 'Times New Roman', Times, serif;
+    text-align:center;
+    margin-bottom:26px;
 }

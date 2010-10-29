@@ -196,6 +196,7 @@ table.portfolio_list td.details a > span.mousedown{
 	top:0;
 	width:100%;
 	opacity:0.2;
+	ilter: alpha(opacity=20);
 	background:#000;
 	z-index:299;
 }

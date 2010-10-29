@@ -1,7 +1,6 @@
 /* =============================== Header CSS styles - Start ================= */
 #siteheader {
-        background:url("http://images.blackbull.in/all_button_matrix.png") repeat-x 0px -148px;
-	background-color:#000;
+        background: #000 url("http://images.blackbull.in/all_button_matrix.png") repeat-x 0px -148px;
 	display:block;
 	font-size:1em;
 	padding:12px 24px;
@@ -115,7 +114,7 @@ html>body .hide{
         margin:0 0 2px 0;
 }
 .submenu li p {
-        color:#bbb;
+        color:#666;
         font-style:italic;
         margin:0;
         margin-bottom:2px;
@@ -154,7 +153,7 @@ html>body .hide{
     position:absolute;
     top:0;
     width:100%;
-    z-index:199;
+    z-index:190;
 }
 
 #header_login_nav {
@@ -334,6 +333,8 @@ body{
         vertical-align: baseline;
         font-smooth:always;
         background:#f3f3f3;
+        position:relative;
+        z-index:195;
 }
 
 article, aside, figure, footer, header, 
@@ -348,6 +349,11 @@ a {
 a:hover {
 	border-bottom: 1px dotted #333;
 	color: #FE581A;
+}
+
+a:active, a:focus{
+	outline: 0;
+	border:0;
 }
 
 ul{

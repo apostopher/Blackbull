@@ -23,3 +23,236 @@
     	font: normal normal normal 21px/24px Cambria, Georgia, 'Times New Roman', Times, serif;
     	margin-bottom:0.5em;
 }
+#daily{
+	width:483px;
+	margin:10px auto;
+	border:1px solid #ddd;
+	border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+}
+
+#dailymove{
+	border:0;
+	color: #333;
+        font: normal normal normal 18px/26px Cambria, Georgia, 'Times New Roman', Times, serif;	
+}
+
+#dailymove td{
+	border-top:1px solid #ddd;
+	border-right:1px solid #ddd;
+	padding:10px;
+	width:100px;
+	text-align:center;
+}
+
+#fiibuy, #diibuy, #totalbuy, .green{
+	color:#6C9B48;
+}
+
+#fiisell, #diisell, #totalsell, .red{
+	color:#D13236;
+}
+
+#daily h3{
+	text-align:center;
+	margin-bottom:4px;
+}
+
+
+#fiidiidate{
+	display:inline-block;
+	text-align:left;
+	font-weight:normal;
+	letter-spacing:1px;
+	color:#666;
+	font-size:12px;
+	font-style:italic;
+	padding:0px 5px;
+	float:left;
+}
+
+#spanright{
+	display:inline-block;
+	text-align:right;
+	font-weight:normal;
+	letter-spacing:1px;
+	color:#666;
+	font-size:12px;
+	font-style:italic;
+	padding:0px 5px;
+	float:right;
+}
+
+#dailymove td.noright{
+	border-right:0;
+}
+
+.legends{
+	background:#f9f9f9;
+}
+#fiidiitd{
+	-moz-border-radius-bottomleft:10px;
+	-webkit-border-bottom-left-radius:10px;
+	border-bottom-left-radius:10px
+}
+
+#fiihelp{
+	width:465px;
+	padding:0px 10px;
+	margin:5px auto;
+	color:#666;
+	font-style:italic;
+	font-size:12px;
+	line-height:18px;
+}
+
+#fiihelp h4{
+	margin-bottom:4px;
+}
+
+#fiihelp ol{
+	margin-top:4px;
+}
+
+#fiidiiholder, #fiiholder, #diiholder{
+	border:1px solid #ddd;
+	width:892px;
+	height:400px;
+	padding:10px;
+	border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+}
+
+#charttype{
+	display:inline-block;
+	float:left;
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+#charttype li{
+	float:left;
+	position:relative;
+	display:inline-block;
+	margin:0;
+	margin-right:5px;
+	padding:0;
+	width:100px;
+	border:1px solid #ddd;
+	border-bottom:0;
+	background:#f1f1f1;
+	text-align:center;
+	font: normal normal normal 18px/26px Cambria, Georgia, 'Times New Roman', Times, serif;
+	-moz-border-radius-topleft:10px;
+	-webkit-border-top-left-radius:10px;
+	border-top-left-radius:10px;
+	-moz-border-radius-topright:10px;
+	-webkit-border-top-right-radius:10px;
+	border-top-right-radius:10px
+}
+
+#charttype li a, #charttype li a:hover{
+	text-decoration:none;
+	color:#999;
+	border:0;
+	display:block;
+	padding:4px 8px;
+}
+
+#charttype li.active{
+	background:#FFF;
+}
+
+#charttype li.hovered{
+	background:#F9F9F9;
+}
+
+#charttype li.hovered a{
+	color:#000;
+	border:0;
+}
+
+#charttype li.active a, #charttype li.active a:hover{
+	text-decoration:none;
+	color:#D13236;
+	border:0;
+}
+#ulholder{
+	position:relative;
+	display:block;
+	padding:0px 20px;
+	width:321px;
+	margin:0 auto;
+}
+
+#tabhelp{
+	position:absolute;
+	left:0;
+	top:0;
+	margin-left:340px;
+	font-size:12px;
+	line-height:18px;
+	color:#666;
+	padding-left:18px;
+	background:url("/images/tabhelp.png") left center no-repeat;
+	font-style:italic;
+	width:120px;
+}
+
+.filler{
+    display:none;
+    margin:0;
+    padding:0;
+    border:0;
+    background:#FFF;
+    width:100%;
+    font-size:2px;
+    line-height:2px;
+    left:0;
+    position:absolute;
+    z-index:35;
+}
+
+span.visible{
+   display:block;
+}
+
+.waiting{
+	width:300px;
+	text-align:center;
+	margin:170px auto;
+	height:60px;
+	font-family: 'Century Gothic', arial, serif;
+	font-size:18px;
+	line-height:26px;
+	color:#4572a7;
+}
+
+#twitthis{
+	float:right;
+	display:block;
+	width:165px;
+	height:200px;
+	background:url("/images/twitthis.png") bottom center no-repeat;
+	border:0;
+	margin:0;
+	padding:0;
+	text-align:center;
+}
+
+#twitthis p{
+	padding:0;
+	margin:0;
+	height:50px;
+	font-size:18px;
+	color:#333;
+	line-height:24px;
+	text-align:center;
+	margin-bottom:40px;
+}
+
+#twitlink{
+	margin:44px 56px;
+}

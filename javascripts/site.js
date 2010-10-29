@@ -140,14 +140,15 @@ $("#opaque").css('height', $(document).height());
 		$("#header_login_nav ul li.third").removeClass("hovered");
 		$("#login_menu").addClass("invisible");
 		$("#loadingdiv").fadeIn("slow");
-		$.jCryption.getKeys("/serverscripts/login.php?generateKeypair=true",function(keys) {
-			$.jCryption.encrypt($("#password").val(),keys,function(encrypted) {
-				$("#encrypted").val(encrypted);
+		/*$.jCryption.getKeys("/serverscripts/login.php?generateKeypair=true",function(keys) {*/
+			/*$.jCryption.encrypt($("#password").val(),keys,function(encrypted) {*/
+				/*$("#encrypted").val(encrypted);*/
 				$.ajax({
 					type: "POST",
 					url: "/serverscripts/login.php",
 					data:({'username':$("#username").val(),
-						'password':$("#encrypted").val(),
+						/*'password':$("#encrypted").val(),*/
+						'password':$("#password").val(),
 						'remember':$("#remember").attr('checked')?1:0}),
 					dataType: "json",
 					success: function(response){
@@ -178,8 +179,8 @@ $("#opaque").css('height', $(document).height());
 						$("#login_menu").removeClass("invisible");
 					}
 				});
-			});
-		});
+			/*});*/
+		/*});*/
 		return false;
 	});
 /* ====================== Login Functionality End =========================*/  	

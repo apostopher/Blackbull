@@ -14,7 +14,7 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 	<title>Blackbull Investment Company</title>
 	<link rel="stylesheet" href="../stylesheets/site.css" media="screen">
 	<link rel="stylesheet" href="../stylesheets/articles/articles.css" media="screen">
-	<!-- script src="../javascripts/lib/modernizr-1.5.min.js"></script -->
+	<script src="../javascripts/lib/modernizr-1.6.min.js"></script>
 </head>
 <body>
 <?php require_once("../_partial_header.php"); ?>
@@ -33,7 +33,7 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 <section>
 <header>
 <h3> The US-China trade relations</h3>
-<header>
+</header>
 <p>The US too recognizes the immense potential of the Chinese markets. China carries the largest bilateral trade with US. The US companies have over 100 jointly managed ventures working in the Chinese mainland. The US concerns have over $40 bn invested in the Chinese corporations both as debt and equity. This plainly paints a picture where an emerging power is gaining its due recognition.</p>
 <p>But it is not all rosy. The Chinese government since 2008 has been under constant flak from the world economies and especially the US about manipulating its currency - the Yuan. The allegations accuse Chinese rule to be deliberately keeping the yuan undervalued.</p>
 <p>So how does China do it? And moreover WHY does it do it?</p>
@@ -62,14 +62,7 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 </div>
 </div>
 <?php require_once("../_partial_footer.php"); ?>
-<!--[if lt IE 9]>
-<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
-<script src="../javascripts/lib/jquery.jcryption-1.1.min.js"></script>
-<script src="../javascripts/site.js"></script>
+<?php require_once("../jslibs.php"); ?>
 <script>
    var _gaq = [['_setAccount', 'UA-11011315-1'], ['_trackPageview']];
    (function(d, t) {
