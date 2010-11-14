@@ -75,14 +75,12 @@ section.bbfolio{
     display:block;
     margin-bottom:20px;
     padding:0px;
-    position:relative;
 }
 
 ul.portfolio {
 	margin-top:20px;
 	float:left;
 	padding-left:10px;
-	position:relative;
 }
 
 ul.portfolio li.tab {
@@ -103,8 +101,12 @@ ul.portfolio li.tab {
     list-style:none;
     text-align:center;
     width:100px;
-    display:inline-block;
+    display:block;
     position:relative;
+}
+
+ul.portfolio li.tab{
+    zoom:1;
 }
 
 ul.portfolio li.active{
@@ -180,7 +182,8 @@ td.scripname{
 td.scripreturn{
    font-weight:bold;
    text-align:right;
-   color:#5aaa23;
+   /*color:#5aaa23;*/
+   color:#4b9278;
 }
 td.red{
    color:#D13236;
@@ -228,6 +231,14 @@ section.bbnews h2, section.bbinfo h2, section.bbfolio h2{
     margin-right:0;
 }
 
+#news2 li{
+	color: #15100F;
+font-size: 14px;
+line-height: 24px;
+margin-bottom: 20px;
+text-align: justify;
+}
+
 div.goto{
 	clear: both;
 	margin:0px auto;
@@ -250,58 +261,121 @@ div.goto{
 	border-top:0;
 }
 
-#indices{
-	padding:10px;
-   	border:1px solid #ddd;
-   	background:#FFF;
-   	-moz-border-radius:5px;
-   	border-radius:5px;
-   	-webkit-border-radius:5px;
-   	margin:0;
-   	margin-bottom:20px;
-   	background:#FFF;
-}
-
-#indices table{
-	width:100%;
-	border:0;
-}
-
-#indices table td, #indices table th{
-	font: normal normal normal 16px/24px "Segoe UI",Arial,Helvetica,sans-serif;
-	width:50%;
-}
-
-#indices table th{
-	padding:5px 10px;
-	color:#4575B4;
-}
-
-#indices table td{
-	padding:0px 10px;
-}
-
-.nifty{
-	text-align:right;
-}
-
-.sensex{
-	text-align:left;
-	border-right:1px solid #ddd;
-}
-
-#indices table #nprice, #indices table #sprice{
-	color:#000;
-	font-weight:bold;
-}
-
-#indices table #nchange, #indices table #schange{
-	font: normal normal normal 12px/18px "Segoe UI",Arial,Helvetica,sans-serif;
-}
 
 #flash{
     color: #D13236;
     font: normal normal normal 18px/26px Cambria, Georgia, 'Times New Roman', Times, serif;
     text-align:center;
     margin-bottom:26px;
+}
+
+#twitthis {
+	background:url("/images/twitthis.png") no-repeat scroll center bottom transparent;
+	border:0 none;
+	display:block;
+	height:200px;
+	margin:0 auto;
+	margin-top:40px;
+	padding:0;
+	text-align:center;
+	width:165px;
+}
+#twitthis p {
+	color:#2A7090;
+	font-size:18px;
+	height:50px;
+	line-height:24px;
+	margin:0;
+	padding:0;
+	text-align:center;
+}
+#twitthis iframe {
+	margin:44px 56px;
+}
+
+#fblike{
+	width:45px;
+	margin:0 auto;
+	padding:0;
+	display:block;
+}
+
+/* new ticker */
+
+.index {
+   	display:block;
+   	margin-bottom:10px;
+}
+
+.indexname {
+	float:left;
+	border-bottom-left-radius:10px;
+	border-top-left-radius:10px;
+	-moz-border-radius-bottomleft:10px;
+	-moz-border-radius-topleft:10px;
+	-webkit-border-bottom-left-radius:10px;
+	-webkit-border-top-left-radius:10px;
+	padding:10px;
+	height:55px;
+	width:90px;
+	text-align:center;
+	font: 21px/55px Cambria,Georgia,'Times New Roman',Times,serif;
+}
+
+.indexvalue {
+	float:left;
+	border-bottom-right-radius:10px;
+	border-top-right-radius:10px;
+	-moz-border-radius-bottomright:10px;
+	-moz-border-radius-topright:10px;
+	-webkit-border-bottom-right-radius:10px;
+	-webkit-border-top-right-radius:10px;
+	padding:10px 20px;
+	width:144px;
+	height:55px;
+	text-align:center;
+}
+
+.greenname{
+	background:#fff url("http://images.blackbull.in/updown.png") no-repeat scroll;
+	background-position:-436px center;
+	border:2px solid #4b9278;
+	border-right:0;
+	color:#111;
+}
+
+.redname{
+	background:#fff url("http://images.blackbull.in/updown.png") no-repeat scroll;
+	background-position:95px center;
+	border:2px solid #D13236;
+	border-right:0;
+	color:#111;
+}
+
+.greenvalue{
+	background:#4b9278 url("http://images.blackbull.in/updown.png") no-repeat scroll;
+	background-position:-546px center;
+	border:2px solid #4b9278;
+	border-left:0;
+	color:#FFF;
+}
+
+.redvalue{
+	background:#D13236 url("http://images.blackbull.in/updown.png") no-repeat scroll;
+	background-position:-15px center;
+	border:2px solid #D13236;
+	border-left:0;
+	color:#FFF;
+}
+
+#sprice, #nprice{
+	font: 21px/35px Cambria,Georgia,'Times New Roman',Times,serif;
+}
+
+#schange, #nchange{
+	font: 14px/20px Cambria,Georgia,'Times New Roman',Times,serif;
+}
+
+.modern #content.watermark{
+	background:#fff url("http://images.blackbull.in/watermark.png") right 20px no-repeat;
 }

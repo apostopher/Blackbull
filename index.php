@@ -7,18 +7,24 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
    }
 ?>
 <!DOCTYPE html>
-<html class="no-js">
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js modern"> <!--<![endif]-->
 <head>
 	<?php require_once("metacontent.php"); ?>
+	<?php require_once("opengraph.php"); ?>
 	<title>Blackbull Investment Company</title>
-        <link rel="stylesheet" href="stylesheets/site.css" media="screen">
-        <link rel="stylesheet" href="stylesheets/home.css" media="screen">
+        <link rel="stylesheet" href="stylesheets/site.css?v=2" media="screen">
+        <link rel="stylesheet" href="stylesheets/home.css?v=2" media="screen">
         <script src="/javascripts/lib/modernizr-1.6.min.js?v=1"></script>
+        <!-- script type="text/javascript" src="http://use.typekit.com/gpv5lbg.js"></script -->
+	<!-- script type="text/javascript">try{Typekit.load();}catch(e){}</script -->
 </head>
 <body>
 <?php require_once("_partial_header.php"); ?>
-<div id="content">
-<div class="spacer">&nbsp;</div>
+<div id="content" class="clearfix">
 <div id="leftpane">
 <a class="next hide"></a>
 <div id="scrollable">
@@ -39,23 +45,20 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 </article>
 </div>
 <aside id="rightpane">
-<div id="flash">Currency options will be launched in NSE &amp BSE from 29 Oct 2010.</div>
-<div id="indices">
-<table cellspacing="0" cellpadding="0">
-<tbody>
-<tr><th class="sensex">SENSEX</th><th class="nifty">NIFTY</th></tr>
-<tr><td id="sprice" class="sensex"></td><td id="nprice" class="nifty"></td></tr>
-<tr><td id="schange" class="sensex"></td><td id="nchange" class="nifty"></td></tr>
-</tbody>
-</table>
+<div id="sensex" class="index clearfix">
+<div class="indexname greenname">SENSEX</div>
+<div class="indexvalue greenvalue"><span id="sprice"></span><br/><span id="schange"></span></div>
+</div>
+<div id="nifty" class="index clearfix">
+<div class="indexname greenname">NIFTY</div>
+<div class="indexvalue greenvalue"><span id="nprice"></span><br/><span id="nchange"></span></div>
 </div>
 <blockquote>
 <p>100 Rs. Invested in Blackbull is <span id="returns"></span>&nbsp;Rs after one year</p>
 </blockquote>
 <section class="bbfolio">
 <h2>Blackbull Portfolio</h2>
-<div id="porttabholder">
-<div class="spacer">&nbsp;</div>
+<div id="porttabholder" class="clearfix">
 <ul class="portfolio">
 <li id="tradingtab" class="tab active"><a href="#">Trading</a>
 <span class="filler">&nbsp;</span>
@@ -64,7 +67,6 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 <span class="filler invisible">&nbsp;</span>
 </li>
 </ul>
-<div class="spacer">&nbsp;</div>
 </div>
 <div id="tradingcontent">
 <table>
@@ -91,12 +93,18 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 <p>Blackbull provides tools that will help you take your investment decisions. The institutional investments chart shows foreign and domestic investments in indian markets. This graph will tell you the market perspective of big investors.</p>
 <span class="goto"><a href="tools/fiidii.php">Go to Blackbull Tools &raquo;</a></span>
 </section>
+<div id="twitthis">
+<p>Liked this site?<br/>Spread the word.</p>
+<a id="twitlink" href="http://twitter.com/share" class="twitter-share-button" data-text="Ckeck this out.. Cool website for stock market investment in india #NSE and #BSE." data-count="vertical" data-via="apostopher">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+</div>
+<div id="fblike">
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fblackbull.in&amp;layout=box_count&amp;show_faces=true&amp;width=45&amp;action=like&amp;colorscheme=light&amp;height=65" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:65px;" allowTransparency="true"></iframe>
+</div>
 </aside>
-<div class="spacer">&nbsp;</div>
 </div>
 <?php require_once("_partial_footer.php"); ?>
 <?php require_once("jslibs.php"); ?>
-<script src="javascripts/home.js"></script>
+<script src="javascripts/home.js?v=4"></script>
 <script>
    var _gaq = [['_setAccount', 'UA-11011315-1'], ['_trackPageview']];
    (function(d, t) {

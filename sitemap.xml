@@ -7,73 +7,59 @@
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
-  <loc>http://www.blackbull.in/</loc>
+  <loc>http://blackbull.in/</loc>
   <changefreq>always</changefreq>
-  <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://www.blackbull.in/index.php</loc>
+  <loc>http://blackbull.in/index.php</loc>
   <changefreq>always</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.blackbull.in/users/changepassword.php</loc>
+  <loc>http://blackbull.in/users/changepassword.php</loc>
   <changefreq>always</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.blackbull.in/users/registration.php</loc>
+  <loc>http://blackbull.in/users/registration.php</loc>
   <changefreq>always</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.blackbull.in/users/login.php?forgot=true</loc>
+  <loc>http://blackbull.in/users/login.php?forgot=true</loc>
   <changefreq>always</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.blackbull.in/users/login.php</loc>
+  <loc>http://blackbull.in/articles/dragonEmpire.php</loc>
   <changefreq>always</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.blackbull.in/articles/dragonEmpire.php</loc>
+  <loc>http://blackbull.in/articles/unlockTheCycle.php</loc>
   <changefreq>always</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.blackbull.in/articles/unlockTheCycle.php</loc>
+  <loc>http://blackbull.in/articles/smallIsBeautiful.php</loc>
   <changefreq>always</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.blackbull.in/articles/smallIsBeautiful.php</loc>
+  <loc>http://blackbull.in/research/coalindiaIPO.php</loc>
   <changefreq>always</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.blackbull.in/knowledge/introStockMarket.php</loc>
+  <loc>http://blackbull.in/knowledge/introStockMarket.php</loc>
   <changefreq>always</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.blackbull.in/knowledge/stockMarketTrading.php</loc>
+  <loc>http://blackbull.in/knowledge/stockMarketTrading.php</loc>
   <changefreq>always</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.blackbull.in/services/queries.php</loc>
+  <loc>http://blackbull.in/knowledge/auction.php</loc>
   <changefreq>always</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.blackbull.in/services/portfolio.php</loc>
+  <loc>http://blackbull.in/tools/fiidii.php</loc>
   <changefreq>always</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.blackbull.in/legal.php</loc>
+  <loc>http://blackbull.in/legal.php</loc>
   <changefreq>always</changefreq>
-  <priority>0.64</priority>
 </url>
 </urlset>

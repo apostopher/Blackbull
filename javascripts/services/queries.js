@@ -34,7 +34,7 @@ $(function(){
 				"private": isprivate,
 				"owner" : ownername}),
 			beforeSend: function(){
-				if(sending){
+				if(sending || querytext.length < 5){
 					return false;
 				}else{
 					sending = true;

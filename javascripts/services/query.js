@@ -1,4 +1,5 @@
 $(function(){
+        var sending = false;
 	var postid = jQuery.url.param("id");
 	
 	$("#postquerybtn").hover(function(){
@@ -71,6 +72,16 @@ $(function(){
                                "open" : "1",
                                "owner" : ownername,
                                "id" : qid}),
+                        beforeSend: function(){
+				if(sending || querytext.length < 5){
+					return false;
+				}else{
+					sending = true;
+					$("#postquerybtn").val("Please wait...");
+					$("#postquerybtn").attr("disabled", "1");
+				}
+				return true;
+			},
 			success: function(response){
 				if(response.error !="0"){
 					return false;
@@ -92,13 +103,13 @@ $(function(){
 				}
 				$('#formresult').html("<p><b>The post has been successfully submitted!. Click here to add a <a id='anotherpost' href='#'>new post</a></b></p>");
 				$("#anotherpost").click(function(){
-					$("#postquery").show();
 					$("#formresult").hide();
 					$("#formresult").html("");
 					$("#querytext").val("");
 					$("#privatepost").checked = false;
 					$("#postquerybtn").val("Submit query");
 					$("#postquerybtn").removeAttr("disabled");
+					$("#postquery").show();
 				});
 				$("#postquery").hide();
 				$('#formresult').show();

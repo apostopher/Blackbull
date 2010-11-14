@@ -154,6 +154,12 @@ $(function() {
 		failure: function(){
 		}
 	});
+	
+	if($("#content").width() > 1000){
+		if(!$("#content").hasClass("watermark")){
+			$("#content").addClass("watermark");
+		}
+	}
 });
 
 function supports_local_storage() {
@@ -168,17 +174,45 @@ function getIndices(){
 	$.getJSON("/serverscripts/getindices.php",function(response){
 		if(response.error == "0"){
 			if(parseFloat(response.values[0].change) < 0){
-				$("#nchange").css("color","#D13236");
+				if($("#nifty .indexname").hasClass("greenname")){
+					$("#nifty .indexname").removeClass("greenname");
+                			$("#nifty .indexvalue").removeClass("greenvalue");
+				}
+				if(!$("#nifty .indexname").hasClass("redname")){
+                			$("#nifty .indexname").addClass("redname");
+                			$("#nifty .indexvalue").addClass("redvalue");
+                		}
 			}else{
-				$("#nchange").css("color","green");
+				if($("#nifty .indexname").hasClass("redname")){
+					$("#nifty .indexname").removeClass("redname");
+                			$("#nifty .indexvalue").removeClass("redvalue");
+				}
+				if(!$("#nifty .indexname").hasClass("greenname")){
+                			$("#nifty .indexname").addClass("greenname");
+                			$("#nifty .indexvalue").addClass("greenvalue");
+                		}
 			}
 			$("#nprice").html(response.values[0].price);
 			$("#nchange").html(response.values[0].change+" / "+response.values[0].perchange);
 			
 			if(parseFloat(response.values[1].change) < 0){
-                		$("#schange").css("color","#D13236");
+				if($("#sensex .indexname").hasClass("greenname")){
+					$("#sensex .indexname").removeClass("greenname");
+                			$("#sensex .indexvalue").removeClass("greenvalue");
+				}
+				if(!$("#sensex .indexname").hasClass("redname")){
+                			$("#sensex .indexname").addClass("redname");
+                			$("#sensex .indexvalue").addClass("redvalue");
+                		}
             		}else{
-                		$("#schange").css("color","green");
+            			if($("#sensex .indexname").hasClass("redname")){
+					$("#sensex .indexname").removeClass("redname");
+                			$("#sensex .indexvalue").removeClass("redvalue");
+				}
+				if(!$("#sensex .indexname").hasClass("greenname")){
+                			$("#sensex .indexname").addClass("greenname");
+                			$("#sensex .indexvalue").addClass("greenvalue");
+                		}
             		}
 			$("#sprice").html(response.values[1].price);
             		$("#schange").html(response.values[1].change+" / "+response.values[1].perchange);

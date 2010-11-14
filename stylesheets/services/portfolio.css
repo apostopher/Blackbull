@@ -17,13 +17,6 @@
     text-align:center;
 }
 
-#portfolio p{
-	font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
-	color:#15100F;
-	margin-bottom:24px;
-	text-align:justify;
-}
-
 #investment_positions{
 	float:left;
 	width:450px;
@@ -34,7 +27,11 @@
 	width:450px;
 }
 
-table.invisible{
+#investment_list_table, #trading_list_table{
+	width:100%;
+}
+
+.invisible{
 	display:none;
 }
 
@@ -44,39 +41,39 @@ table.invisible{
 	text-align:center;
 }
 
-table.portfolio_list td{
+.portfolio_list td{
 	border-bottom:1px solid #eee;
 	/*background:url("../../images/portfolio_table_td.png") bottom left repeat-x;*/
 	padding:10px 5px;
 	color:#222;
 }
 
-table.portfolio_list td.name{
+.portfolio_list td.name{
 	width:250px;
 	text-align:left;
 	font-weight:bold;
 }
 
-table.portfolio_list td.returns{
+.portfolio_list td.returns{
 	width:80px;
 	text-align:center;
 	color:#5AAA23;
 	font-weight:bold;
 }
 
-table.portfolio_list td.red{
+.portfolio_list td.red{
 	color:#D13236;
 }
 
-table.portfolio_list thead th{
+.portfolio_list thead th{
 	border-bottom:1px solid #EEE;
 }
 
-table.portfolio_list td.details{
+.portfolio_list td.details{
 	width:80px;
 	text-align:center;
 }
-table.portfolio_list td.details a{
+.portfolio_list td.details a{
 	background: url("http://images.blackbull.in/all_button_matrix.png") no-repeat;
 	background-position:-117px -23px;
 	border:0;
@@ -91,18 +88,18 @@ table.portfolio_list td.details a{
 	text-shadow: #fff 1px 1px 0px;
 }
 
-table.portfolio_list td.details a.hovered{
+.portfolio_list td.details a.hovered{
 	background-position:-117px -69px;
 	color:#FFFFFF;
 	text-decoration:none;
 	text-shadow:-1px -1px 0 rgba(0, 0, 0, 0.3);
 }
 
-table.portfolio_list td.details a.mousedown{
+.portfolio_list td.details a.mousedown{
 	background-position:-117px -115px;
 }
 
-table.portfolio_list td.details a > span{
+.portfolio_list td.details a > span{
 	background: url("http://images.blackbull.in/all_button_matrix.png") no-repeat;
 	background-position:-164px 0px;
 	display: block;
@@ -111,10 +108,10 @@ table.portfolio_list td.details a > span{
 	padding: 0px 10px 0px 8px;
 }
 
-table.portfolio_list td.details a > span.hovered{
+.portfolio_list td.details a > span.hovered{
 	background-position:-164px -46px;
 }
-table.portfolio_list td.details a > span.mousedown{
+.portfolio_list td.details a > span.mousedown{
 	background-position:-164px -92px;
 }
 
@@ -196,7 +193,51 @@ table.portfolio_list td.details a > span.mousedown{
 	top:0;
 	width:100%;
 	opacity:0.2;
-	ilter: alpha(opacity=20);
+	filter: alpha(opacity=20);
 	background:#000;
 	z-index:299;
+}
+
+#twitthis {
+	background:url("/images/twitthis.png") no-repeat scroll center bottom transparent;
+	border:0 none;
+	float:right;
+	display:block;
+	height:150px;
+	margin:0;
+	padding:0;
+	text-align:center;
+	width:165px;
+}
+
+#twitthis iframe {
+	margin:44px 56px;
+}
+
+#twitcaption{
+	float:right;
+	display:block;
+	color:#2A7090;
+	font-size:18px;
+	line-height:25px;
+	margin:50px 0;
+	padding:0;
+	text-align:right;
+}
+
+#portfolio #foliointro{
+	width:500px;
+	display:block;
+	font:18px/26px Cambria,Georgia,'Times New Roman',Times,serif;
+	text-align:justify;
+}
+
+.posintro{
+	color:#666;
+	font:normal normal normal 14px/21px 'Century Gothic', arial, serif;
+	display:block;
+	width:400px;
+	margin:0 auto 10px;
+	padding:0;
+	text-align:center;
 }

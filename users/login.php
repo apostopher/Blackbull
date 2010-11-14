@@ -10,7 +10,7 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 <html class="no-js">
 <head>
 	<?php require_once("../metacontent.php"); ?>
-	<title>Blackbull Investment Company</title>
+	<title>Login - Blackbull Investment Company</title>
 	<link rel="stylesheet" href="../stylesheets/site.css" media="screen">
 	<link rel="stylesheet" href="../stylesheets/users/login.css" media="screen">
 	<script src="/javascripts/lib/modernizr-1.6.min.js?v=1"></script>

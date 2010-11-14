@@ -4,13 +4,13 @@
 	display:block;
 	font-size:1em;
 	padding:12px 24px;
-        position:relative;
 }
 
 #logo{
-	display:inline-block;
+	display:block;
 	height:40px;
 	border:0;
+	float:left;
 }
 
 #logo img{
@@ -162,12 +162,9 @@ html>body .hide{
     color:#eee;
     height:32px;
     line-height:24px;
-    position:absolute;
-    top:32px;
-    margin-top:-16px;
-    right:24px;
-    z-index:200;
     font-weight:bold;
+    float:right;
+    margin:4px 0px;
 }
 
 #header_login_nav a {
@@ -175,7 +172,6 @@ html>body .hide{
 }
 
 #header_login_nav ul{
-   float:left;
    padding:0;
    margin:0;
    list-style:none;
@@ -184,19 +180,16 @@ html>body .hide{
 #header_login_nav .first{
   margin-right:2px;
 }
-#header_login_nav .second{
-  line-height:14px;
-  padding-top:6px;
-}
+
 #header_login_nav .limenu{
   margin-left:2px;
   cursor:pointer;
 }
 
-#header_login_nav ul li{
+#header_login_nav .limenumain{
     position:relative;
     z-index:200;
-    float:left;
+    float:right;
     display:block;
     padding:4px 6px;
     text-decoration:none;
@@ -210,7 +203,7 @@ html>body .hide{
     background:#F9F9F9;
 }
 
-#header_login_nav ul li.hovered a{
+#header_login_nav .hovered a{
     color:#333;
 }
 
@@ -221,26 +214,25 @@ html>body .hide{
     -webkit-border-top-left-radius:5px;
     -webkit-border-bottom-left-radius:5px;
     -webkit-border-bottom-right-radius:5px;
-    behavior: url(ie-css3.htc);
     background-color:#F9F9F9;
     position:absolute;
-    z-index:200;
+    z-index:400;
     text-align:left;
     border:0;
     margin-top:0px;
     color:#333;
     font-size:11px;
+    right:0;
+    top:27px;
 }
 
 #signin_menu {
    width:210px;
-   right:0;
    padding:12px;
 }
 
 #settings_menu{
    width:120px;
-   right:0;
    padding:3px 10px;
 }
 
@@ -276,7 +268,6 @@ html>body .hide{
 #signin_submit {
     -moz-border-radius:4px;
     -webkit-border-radius:4px;
-    behavior: url(ie-css3.htc);
     background:#444;
     border:1px solid #444;
     color:#fff;
@@ -294,7 +285,6 @@ input.txtbox {
     display:block;
     -moz-border-radius:4px;
     -webkit-border-radius:4px;
-        behavior: url(ie-css3.htc);
     border:1px solid #DEDEDE;
     font-size:13px;
     margin:0 0 5px;
@@ -323,18 +313,21 @@ ul.invisible, #settings_menu ul li.invisible {
 /* =============================== Login CSS styles - Stop ================= */
 
 /* =============================== Common CSS styles - Start =============== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
+    display:block;
+}
+
 body{
 	margin:0;
 	padding:0;
 	font-family:"Segoe UI",Arial,Helvetica,sans-serif;
 	font-size:12px;
 	line-height:20px;
-	color: #333;
+	color: #444;
         vertical-align: baseline;
         font-smooth:always;
         background:#f3f3f3;
-        position:relative;
-        z-index:195;
 }
 
 article, aside, figure, footer, header, 
@@ -347,7 +340,7 @@ a {
 }
 
 a:hover {
-	border-bottom: 1px dotted #333;
+	/*border-bottom: 1px dotted #333;*/
 	color: #FE581A;
 }
 
@@ -390,10 +383,16 @@ table{
 	line-height: 24px;
 	margin-bottom: 20px;
 }
-p.last::after{
+p.last:after{
 	content: url("http://images.blackbull.in/stop.gif");
 	margin-left:4px;
 	width:10px;
 	height:10px;
 }
+
+.ie7 img { -ms-interpolation-mode: bicubic; }
+
+.clearfix:before, .clearfix:after {  content: "\0020"; display: block; height: 0; visibility: hidden;	 } 
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
 /* =============================== Common CSS styles - Stop =============== */

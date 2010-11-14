@@ -1,12 +1,10 @@
 <div id="opaque" class="hide"></div>
-<header id="siteheader">
+<header id="siteheader" class="png_bg clearfix">
 <a href="/index.php" ID="logo"><img src="/images/logo.png" width="314" height="26" alt="Company logo"/></a>
 <div id="header_login_nav" class="topnav">
 <div id="loadingdiv" class="hide"><span>Please wait&hellip;</span></div>
-<ul id="logout_menu" <?php if(!$_SESSION['user']){echo "class=\"invisible\"";} ?>>
-<li class="first">Welcome <span id='uname'><?php echo $_SESSION['user']; ?></span></li>
-<li class="second">|</li>
-<li class="limenu signout"><a class="settings signout" href='#'>Settings</a>
+<ul id="logout_menu" class="clearfix <?php if(!$_SESSION['user']){echo " invisible";} ?>" >
+<li class="limenu signout limenumain"><a class="settings signout" href='#'>Settings</a>
 <div id="settings_menu" class="hide">
 <ul>
 <li class="bottomborder"><a href="/users/changepassword.php">Change Password</a></li>
@@ -16,12 +14,12 @@
 </ul>
 </div>
 </li>
+<li class="second limenumain">|</li>
+<li class="first limenumain">Welcome <span id='uname'><?php echo $_SESSION['user']; ?></span></li>
 </ul>
-<ul id="login_menu" <?php if($_SESSION['user']){echo "class=\"invisible\"";} ?>>
-<li class="first"><a href="/users/registration.php">Register</a></li>
-<li class="second">|</li>
-<li class="limenu signin">
-<a class="signin" href="/login.php">Sign in</a>
+<ul id="login_menu" class="clearfix <?php if($_SESSION['user']){echo " invisible";} ?>" >
+<li class="limenu signin limenumain">
+<a class="signin" href="/users/login.php">Sign in</a>
 <div id="signin_menu" class="hide">
     <form id="signinfrm" method="post">
       <p>
@@ -42,23 +40,25 @@
     </form>
 </div>
 </li>
+<li class="second limenumain">|</li>
+<li class="first limenumain"><a href="/users/registration.php">Register</a></li>
 </ul>
 </div>     
 </header>
 <div id="light"><!-- --></div>
 <nav id="sitenavigation">
 <ul id="mainnav">
-<li class="menuitem wall" data-tab-name="Services">
-<span class="liname">Services</span>
-<span class="arrow hide"></span>
+<li class="menuitem wall png_bg" data-tab-name="Services">
+<span class="liname png_bg">Services</span>
+<span class="arrow hide png_bg"></span>
 <ul class="submenu hide">
 <li><a href="/services/queries.php" rel="prefetch"><h6>Blackbull Queries</h6><p>Get your questions answered.</p></a></li>
 <li><a href="/services/portfolio.php" rel="prefetch"><h6>Blackbull Portfolio</h6><p>The market positions that we have.</p></a></li>
 </ul>
 </li>
-<li class="menuitem wall" data-tab-name="Articles">
-<span class="liname">Articles</span>
-<span class="arrow hide"></span>
+<li class="menuitem wall png_bg" data-tab-name="Articles">
+<span class="liname png_bg">Articles</span>
+<span class="arrow hide png_bg"></span>
 <ul class="submenu hide">
 <li><a href="/articles/dragonEmpire.php"><h6>Dragon Empire</h6><p>US-China trade relations.</p></a></li>
 <!-- li><h6>Mix the perfect cocktail</h6><p>Use of fundamental &amp; technical analysis in investment decisions.</p></li -->
@@ -66,25 +66,25 @@
 <li><a href="/articles/smallIsBeautiful.php"><h6>Small is beautiful</h6><p>Investment techniques in smallcaps.</p></a></li>
 </ul>
 </li>
-<li class="menuitem wall" data-tab-name="Research">
-<span class="liname">Research</span>
-<span class="arrow hide"></span>
+<li class="menuitem wall png_bg" data-tab-name="Research">
+<span class="liname png_bg">Research</span>
+<span class="arrow hide png_bg"></span>
 <ul class="submenu hide">
 <li><a href="/research/coalindiaIPO.php"><h6>Coal India IPO</h6><p>The IPO analysis.</p></a></li>
 </ul>
 </li>
-<li class="menuitem wall" data-tab-name="Knowledge">
-<span class="liname">Knowledge</span>
-<span class="arrow hide"></span>
+<li class="menuitem wall png_bg" data-tab-name="Knowledge">
+<span class="liname png_bg">Knowledge</span>
+<span class="arrow hide png_bg"></span>
 <ul class="submenu hide">
 <li><a href="/knowledge/introStockMarket.php"><h6>The stock market</h6><p>The basics of stock market.</p></a></li>
 <li><a href="/knowledge/stockMarketTrading.php"><h6>The stock market trading</h6><p>trading fundamentals.</p></a></li>
 <li><a href="/knowledge/auction.php"><h6>The auction trading</h6><p>Basics of auctions.</p></a></li>
 </ul>
 </li>
-<li class="menuitem wall" data-tab-name="Tools">
-<span class="liname">Tools</span>
-<span class="arrow hide"></span>
+<li class="menuitem wall png_bg" data-tab-name="Tools">
+<span class="liname png_bg">Tools</span>
+<span class="arrow hide png_bg"></span>
 <ul class="submenu hide">
 <li><a href="/tools/fiidii.php"><h6>Institutional investments</h6><p>A chart of foreign &amp; domestic investments.</p></a></li>
 </ul>

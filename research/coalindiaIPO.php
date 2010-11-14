@@ -11,7 +11,7 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 <html class="no-js">
 <head>
 	<?php require_once("../metacontent.php"); ?>
-	<title>Blackbull Investment Company</title>
+	<title>Coal India IPO - Blackbull Investment Company</title>
 	<link rel="stylesheet" href="../stylesheets/site.css" media="screen">
 	<link rel="stylesheet" href="../stylesheets/research/research.css" media="screen">
 	<script src="../javascripts/lib/modernizr-1.6.min.js"></script>

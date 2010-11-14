@@ -10,9 +10,9 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 <html class="no-js">
 <head>
 	<?php require_once("../metacontent.php"); ?>
-	<title>Blackbull Investment Company</title>
+	<title>Institutional investments - Blackbull Investment Company</title>
 	<link rel="stylesheet" href="../stylesheets/site.css" media="screen">
-	<link rel="stylesheet" href="../stylesheets/tools/fiidii.css?v=2" media="screen">
+	<link rel="stylesheet" href="../stylesheets/tools/fiidii.css?v=3" media="screen">
 	<script src="../javascripts/lib/modernizr-1.6.min.js"></script>
 </head>
 <body>

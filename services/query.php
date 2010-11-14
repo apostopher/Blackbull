@@ -13,7 +13,7 @@ if(!isset($_SESSION['user'])){
 <html class="no-js">
 <head>
 	<?php require_once("../metacontent.php"); ?>
-	<title>Blackbull Investment Company</title>
+	<title>Query - Blackbull Investment Company</title>
 	<link rel="stylesheet" href="../stylesheets/site.css" media="screen">
 	<link rel="stylesheet" href="../stylesheets/services/query.css" media="screen">
 	<link rel="stylesheet" href="../stylesheets/services/queryform.css" media="screen">

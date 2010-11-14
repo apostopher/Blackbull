@@ -247,12 +247,11 @@ span.visible{
 	margin:0;
 	height:50px;
 	font-size:18px;
-	color:#333;
+	color:#2A7090;
 	line-height:24px;
 	text-align:center;
-	margin-bottom:40px;
 }
 
-#twitlink{
+#twitthis iframe{
 	margin:44px 56px;
 }

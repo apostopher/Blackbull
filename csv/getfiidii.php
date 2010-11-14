@@ -20,6 +20,18 @@ $filename = 'eq_fiidii_'.$csvdate.$csvdate.'.csv';
 $url = $baseurl.$filename;
 /*$url = "http://www.nseindia.com/content/equities/temp_csv/eq_fiidii_25-10-201025-10-2010.csv";*/
 if(url_exists($url)){
+	updatefiidii($url, $sqldate);
+}
+/*else{
+	$request = array("category" => "noValue","fromDate" => $csvdate, "toDate" => $csvdate, "check" => "new");
+	list($header, $content) = PostRequest("http://www.nseindia.com/marketinfo/equities/eq_fiidii_archives.jsp","http://www.nseindia.com/content/equities/eq_fiidii_archives.htm",$request);
+	echo $content;
+	if(url_exists($url)){
+		updatefiidii($url, $sqldate);
+	}
+}*/
+
+function updatefiidii($url, $sqldate){
 	$file = fopen($url,"r");
 	$fiidii = fgetcsv($file);
 	while($fiidii = fgetcsv($file)) {
@@ -52,11 +64,7 @@ if(url_exists($url)){
 		}
 	}
 	fclose($file);
-}else{
-	$request = array("category" => "noValue","fromDate" => $csvdate, "toDate" => $csvdate, "check" => "new");
-	list($header, $content) = PostRequest("http://www.nseindia.com/marketinfo/equities/eq_fiidii_archives.jsp","http://www.nseindia.com/content/equities/eq_fiidii_archives.htm",$request);
-	echo $content;
-}
+};
 
 function url_exists($url) {
     $hdrs = @get_headers($url);

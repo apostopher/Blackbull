@@ -1,5 +1,12 @@
 $(function() {
 
+        // Select the active tab
+        var activetab = $('div#content').attr("data-type");
+        if(activetab){
+        	$('li.menuitem[data-tab-name|='+activetab+'] span.liname').addClass("active");
+        	$('li.menuitem[data-tab-name|='+activetab+'] span.arrow').removeClass("hide");
+        }
+
 /* ====================== Header Functionality Start =========================*/
 $("li.menuitem").hover(
 		function(){

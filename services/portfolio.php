@@ -14,9 +14,9 @@ if(!isset($_SESSION['user'])){
 <html class="no-js">
 <head>
 	<?php require_once("../metacontent.php"); ?>
-	<title>Blackbull Investment Company</title>
+	<title>Portfolio - Blackbull Investment Company</title>
 	<link rel="stylesheet" href="../stylesheets/site.css" media="screen">
-	<link rel="stylesheet" href="../stylesheets/services/portfolio.css" media="screen">
+	<link rel="stylesheet" href="../stylesheets/services/portfolio.css?v=1" media="screen">
 	<script src="../javascripts/lib/modernizr-1.6.min.js"></script>
 </head>
 <body>
@@ -40,9 +40,15 @@ if(!isset($_SESSION['user'])){
 <?php require_once("../_partial_header.php"); ?>
 <div id="content" data-type="Services">
 <div id="portfolio">
+<div id="twitthis">
+<a id="twitlink" href="http://twitter.com/share" class="twitter-share-button" data-text="Ckeck this out.. #NSE and #BSE stock market portfolio on #blackbull." data-count="vertical" data-via="apostopher">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+</div>
+<div id="twitcaption">Liked our portfolio?<br/>Tell your friends.</div>
 <h1>Blackbull Portfolio</h1>
+<p id="foliointro">These are the investment &amp; trading market positions that we have. The latest market positions are at the top.</p>
 <div id="investment_positions">
 <h3>Investment positions</h3>
+<div class="posintro">These are long-term wealth appreciation investment calls. The purpose of these calls is to maximize the investor's wealth over a five year horizon. All the stocks recommended here are traded on the Bombay Stock Exchange(BSE).</div>
 <table id="investment_list_table" class="portfolio_list" cellspacing="0" cellpadding="0">
 <thead>
 <tr><th colspan="3">&nbsp;</th></tr>
@@ -54,6 +60,7 @@ if(!isset($_SESSION['user'])){
 </div>
 <div id="trading_positions">
 <h3>Trading positions</h3>
+<div class="posintro">These are short term momentum trading calls. The user must practice absolute discipline in following the stop losses and target levels. All the stocks recommended here are traded on the Bombay Stock Exchange(BSE) &amp; National Stock Exchange(NSE).</div>
 <table id="trading_list_table" class="portfolio_list" cellspacing="0" cellpadding="0">
 <thead>
 <tr><th colspan="3">&nbsp;</th></tr>

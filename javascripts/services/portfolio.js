@@ -95,12 +95,16 @@ function getInvestmentStatus(){
 						$("#scripname").html(scripname);
 					},
 					success:function(response){
+						var boxTop = $("#facebox").height();
+						var windowHeight = $(window).height();
+						var scrollTop = $(window).scrollTop();
+						var topmargin = (windowHeight-boxTop + scrollTop)/2;
 						$(".scripdetails div.details").html(response);
-						$("#facebox").animate({'margin-top':"-"+$("#facebox").height()/2 +"px"}, "slow");
+						$("#facebox").animate({'top':topmargin +"px"}, "slow");
 					},
 					failure:function(){
 						$(".scripdetails div.details").html("<p class=\"error\">Error occured&hellip;</p>");
-						$("#facebox").animate({'margin-top':"-"+$("#facebox").height()/2 +"px"}, "slow");
+						$("#facebox").animate({'top':topmargin +"px"}, "slow");
 					}
 				});
 				if($("#facebox").hasClass("hide")){
@@ -197,12 +201,16 @@ function getTradingStatus(){
 						$("#scripname").html(scripname);
 					},
 					success:function(response){
+						var boxTop = $("#facebox").height();
+						var windowHeight = $(window).height();
+						var scrollTop = $(window).scrollTop();
+						var topmargin = (windowHeight-boxTop + scrollTop)/2;
 						$(".scripdetails div.details").html(response);
-						$("#facebox").animate({'margin-top':(($("#facebox").height()/2)- $(window).scrollTop())*(-1) +"px"}, "slow");
+						$("#facebox").animate({'top':topmargin + "px"}, "slow");
 					},
 					failure:function(){
 						$(".scripdetails div.details").html("<p class=\"error\">Error occured&hellip;</p>");
-						$("#facebox").animate({'margin-top':(($("#facebox").height()/2)- $(window).scrollTop())*(-1) +"px"}, "slow");
+						$("#facebox").animate({'top':topmargin + "px"}, "slow");
 					}
 				});
 				if($("#facebox").hasClass("hide")){
