@@ -11,7 +11,7 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 <head>
 	<?php require_once("../metacontent.php"); ?>
 	<title>New password - Blackbull Investment Company</title>
-	<link rel="stylesheet" href="../stylesheets/site.css" media="screen">
+	<link rel="stylesheet" href="../stylesheets/site.css?v=6" media="screen">
 	<link rel="stylesheet" href="../stylesheets/users/setnewpassword.css" media="screen">
 	<!-- script src="../javascripts/lib/modernizr-1.5.min.js"></script -->
 </head>

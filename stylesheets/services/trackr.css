@@ -2,14 +2,11 @@
 
 #portmain{
 	margin:0;
-	padding:16px 0px 10px 24px;
+	padding:20px 0 0 0;
 	background:#fff;
 	font-size:14px;
 	line-height:22px;
 	font-family: arial, serif;
-	margin-left:25px;
-	border-left:1px solid #ddd;
-	position:relative;
 }
 
 #portholder{
@@ -19,19 +16,18 @@
 }
 
 #toolbar{
-	margin:10px auto 0px auto;
-	width:840px;
+	display:block;
+	margin:0;
 	padding:5px;
+	height:30px;
+	border-top:1px solid #576c93;
+	background:#f3f6fa;
+	margin-bottom:10px;
 }
 
 #holder{
-	border:1px solid #999;
-	background:#f9f9f9 url("/images/trackr_sidebar_back.png") repeat-y 601px top;
-	margin:0;
-	width:924px;
-	-moz-border-radius:10px;
-   	border-radius:10px;
-   	-webkit-border-radius:10px;	
+	margin-left:20px;
+	width:924px;	
 }
 
 #sidebar{
@@ -45,17 +41,9 @@
 	float:left;
 	width:600px;
 	min-height:800px;
-	border-right:1px solid #999;
-	/*background:#fff url("/images/trackr_back.png") repeat-y right top;*/
 	background:#fff;
 	margin:0;
 	padding:5px 0;
-	-moz-border-radius-bottomleft:10px;
-	-webkit-border-bottom-left-radius:10px;
-	border-bottom-left-radius:10px;
-	-moz-border-radius-topleft:10px;
-	-webkit-border-top-left-radius:10px;
-	border-top-left-radius:10px;
 }
 
 #portcontent{
@@ -79,7 +67,7 @@
 	border-bottom:1px solid #eee;
 	padding:4px;
 	width:233px;
-	color:#4575B4;
+	color:#2A7090;
 	/*font-weight:bold;*/
 }
 
@@ -136,21 +124,12 @@
 	color:#000;
 }
 
-.infoblock{
-	background:#fff;
-	-moz-border-radius:10px;
-   	border-radius:10px;
-   	-webkit-border-radius:10px;
-   	border:1px solid #999;
-   	padding:5px;
-}
-
 ul{
 	list-style:none;
 }
 
 #markets{
-	margin-bottom:20px;
+	height:80px;
 }
 
 #tip{
@@ -169,4 +148,15 @@ ul{
 	-webkit-border-top-left-radius:0px;
 	border-top-left-radius:0px;
 	background:url("/images/slideout.png") right center no-repeat;
+	display:none;
+}
+
+#transform {
+	display:none;
+}
+
+h1{
+	color:#2A7090;
+	font:30px/54px Cambria,Georgia,'Times New Roman',Times,serif;
+	margin:20px;
 }

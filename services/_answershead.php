@@ -1,3 +1,4 @@
+<div id="queryqnholder" class="clearfix">
 <div id="postquery">
 <div id="charsleft"><b id="charcount">1000</b> characters left</div>
 <h3>Post an answer:</h3>
@@ -8,5 +9,6 @@
 <input type="hidden" name="ownername" id="ownername" value="<?php echo $_SESSION['id']; ?>"/>
 <span id="tip">Keep my post private<div id="privatetip"><b>Private</b> posts will not publish your identity.</div></span>
 </form>
+</div>
 </div>
 <div id="formresult"><p>The post has been successfully submitted!. Click here to add a <a id='anotherpost' href='#'>new post</a></p></div>

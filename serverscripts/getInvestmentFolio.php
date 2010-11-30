@@ -25,6 +25,7 @@ if ($file) {
 	}else{
 		$response = $response."<tr><td class=\"legend\">Current % returns</td><td class=\"green\">".$profit."%</td></tr>";
 	}
+	$response = $response."<tr><td class=\"legend\">Comments</td><td>".$row['comment']."</td></tr>";
 	$response = $response."</tbody></table>";
 	//$data[$i] = "report" => $row['report'], "comment" => $row['comment']);
 	fclose($file);

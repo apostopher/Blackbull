@@ -60,3 +60,10 @@ top:-6px;
 	color: #333;
 	font: normal normal normal 18px/26px Cambria, Georgia, 'Times New Roman', Times, serif;
 }
+
+#googleads{
+	display:block;
+	width:750px;
+	padding:0;
+	margin:20px auto;
+}

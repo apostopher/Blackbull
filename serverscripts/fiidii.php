@@ -2,7 +2,7 @@
 //Include the database.
 require_once("dba.php");
 
-$query = "SELECT fii,dii,fiidii_date,close FROM fiidii, cmbhav WHERE symbol=\"NIFTY\" AND fiidii_date=timestamp ORDER BY fiidii_date DESC LIMIT 30";
+$query = "SELECT fii,dii,fiidii_date FROM fiidii ORDER BY fiidii_date DESC LIMIT 30";
 $result = mysql_query($query);
 if($result){
 	$i = 0;
@@ -11,7 +11,7 @@ if($result){
 		$dii = round($row['dii']/1000, 2);
 		$total = round(($row['fii'] + $row['dii'])/1000, 2);
 		$date = date("d-M", strtotime($row['fiidii_date']));
-		$data[$i] = array("date" => $date, "value" => $total, "fii" => $fii, "dii" => $dii, "closeval" => $row['close']);
+		$data[$i] = array("date" => $date, "value" => $total, "fii" => $fii, "dii" => $dii);
 		$i++;
 	}
 	$daily_move = "SELECT fiidii_date, fiibuy, fiisell ,diibuy ,diisell FROM fiidii ORDER BY fiidii_date DESC LIMIT 1";

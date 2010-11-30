@@ -121,6 +121,20 @@ html>body .hide{
         font-size:12px;
         line-height:14px;
 }
+#bbsearch{
+	float:right;
+	margin:0;
+	padding:0;
+	margin-top:4px;
+}
+#bbsearch form{
+	margin:0;
+	padding:0;
+}
+
+* html #bbsearch{
+	display:inline;
+}
 /* =============================== Header CSS styles - Stop ================== */
 
 /* =============================== Footer CSS styles - Start ================= */
@@ -154,6 +168,9 @@ html>body .hide{
     top:0;
     width:100%;
     z-index:190;
+    opacity: .4;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    filter: alpha(opacity=40);
 }
 
 #header_login_nav {
@@ -161,9 +178,13 @@ html>body .hide{
     text-align:right;
     color:#eee;
     height:32px;
+    width:300px;
     line-height:24px;
     font-weight:bold;
-    float:right;
+    position:absolute;
+    z-index:200;
+    top:12px;
+    right:24px;
     margin:4px 0px;
 }
 

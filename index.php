@@ -16,7 +16,7 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 	<?php require_once("metacontent.php"); ?>
 	<?php require_once("opengraph.php"); ?>
 	<title>Blackbull Investment Company</title>
-        <link rel="stylesheet" href="stylesheets/site.css?v=2" media="screen">
+        <link rel="stylesheet" href="stylesheets/site.css?v=6" media="screen">
         <link rel="stylesheet" href="stylesheets/home.css?v=2" media="screen">
         <script src="/javascripts/lib/modernizr-1.6.min.js?v=1"></script>
         <!-- script type="text/javascript" src="http://use.typekit.com/gpv5lbg.js"></script -->
@@ -53,11 +53,27 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 <div class="indexname greenname">NIFTY</div>
 <div class="indexvalue greenvalue"><span id="nprice"></span><br/><span id="nchange"></span></div>
 </div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-2413414539580695";
+/* Homepage */
+google_ad_slot = "3232859886";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
 <blockquote>
 <p>100 Rs. Invested in Blackbull is <span id="returns"></span>&nbsp;Rs after one year</p>
 </blockquote>
 <section class="bbfolio">
 <h2>Blackbull Portfolio</h2>
+<p class="attention">We are going for profit booking to invest at the intermediate bottom when it happens. Visit <a href="services/portfolio.php">blackbull portfolio</a> page for more details.</p>
+</section>
+<section class="hide">
+<h2>Blackbull Portfolio</h2>
+<p class="attention">We are going for profit booking to invest at the intermediate bottom when it happens. Visit <a href="services/portfolio.php">blackbull portfolio</a> page.</p>
 <div id="porttabholder" class="clearfix">
 <ul class="portfolio">
 <li id="tradingtab" class="tab active"><a href="#">Trading</a>

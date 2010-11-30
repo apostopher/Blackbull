@@ -14,7 +14,7 @@ if(!isset($_SESSION['user'])){
 <head>
 	<?php require_once("../metacontent.php"); ?>
 	<title>Query - Blackbull Investment Company</title>
-	<link rel="stylesheet" href="../stylesheets/site.css" media="screen">
+	<link rel="stylesheet" href="../stylesheets/site.css?v=6" media="screen">
 	<link rel="stylesheet" href="../stylesheets/services/query.css" media="screen">
 	<link rel="stylesheet" href="../stylesheets/services/queryform.css" media="screen">
 	<script src="../javascripts/lib/modernizr-1.6.min.js"></script>
@@ -23,6 +23,19 @@ if(!isset($_SESSION['user'])){
 <?php require_once("../_partial_header.php"); ?>
 <div id="content" data-type="Services">
 <div id="query">
+<div id="googleads">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2413414539580695";
+/* query */
+google_ad_slot = "7222763231";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
 <div id="question">
 </div>
 <div id="answers">

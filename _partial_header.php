@@ -1,6 +1,4 @@
 <div id="opaque" class="hide"></div>
-<header id="siteheader" class="png_bg clearfix">
-<a href="/index.php" ID="logo"><img src="/images/logo.png" width="314" height="26" alt="Company logo"/></a>
 <div id="header_login_nav" class="topnav">
 <div id="loadingdiv" class="hide"><span>Please wait&hellip;</span></div>
 <ul id="logout_menu" class="clearfix <?php if(!$_SESSION['user']){echo " invisible";} ?>" >
@@ -43,10 +41,24 @@
 <li class="second limenumain">|</li>
 <li class="first limenumain"><a href="/users/registration.php">Register</a></li>
 </ul>
-</div>     
+</div>
+<header id="siteheader" class="png_bg clearfix">
+<a href="/index.php" id="logo"><img src="/images/logo.png" width="314" height="26" alt="Company logo"/></a>     
 </header>
 <div id="light"><!-- --></div>
 <nav id="sitenavigation">
+<div id="bbsearch">
+<form action="http://blackbull.in/searchresults.php" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-2413414539580695:1w7lvk-k0hd" />
+    <input type="hidden" name="cof" value="FORID:10" />
+    <input type="hidden" name="ie" value="UTF-8" />
+    <input type="text" name="q" size="20" />
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.co.in/cse/brand?form=cse-search-box&amp;lang=en"></script>
+</div>
 <ul id="mainnav">
 <li class="menuitem wall png_bg" data-tab-name="Services">
 <span class="liname png_bg">Services</span>
@@ -71,6 +83,8 @@
 <span class="arrow hide png_bg"></span>
 <ul class="submenu hide">
 <li><a href="/research/coalindiaIPO.php"><h6>Coal India IPO</h6><p>The IPO analysis.</p></a></li>
+<li><a href="/research/tulip.php"><h6>TULIP telecom analysis</h6><p>The complete analysis of TULIP telecom.</p></a></li>
+<li><a href="/research/moilIPO.php"><h6>MOIL IPO analysis</h6><p>The complete analysis of MOIL IPO.</p></a></li>
 </ul>
 </li>
 <li class="menuitem wall png_bg" data-tab-name="Knowledge">
@@ -87,6 +101,7 @@
 <span class="arrow hide png_bg"></span>
 <ul class="submenu hide">
 <li><a href="/tools/fiidii.php"><h6>Institutional investments</h6><p>A chart of foreign &amp; domestic investments.</p></a></li>
+<li><a href="/tools/optionspread.php"><h6>Options Spread</h6><p>An overview of NIFTY put and call options.</p></a></li>
 </ul>
 </li>
 </ul>

@@ -1,0 +1,148 @@
+#leftpane{
+	width:200px;
+	float:left;
+	padding:225px 10px 0px;
+}
+
+#tulipads{
+	width:160px;
+	margin:0 auto;
+}
+
+#analysis{
+	float:left;
+	width:700px;
+	margin:0 auto;
+}
+
+#analysis p,#analysis li{
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    font-size:14px;
+    line-height:24px;
+    color:#333;
+    margin-bottom:24px;
+    text-align:justify;
+}
+
+#analysis li{
+    margin:0;
+}
+#analysis h1{
+    color: #f15a22;
+    font: normal normal normal 36px/40px 'Times New Roman', Times, serif;
+    margin:54px 0 0 0;
+    width:50%
+}
+#analysis h3{
+    color: #f15a22;
+    font-size:14px;
+}
+
+#analysis h4{
+    font-size:14px;
+    font-weight:normal;
+    color:#666;
+    font-style:italic;
+    margin:4px;
+}
+
+#analysis li h4{
+    color:#333;
+    margin:0;
+}
+
+#analysis h6{
+    font-size:10px;
+    font-weight:normal;
+    color:#666;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-top:5px;
+    margin-bottom:74px;
+}
+#analysis li p{
+    margin-top:0px;
+}
+#analysis p#tulipkey{
+    font-style:italic;
+    margin:24px;
+    color:#f15a22;
+}
+
+#stockinfo{
+	float:right;
+	text-align:center;
+	border:1px solid #f15a22;
+	background:#fff;
+	padding:0px;
+	margin-top:54px;
+	border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+}
+
+#stockinfo td{
+	padding:10px;
+}
+
+#topleft{
+	border-right:1px solid #f15a22;
+	border-bottom:1px solid #f15a22;
+}
+
+#bottomleft, #middleleft{
+	border-right:1px solid #f15a22;
+	border-bottom:1px solid #f15a22;
+}
+
+#topright{
+	border-bottom:1px solid #f15a22;
+	font-weight:bold;
+}
+
+#bottomright, #middleright{
+	font-weight:bold;
+	border-bottom:1px solid #f15a22;
+}
+
+#stockinfo td#bottommost{
+    padding:4px;
+    font-size:10px;
+}
+
+
+#analysis p.buy{
+	color:#6C9B48;
+	font-style:italics;
+	margin:10px 0px;
+	font-weight:bold;
+	font-size:18px;
+	text-align:center;
+	text-shadow:#FFF 1px 1px 0px;
+}
+
+.dropcap {
+    float: left;
+    font-family: Cambria, Georgia, 'Times New Roman', Times, serif;
+    font-size: 3.5em;
+    line-height: 0.95em;
+    padding-right: 5px;
+    padding-top: 1px;
+    color:#000;
+}
+#tulipresources h3{
+   font-weight:normal;
+   font-size:12px;
+   letter-spacing:1px;
+}
+
+#tulipresources ul li{
+    list-style:none;
+    font-size:11px;
+    color:#666;
+}
+
+#tulipbanner{
+	width:468px;
+	margin:30px auto;
+}

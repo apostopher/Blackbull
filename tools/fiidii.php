@@ -10,8 +10,8 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 <html class="no-js">
 <head>
 	<?php require_once("../metacontent.php"); ?>
-	<title>Institutional investments - Blackbull Investment Company</title>
-	<link rel="stylesheet" href="../stylesheets/site.css" media="screen">
+	<title>FII DII investments - Blackbull Investment Company</title>
+	<link rel="stylesheet" href="../stylesheets/site.css?v=6" media="screen">
 	<link rel="stylesheet" href="../stylesheets/tools/fiidii.css?v=3" media="screen">
 	<script src="../javascripts/lib/modernizr-1.6.min.js"></script>
 </head>
@@ -48,6 +48,19 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 <li>Select tab to see corresponding chart.</li>
 <li>FII data calculation comes negative according to the data from NSE.</li>
 </ol>
+</div>
+<div id="adthis">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2413414539580695";
+/* fiidiirec */
+google_ad_slot = "8392314650";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
 </div>
 <div id="twitthis">
 <p>Liked this page?<br/>Spread the word.</p>

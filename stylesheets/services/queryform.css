@@ -1,14 +1,47 @@
 /* ------------   Post a Query ----- */
+#queryqnholder {
+	margin-bottom:10px;
+}
+
 #postquery{
-	display:inline-block;
-	clear:both;
-	margin:0px 0px 20px 0px;
+	display:block;
+	float:left;
+	margin:0px 20px 20px 0px;
 	padding:10px;
 	background:#FAFAFA;
 	-moz-border-radius: 5px;
   	-webkit-border-radius: 5px;
   	border-radius: 5px;
   	border:1px solid #eee;
+  	width:430px;
+}
+
+#queryqninfo {
+	float:left;
+	padding:10px;
+	width:400px;
+	background:#fdffce;
+	border:1px solid #dbd1a0;
+	-moz-border-radius: 5px;
+  	-webkit-border-radius: 5px;
+  	border-radius: 5px;
+}
+
+#queryqninfo h6{
+        margin:0;
+        font-size:12px;
+}
+
+#queryqninfo p {
+        font-size:12px;
+	line-height:18px;
+	font-family:arial,serif;
+	margin-bottom:12px;
+}
+#queryqninfo li{
+	font-family:arial,serif;
+	line-height:18px;
+	margin-bottom:6px;
 }
 
 #postquery h3 {

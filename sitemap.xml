@@ -4,14 +4,8 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
 <url>
   <loc>http://blackbull.in/</loc>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>http://blackbull.in/index.php</loc>
   <changefreq>always</changefreq>
 </url>
 <url>
@@ -19,11 +13,19 @@
   <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://blackbull.in/users/registration.php</loc>
+  <loc>http://blackbull.in/users/login.php</loc>
   <changefreq>always</changefreq>
 </url>
 <url>
   <loc>http://blackbull.in/users/login.php?forgot=true</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://blackbull.in/users/registration.php</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://blackbull.in/index.php</loc>
   <changefreq>always</changefreq>
 </url>
 <url>
@@ -43,6 +45,14 @@
   <changefreq>always</changefreq>
 </url>
 <url>
+  <loc>http://blackbull.in/research/tulip.php</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://blackbull.in/research/moilIPO.php</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
   <loc>http://blackbull.in/knowledge/introStockMarket.php</loc>
   <changefreq>always</changefreq>
 </url>
@@ -56,6 +66,10 @@
 </url>
 <url>
   <loc>http://blackbull.in/tools/fiidii.php</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://blackbull.in/tools/optionspread.php</loc>
   <changefreq>always</changefreq>
 </url>
 <url>

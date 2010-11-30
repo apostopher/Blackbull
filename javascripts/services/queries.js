@@ -60,9 +60,9 @@ $(function(){
 					// Hide the add post form.
 					$("#postquerybtn").val("Post");
 					$("formresult").html("<p>The post has been successfully submitted!. Click here to add a <a id='anotherpost' href='#'>new post</a></p>");
-					$("#postquery").hide();
+					$("#queryqnholder").hide();
 					$("#anotherpost").click(function(){
-						$("#postquery").show();
+						$("#queryqnholder").show();
 						$("#formresult").hide();
 						$("#formresult").html("");
 						$("#querytext").val("");

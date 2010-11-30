@@ -15,9 +15,9 @@ if(!isset($_SESSION['user'])){
 <head>
 	<?php require_once("../metacontent.php"); ?>
 	<title>Queries - Blackbull Investment Company</title>
-	<link rel="stylesheet" href="../stylesheets/site.css" media="screen">
-	<link rel="stylesheet" href="../stylesheets/services/queries.css" media="screen">
-	<link rel="stylesheet" href="../stylesheets/services/queryform.css" media="screen">
+	<link rel="stylesheet" href="../stylesheets/site.css?v=6" media="screen">
+	<link rel="stylesheet" href="../stylesheets/services/queries.css?v=2" media="screen">
+	<link rel="stylesheet" href="../stylesheets/services/queryform.css?v=2" media="screen">
 	<script src="../javascripts/lib/modernizr-1.6.min.js"></script>
 </head>
 <body>
@@ -33,6 +33,19 @@ if(isset($_SESSION['user'])){
 	require_once("_querieslogin.php");
 }
 ?>
+<div id="queriesads">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2413414539580695";
+/* query */
+google_ad_slot = "7222763231";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
 <div id="querytable">
 <table id="table_queries" cellpadding="0" cellspacing="0" border="0">
 <colgroup>

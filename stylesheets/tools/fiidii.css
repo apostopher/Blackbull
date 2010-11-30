@@ -229,6 +229,10 @@ span.visible{
 	line-height:26px;
 	color:#4572a7;
 }
+#adthis{
+	float:left;
+	display:block;
+}
 
 #twitthis{
 	float:right;

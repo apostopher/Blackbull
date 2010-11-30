@@ -11,9 +11,13 @@ if(strstr($tableStatusCM['timestamp'],date("Y-m-d"))){
 	mysql_close($con);
 	return false;
 }
-
-$csvdate = date("d-m-Y");
-$sqldate = date("Y-m-d");
+if($_REQUEST['csvdate'] && $_REQUEST['sqldate']){
+  $csvdate = $_REQUEST['csvdate'];
+  $sqldate = $_REQUEST['sqldate'];
+}else{
+  $csvdate = date("d-m-Y");
+  $sqldate = date("Y-m-d");
+}
 
 $baseurl = 'http://www.nseindia.com/content/equities/temp_csv/';
 $filename = 'eq_fiidii_'.$csvdate.$csvdate.'.csv';
@@ -21,6 +25,8 @@ $url = $baseurl.$filename;
 /*$url = "http://www.nseindia.com/content/equities/temp_csv/eq_fiidii_25-10-201025-10-2010.csv";*/
 if(url_exists($url)){
 	updatefiidii($url, $sqldate);
+}else{
+	echo $url;
 }
 /*else{
 	$request = array("category" => "noValue","fromDate" => $csvdate, "toDate" => $csvdate, "check" => "new");

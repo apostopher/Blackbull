@@ -15,7 +15,7 @@ if(!isset($_SESSION['user'])){
 <head>
 	<?php require_once("../metacontent.php"); ?>
 	<title>Portfolio - Blackbull Investment Company</title>
-	<link rel="stylesheet" href="../stylesheets/site.css" media="screen">
+	<link rel="stylesheet" href="../stylesheets/site.css?v=6" media="screen">
 	<link rel="stylesheet" href="../stylesheets/services/portfolio.css?v=1" media="screen">
 	<script src="../javascripts/lib/modernizr-1.6.min.js"></script>
 </head>
@@ -46,6 +46,19 @@ if(!isset($_SESSION['user'])){
 <div id="twitcaption">Liked our portfolio?<br/>Tell your friends.</div>
 <h1>Blackbull Portfolio</h1>
 <p id="foliointro">These are the investment &amp; trading market positions that we have. The latest market positions are at the top.</p>
+<div id="portfolioads">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2413414539580695";
+/* query */
+google_ad_slot = "7222763231";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
 <div id="investment_positions">
 <h3>Investment positions</h3>
 <div class="posintro">These are long-term wealth appreciation investment calls. The purpose of these calls is to maximize the investor's wealth over a five year horizon. All the stocks recommended here are traded on the Bombay Stock Exchange(BSE).</div>

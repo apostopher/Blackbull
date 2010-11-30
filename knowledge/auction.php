@@ -11,7 +11,7 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 <head>
 	<?php require_once("../metacontent.php"); ?>
 	<title>Auction trading - Blackbull Investment Company</title>
-	<link rel="stylesheet" href="../stylesheets/site.css" media="screen">
+	<link rel="stylesheet" href="../stylesheets/site.css?v=6" media="screen">
 	<link rel="stylesheet" href="../stylesheets/knowledge/knowledge.css" media="screen">
 	<script src="../javascripts/lib/modernizr-1.6.min.js"></script>
 </head>
@@ -20,7 +20,19 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 <div id="content" data-type="Knowledge">
 <div id="knowledge">
 <div class="spacer">&nbsp;</div>
-<aside id="leftpane">&nbsp;</aside>
+<aside id="leftpane">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2413414539580695";
+/* knowledge */
+google_ad_slot = "9946812743";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</aside>
 <article id="rightpane">
 <header>
 <h1>Auctions in trading</h1>

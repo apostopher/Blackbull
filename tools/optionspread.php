@@ -11,7 +11,7 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 <head>
 	<?php require_once("../metacontent.php"); ?>
 	<title>Options spread - Blackbull Investment Company</title>
-	<link rel="stylesheet" href="../stylesheets/site.css" media="screen">
+	<link rel="stylesheet" href="../stylesheets/site.css?v=6" media="screen">
 	<link rel="stylesheet" href="../stylesheets/tools/optionspread.css" media="screen">
 	<script src="../javascripts/lib/modernizr-1.6.min.js"></script>
 </head>
@@ -25,6 +25,8 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 <tr><td class="legend">Expiry Date</td><td class="colon">:</td><td class="cellval"><span id="sec_expiry"></span></td><td></td></tr>
 <tr><td class="legend">Value of underlying</td><td class="colon">:</td><td class="cellval"><span id="sec_val"></span></td><td id="updatedate"></td></tr>
 </table>
+<div id="toolscolumnads">
+</div>
 <table id="tbl_optionspread" cellpadding="0" cellspacing="0" border="0">
 <thead>
 <tr>
@@ -47,7 +49,7 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 </tfoot>
 <tbody id='spread_body'>
 <tr><td colspan="7">Loading data&hellip;</td></tr>
-<tbody>
+</tbody>
 </table>
 </div>
 </div>
