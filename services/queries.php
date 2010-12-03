@@ -1,4 +1,5 @@
 <?php
+require_once("../phpinisettings.php");
 session_start();
 if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE['cookid'])){
       $_SESSION['user'] = $_COOKIE['cookname'];
@@ -14,8 +15,9 @@ if(!isset($_SESSION['user'])){
 <html class="no-js">
 <head>
 	<?php require_once("../metacontent.php"); ?>
+	<meta name="Description" content="Blackbull.in queries is a forum to discuss stock market investment ideas, queries and views. Discuss company prospects, IPO and FPO views on blackbull queries."/>
 	<title>Queries - Blackbull Investment Company</title>
-	<link rel="stylesheet" href="../stylesheets/site.css?v=6" media="screen">
+	<link rel="stylesheet" href="../stylesheets/site.css" media="screen">
 	<link rel="stylesheet" href="../stylesheets/services/queries.css?v=2" media="screen">
 	<link rel="stylesheet" href="../stylesheets/services/queryform.css?v=2" media="screen">
 	<script src="../javascripts/lib/modernizr-1.6.min.js"></script>

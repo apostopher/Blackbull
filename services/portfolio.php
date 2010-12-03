@@ -1,4 +1,5 @@
 <?php
+require_once("../phpinisettings.php");
 session_start();
 if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE['cookid'])){
       $_SESSION['user'] = $_COOKIE['cookname'];
@@ -14,8 +15,9 @@ if(!isset($_SESSION['user'])){
 <html class="no-js">
 <head>
 	<?php require_once("../metacontent.php"); ?>
+	<meta name="Description" content="These are the long-term and short-term investment stocks. Blackbull.in does a thorough analysis of every stock using fundamental and/or technical analysis."/>
 	<title>Portfolio - Blackbull Investment Company</title>
-	<link rel="stylesheet" href="../stylesheets/site.css?v=6" media="screen">
+	<link rel="stylesheet" href="../stylesheets/site.css" media="screen">
 	<link rel="stylesheet" href="../stylesheets/services/portfolio.css?v=1" media="screen">
 	<script src="../javascripts/lib/modernizr-1.6.min.js"></script>
 </head>

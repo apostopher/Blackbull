@@ -1,4 +1,5 @@
 <?php
+require_once("../phpinisettings.php");
 session_start();
 if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE['cookid'])){
       $_SESSION['user'] = $_COOKIE['cookname'];
@@ -11,8 +12,9 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 <html class="no-js">
 <head>
 	<?php require_once("../metacontent.php"); ?>
+	<meta name="Description" content="TULIP is a leading VPN provider in India. Blackbull.in explains how well the company is performing fundamentally and is it right time to invest in TULIP."/>
 	<title>TULIP Telecom Analysis - Blackbull Investment Company</title>
-	<link rel="stylesheet" href="../stylesheets/site.css?v=6" media="screen">
+	<link rel="stylesheet" href="../stylesheets/site.css" media="screen">
 	<link rel="stylesheet" href="../stylesheets/research/tulip.css" media="screen">
 	<script src="../javascripts/lib/modernizr-1.6.min.js"></script>
 </head>

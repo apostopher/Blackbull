@@ -1,4 +1,5 @@
 <?php
+require_once("phpinisettings.php");
 session_start();
 if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE['cookid'])){
       $_SESSION['user'] = $_COOKIE['cookname'];
@@ -14,6 +15,7 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js modern"> <!--<![endif]-->
 <head>
 	<?php require_once("metacontent.php"); ?>
+	<meta name="Description" content="Blackbull.in is a website about stock market investments. Get access to various articles on stocks, IPO, company analysis. Our investment tools, stock market tips and tricks help you become intelligent investor."/>
 	<?php require_once("opengraph.php"); ?>
 	<title>Blackbull Investment Company</title>
         <link rel="stylesheet" href="stylesheets/site.css?v=6" media="screen">

@@ -1,4 +1,5 @@
 <?php
+require_once("../phpinisettings.php");
 session_start();
 if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE['cookid'])){
       $_SESSION['user'] = $_COOKIE['cookname'];
@@ -11,8 +12,9 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 <html class="no-js">
 <head>
 	<?php require_once("../metacontent.php"); ?>
+	<meta name="Description" content="MOIL is coming up with an IPO. Blackbull.in did the company analysis of MOIL. This article explains whether one should invest in MOIL IPO."/>
 	<title>MOIL IPO - Blackbull Investment Company</title>
-	<link rel="stylesheet" href="../stylesheets/site.css?v=6" media="screen">
+	<link rel="stylesheet" href="../stylesheets/site.css" media="screen">
 	<link rel="stylesheet" href="../stylesheets/research/research.css" media="screen">
 	<script src="../javascripts/lib/modernizr-1.6.min.js"></script>
 </head>

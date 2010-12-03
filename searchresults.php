@@ -1,4 +1,5 @@
 <?php
+require_once("phpinisettings.php");
 session_start();
 if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE['cookid'])){
       $_SESSION['user'] = $_COOKIE['cookname'];
@@ -14,9 +15,10 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js modern"> <!--<![endif]-->
 <head>
 	<?php require_once("metacontent.php"); ?>
+	<meta name="Description" content="Blackbull.in search is a custom site search powered by google."/>
 	<?php require_once("opengraph.php"); ?>
 	<title>Blackbull Investment Company</title>
-        <link rel="stylesheet" href="stylesheets/site.css?v=6" media="screen">
+        <link rel="stylesheet" href="stylesheets/site.css?v=4" media="screen">
         <!-- script type="text/javascript" src="http://use.typekit.com/gpv5lbg.js"></script -->
 	<!-- script type="text/javascript">try{Typekit.load();}catch(e){}</script -->
 </head>

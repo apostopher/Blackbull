@@ -127,14 +127,6 @@ html>body .hide{
 	padding:0;
 	margin-top:4px;
 }
-#bbsearch form{
-	margin:0;
-	padding:0;
-}
-
-* html #bbsearch{
-	display:inline;
-}
 /* =============================== Header CSS styles - Stop ================== */
 
 /* =============================== Footer CSS styles - Start ================= */

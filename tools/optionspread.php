@@ -1,4 +1,5 @@
 <?php
+require_once("../phpinisettings.php");
 session_start();
 if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE['cookid'])){
       $_SESSION['user'] = $_COOKIE['cookname'];
@@ -10,8 +11,9 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 <html class="no-js">
 <head>
 	<?php require_once("../metacontent.php"); ?>
+	<meta name="Description" content="Blackbull.in options trading tool gives you an overview of near term NIFTY call options and put options traded on NSE."/>
 	<title>Options spread - Blackbull Investment Company</title>
-	<link rel="stylesheet" href="../stylesheets/site.css?v=6" media="screen">
+	<link rel="stylesheet" href="../stylesheets/site.css" media="screen">
 	<link rel="stylesheet" href="../stylesheets/tools/optionspread.css" media="screen">
 	<script src="../javascripts/lib/modernizr-1.6.min.js"></script>
 </head>

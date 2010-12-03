@@ -1,4 +1,5 @@
 <?php
+require_once("../phpinisettings.php");
 session_start();
 if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE['cookid'])){
       $_SESSION['user'] = $_COOKIE['cookname'];
@@ -10,8 +11,9 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 <html class="no-js">
 <head>
 	<?php require_once("../metacontent.php"); ?>
+	<meta name="Description" content="Get the chart of FII and DII investment in indian markets over a month. Blackbull.in provides FII and DII investment tool to give the overview of foreign investment in india."/>
 	<title>FII DII investments - Blackbull Investment Company</title>
-	<link rel="stylesheet" href="../stylesheets/site.css?v=6" media="screen">
+	<link rel="stylesheet" href="../stylesheets/site.css" media="screen">
 	<link rel="stylesheet" href="../stylesheets/tools/fiidii.css?v=3" media="screen">
 	<script src="../javascripts/lib/modernizr-1.6.min.js"></script>
 </head>
@@ -52,10 +54,10 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 <div id="adthis">
 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-2413414539580695";
-/* fiidiirec */
-google_ad_slot = "8392314650";
-google_ad_width = 200;
-google_ad_height = 200;
+/* fiileader */
+google_ad_slot = "1377945996";
+google_ad_width = 728;
+google_ad_height = 90;
 //-->
 </script>
 <script type="text/javascript"
