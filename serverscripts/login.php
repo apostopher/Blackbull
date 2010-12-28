@@ -50,6 +50,7 @@ if($rowCheck > 0){
 	while($row = mysql_fetch_array($result)){
 		session_start();
 		// Set the session variables
+		$_SESSION['user_id'] = $row['user_id'];
 		$_SESSION['id'] = $row['id'];
 		$_SESSION['user'] = $row['fname'];
 		$_SESSION['pass'] = $row['pass'];
@@ -75,6 +76,7 @@ if($rowCheck > 0){
 		}
 		// Create the JSON response
 		$response = array(
+		        "user_id"=>$row['user_id'],
 			"id"=>$row['fname'],
 			"redirect"=>$redirect,
 			"admin"=>$admin);

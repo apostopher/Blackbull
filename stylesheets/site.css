@@ -251,8 +251,8 @@ html>body .hide{
 
 #loadingdiv{
    color:#FFF;
-   padding-left:24px;
-   background:url("../images/loader.gif") no-repeat left center;
+   padding-right:24px;
+   background:url("../images/loader.gif") no-repeat right center;
 }
 
 .hide, .invisible{

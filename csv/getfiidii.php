@@ -28,14 +28,6 @@ if(url_exists($url)){
 }else{
 	echo $url;
 }
-/*else{
-	$request = array("category" => "noValue","fromDate" => $csvdate, "toDate" => $csvdate, "check" => "new");
-	list($header, $content) = PostRequest("http://www.nseindia.com/marketinfo/equities/eq_fiidii_archives.jsp","http://www.nseindia.com/content/equities/eq_fiidii_archives.htm",$request);
-	echo $content;
-	if(url_exists($url)){
-		updatefiidii($url, $sqldate);
-	}
-}*/
 
 function updatefiidii($url, $sqldate){
 	$file = fopen($url,"r");
@@ -74,6 +66,7 @@ function updatefiidii($url, $sqldate){
 
 function url_exists($url) {
     $hdrs = @get_headers($url);
+    echo $hdrs[0];
     return is_array($hdrs) ? preg_match('/^HTTP\\/\\d+\\.\\d+\\s+2\\d\\d\\s+.*$/',$hdrs[0]) : false;
 };
 

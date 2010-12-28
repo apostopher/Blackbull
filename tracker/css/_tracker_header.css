@@ -1,0 +1,11 @@
+/* header styles */
+#siteheader, #headerwrap { height:50px; line-height:50px; background:#333; border:0;}
+#headerwrap {width:1000px; margin:0 auto; border:0;}
+#logo{float:left; width:72px; height:26px; margin-top:8px;}
+#srchfrm{float:left; margin-left:20px; margin-top:13px;}
+#srchfield {position:relative; padding:0; margin:0; width:212px;}
+#srchterm{position:absolute; right:0; z-index:100; border:1px solid #fff; width:180px; padding:1px 24px 1px 4px;
+          height:20px; line-height:20px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; margin:0;}
+#srchsubmit{position:absolute; right:0; height:22px; line-height:22px; width:22px; z-index:200; border:0; margin:0;
+            background:url("/tracker/images/search.png") no-repeat right center; margin-right:8px;}
+/* header style end */

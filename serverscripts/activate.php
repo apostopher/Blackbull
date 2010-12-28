@@ -9,7 +9,7 @@ $presult = mysql_query($query);
 
 while($row = mysql_fetch_array($presult))
 {
-	$iquery = "INSERT INTO users VALUES ('".$row['id']."','".$row['pass']."','".$row['fname']."','".$row['lname']."','".$row['sex']."','".$row['addr1']."','".$row['addr2']."','".$row['city']."','".$row['pincode']."','".$row['state']."','".$row['country']."','".$row['contact']."','".$row['subscrib']."')";
+	$iquery = "INSERT INTO users VALUES (null,'".$row['id']."','".$row['pass']."','".$row['fname']."','".$row['lname']."','".$row['sex']."','".$row['addr1']."','".$row['addr2']."','".$row['city']."','".$row['pincode']."','".$row['state']."','".$row['country']."','".$row['contact']."','".$row['subscrib']."')";
 	
 	$qresult = mysql_query($iquery);
 	$dquery = "DELETE FROM pending WHERE activate like '".$_GET['key']."'";

@@ -62,7 +62,7 @@ $(function(){
         		enabled: false
     		},
     		title: {
-        		text: 'FII + DII Investment in NSE'
+        		text: 'FII + DII Investment in India'
     		},
     		xAxis: [{
     			labels: {
@@ -102,7 +102,7 @@ $(function(){
         		enabled: false
     		},
     		title: {
-        		text: 'FII Investment in NSE'
+        		text: 'FII Investment in India'
     		},
     		xAxis: [{
     			labels: {
@@ -142,7 +142,7 @@ $(function(){
         		enabled: false
     		},
     		title: {
-        		text: 'DII Investment in NSE'
+        		text: 'DII Investment in India'
     		},
     		xAxis: [{
     			labels: {

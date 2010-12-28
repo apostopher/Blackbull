@@ -1,6 +1,6 @@
 <?php
-require_once("../phpinisettings.php");
 session_start();
+require_once("../phpinisettings.php");
 if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass'])){
       $_SESSION['user'] = $_COOKIE['cookname'];
       $_SESSION['pass'] = $_COOKIE['cookpass'];

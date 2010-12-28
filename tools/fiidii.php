@@ -1,6 +1,6 @@
 <?php
-require_once("../phpinisettings.php");
 session_start();
+require_once("../phpinisettings.php");
 if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE['cookid'])){
       $_SESSION['user'] = $_COOKIE['cookname'];
       $_SESSION['pass'] = $_COOKIE['cookpass'];
@@ -12,7 +12,7 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 <head>
 	<?php require_once("../metacontent.php"); ?>
 	<meta name="Description" content="Get the chart of FII and DII investment in indian markets over a month. Blackbull.in provides FII and DII investment tool to give the overview of foreign investment in india."/>
-	<title>FII DII investments - Blackbull Investment Company</title>
+	<title>FII DII trading activity on NSE and BSE - Blackbull Investment Company</title>
 	<link rel="stylesheet" href="../stylesheets/site.css" media="screen">
 	<link rel="stylesheet" href="../stylesheets/tools/fiidii.css?v=3" media="screen">
 	<script src="../javascripts/lib/modernizr-1.6.min.js"></script>

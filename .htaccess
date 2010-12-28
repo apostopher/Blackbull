@@ -8,6 +8,7 @@ RewriteRule ^(.*)accounts\/activate\/(.*)$ /serverscripts/activate.php?key=$2 [P
 RewriteRule ^(.*)accounts\/resetpass(.*)$ /users/setnewpassword.php [PT]
 RewriteRule ^(.*)accounts\/setnewpassword(.*)$ /users/setnewpassword.php [PT]
 RewriteRule ^(.*)query\/(.*)$ /showquery.php?id=$2 [PT]
+RewriteRule ^(.*)finance\/overview(.*)$ /tracker/overview.php$2 [PT]
 ErrorDocument 404 /nopage.php
 ErrorDocument 403 /nopage.php
 Options -Indexes
