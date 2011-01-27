@@ -81,19 +81,83 @@ button {  width: auto; overflow: visible; }
  /* Primary Styles
     Author: Rahul Devaskar
  */
-#waitscreen{text-align:center; color:#777; font-size:20px; line-height:20px; padding:0; margin:100px 0px;}
+#container {background: url("/tracker/images/trackerback.jpg") repeat-x scroll left 48px #F5F6F6}
+#waitscreen{text-align:center; color:#777; font-size:20px; line-height:20px; padding:0; margin:190px 0px;}
 #waitscreen.red{color:#D13236;}
-#main{width:1000px; margin:0 auto; padding:50px; 0px 0px}
-h1{color: #333333; font-size:1.5em; line-height:1.5em; font-weight: normal; margin: 0px; padding: 0;}
-#tradesummary{padding:10px 5px; background:#F9F9F9; margin:10px 0px; border-bottom:1px solid #ccc;}
-.summarysection{float:left; border-right:1px solid #ccc;}
-#chartholder{width:950px; margin:10px auto;}
+#main{width:990px; margin:40px auto 0px; padding:0px; border:1px solid #E3E7E7; background:#fff url("/tracker/images/genbg.png") repeat-x scroll left bottom;
+      -moz-box-shadow: 0 2px 4px #ddd; -webkit-box-shadow: 0 2px 4px #ddd; box-shadow: 0 2px 4px #ddd;
+      border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px; position:relative;}
+#trade_ltp{width:105px; height:105px; color:#090; text-align:center; padding:10px 20px; position:absolute;
+           /*background: url("/tracker/images/ltpgreen.png") top right no-repeat;*/ border:0; top:0; right:0;
+           border-top-right-radius:8px; -moz-border-radius-topright:8px; -webkit-border-top-right-radius:8px;}
+.sectionvalue{font-size:18px; color:#000; line-height:32px; height:32px; font-weight:bold;}
+#unr_ret_div, #r_ret_div{color:#090;}
+#trade_ltp.down{/*background: url("/tracker/images/ltpred.png") top right no-repeat;*/}
+#trade_ltp.down, #avg_price_div.down, #unr_ret_div.down, #r_ret_div.down{color:#D13236;}
+#trade_ltp h5{ font-weight:normal; color:#222; font-size:18px; line-height:24px; margin-bottom:8px;}
+#ltpprice{font-size:20px; line-height:24px; font-weight:bold; margin-top:10px;}
+#ltpchg{font-size:14px; font-weight:normal;}
+h1{color: #444444; font-family:Cambria,Georgia,'Times New Roman',Times,serif; font-size:24px; line-height:40px; font-weight: normal; margin: 0px; padding: 20px 20px 0px;}
+h4{margin:10px; color:#444; font-size:20px; line-height:30px; font-weight:normal;
+                   font-family:Cambria,Georgia,'Times New Roman',Times,serif;}
+h6{color:#999; font-weight:normal; padding:0 22px; font-size:12px; line-height:16px;}
+#tradesummary{padding:0px 5px 4px; background:url("/tracker/images/headdivbg.png") repeat-x scroll left bottom; margin:30px 0px 10px;}
+#summaryholder{width:916px; margin:0 auto;}
+.summarysection{float:left; border-right:1px solid #dfdfdf; padding:10px 15px; width:100px; text-align:center;}
+.summarysection h4{margin-bottom:10px; color:#666; font-size:16px; line-height:20px; font-weight:normal;
+                   font-family:Cambria,Georgia,'Times New Roman',Times,serif;}
+.summarylast, .headlast{border:0;}
+#chartholder{width:800px; margin:10px 0px 10px 10px; height:400px;}
+#transholder{width:800px; background:url("/tracker/images/divtopbg.png") top left repeat-x; padding:10px 10px 20px;}
+.empty{color:#999; text-align:center; font-size:14px; line-height:22px; padding:5px;}
+#datatable{width:100%; padding:0; margin:0;}
+#newtransdiv{background:#F9F9F9; padding:10px; border:1px solid #DFDFDF;}
+#transdiv{width:427px; margin:0px; float:left;}
+#subdiv{width:348px; margin:0px; float:left;}
+#sidebar{margin:0px 5px; padding:0px; float:right;}
+#adholder{width:160px; margin:0 auto;}
+#transtbody, #sltbody, #targettbody{border-right:1px solid #DFDFDF; border-left:1px solid #DFDFDF;}
+#transmenu, #submenu{padding:10px 0px 0px 10px;}
+#transmenu h4{float:left; margin:0px 10px 0px 0px;}
+#subdiv h4{margin:0px 10px 0px 0px;}
+#addtransmenu{float:right; display:block; text-decoration:none; color:#000; line-height:30px;}
+#transheaddiv, #transbodydiv{padding:0;}
+#transheaddiv, #targetheaddiv, #slheaddiv{ background:#fff url("/tracker/images/headdivbg.png") repeat-x scroll left bottom; border-top:1px solid #DFDFDF;
+                                           margin-top:10px;}
+.headdiv {font-size:14px; border:0; color:#000; padding:0px; margin:0px; float:none;}
+.headdiv div{font-weight:bold; font-style:normal; border-right:1px solid #DFDFDF; font-size:0.95em; padding:10px 10px 15px; color:#000;}
+.headdiv div.lastcell, .bodydiv div.lastcell, .bodydivlast div.lastcell{border:0;}
+.bodydiv, .bodydivlast {font-size:14px; border:0; background:#fff; border-bottom:1px solid #eee;
+          padding:0px; margin:0; clear:both; float:none;}
+.bodydivlast { border-bottom:1px solid #dfdfdf;}
+.odd{background:#fcfcfc;}
+.srno, .trcontrol, .ttype, .tdate, .tprice, .tqty, .slvalue, .trvalue{float:left; padding:10px; border-right:1px solid #eee; line-height:20px; height:20px;}
+.srno, .trcontrol{width:20px; text-align:right;}
+.ttype{width:50px;text-align:left; }
+.ttype a{color:#075FB2; text-decoration:none; font-weight:bold;}
+.ttype a:hover{text-decoration:underline;}
+.tdate {width:80px; text-align:left; font-style:italic; color: #666; font-size:12px;}
+.tprice{width:70px; font-weight:bold; color:#111; text-align:right;}
+.tqty{width:60px; text-align:right;}
+.trvalue, .slvalue{width:60px; text-align:right; font-weight:bold; color:#999;}
+.activevalue{color:#000;}
+#subdivbody{width:443px; margin-top:10px;border-bottom:1px solid #DFDFDF;}
+.keyname{background:#f9f9f9; border:1px solid #DFDFDF; padding:10px; border-right:0; border-bottom:0; float:left; 
+         width:94px; color:#666; font-weight:bold; font-size:14px;}
+.keyvalue{background:#fff; border:1px solid #DFDFDF; padding:10px; border-bottom:0; float:left; width:85px; color:#000;
+          font-weight:bold; text-align:center; font-size:14px;}
+#datev, #highv{border-right:0;}
+#overviewads{margin:15px auto; padding:0; width:336px;}
+#sltarget{margin:10px auto 0px;}
+#stoplossdiv, #targetsdiv{float:left; margin:0px 0px 30px 10px;}
+.loadmsg{padding:10px; color:#999; text-align:center; font-weight:bold;}
 /* footer styles */
 #footercontent{width:980px; margin:50px auto 0; border-top:1px solid #ccc; padding:10px;}
 .contactme{float:right; color:#999; line-height:12px; font-size:12px;}
 .copy{color:#999; line-height:12px; font-size:12px; text-align:center;}
 .copy a, .contactme a{color:#999; text-decoration:none;}
 .copy a:hover, .contactme a:hover{text-decoration:underline;}
+.addclass{background:#f9f9f9; border: 1px solid #DFDFDF; padding:0px 5px; font-weight:bold;}
 /* footer styles end */
  
 

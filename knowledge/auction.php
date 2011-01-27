@@ -119,21 +119,25 @@ Clearing corporation prepares a list of short securities and sends it across all
 </li>
 </ul>
 </section>
+<div id="knowads">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2413414539580695";
+/* knowledgeleader */
+google_ad_slot = "1089262443";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
 </article>
 <div class="spacer">&nbsp;</div>
 </div>
 </div>
 <?php require_once("../_partial_footer.php"); ?>
 <?php require_once("../jslibs.php"); ?>
-<script>
-   var _gaq = [['_setAccount', 'UA-11011315-1'], ['_trackPageview']];
-   (function(d, t) {
-    var g = d.createElement(t),
-        s = d.getElementsByTagName(t)[0];
-    g.async = true;
-    g.src = '//www.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g, s);
-   })(document, 'script');
-</script>
+<?php require_once("../analyticstracking.php"); ?>
 </body>
 </html>

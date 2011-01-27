@@ -83,7 +83,7 @@
         header("Pragma: no-cache");
     }
     if($cash_updated){
-      $response = array("status" => '1', "message" => $cash_msg, "cash_id" => $cash_id, "cash" => $cash);
+      $response = array("status" => '1', "cash_id" => $cash_id, "message" => $cash_msg, "cash_id" => $cash_id, "cash" => $cash);
     }else{
       $response = array("status" => '0', "error" => "Cash update failed");
     }

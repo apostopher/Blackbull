@@ -1,12 +1,15 @@
 <?php
 
 require_once('../serverscripts/dba.php');
+/* Twitter Oauth API */
+require_once('twitter/twitteroauth.php');
+require_once('twitter/config.php');
 
 // Check whether we can run this script now!
 $tableStatusCMQuery = "SELECT timestamp FROM updatestatus WHERE tablename='fiidii'";
 $tableStatusCM = mysql_fetch_array(mysql_query($tableStatusCMQuery));
 if(strstr($tableStatusCM['timestamp'],date("Y-m-d"))){
-	echo "Can't Update now... old data";
+	echo "Already updated";
 	// Close the connection to the database
 	mysql_close($con);
 	return false;
@@ -57,6 +60,14 @@ function updatefiidii($url, $sqldate){
 			echo "FII update successful.\n";
 			$updatetimefo = "UPDATE updatestatus SET timestamp= '".$sqldate."' WHERE tablename='fiidii'";
     			$updatetimeforesult = mysql_query($updatetimefo);
+    			/* POST the new twit on twitter */
+    			$connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_SECRET);
+    			/* twit format
+    			   #FII & #DII trading activity on #NSE and #BSE as on 31-Dec-2010 visit http://blck.in/d2FC3F on #blackbull
+    			*/
+    			$twit = "Beautiful charts of #FII & #DII trading activity on #NSE and #BSE as on ".date("j-M-Y")." visit http://blck.in/d2FC3F on #blackbull";
+    			$connection->post('statuses/update', array('status' => $twit));
+    			error_log("twit posted");
 		}else{
 			echo "FII update failed.\n";
 		}

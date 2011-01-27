@@ -48,7 +48,7 @@
     $portfolio_id = mysql_real_escape_string($_POST['portfolio_id']);
 
     /* Read the request parameters. */
-    $trans_scrip = trim(mysql_real_escape_string($_POST['trans_scrip']));
+    $trans_scrip = strtoupper(trim(mysql_real_escape_string($_POST['trans_scrip'])));
     $trans_qscrip = trim(mysql_real_escape_string($_POST['trans_qscrip']));
     $trans_type = mysql_real_escape_string($_POST['trans_type']);
     $trans_price = mysql_real_escape_string($_POST['trans_price']);
@@ -198,7 +198,17 @@
         }
         if($scrip_id == 0){
             /* We need to add this scrip to portfolio_scrips table. */
-            $scrip_insert_query = "INSERT INTO portfolio_scrips VALUES(null,'".$trans_scrip."','".$trans_qscrip."')";
+            /* If trans_scrip is NSE scrip then the corresponding NSE symbol can be found
+               if the length is less than 9 e.g. UNIPHOS.NS is equivalent to UNIPHOS in NSE*/
+            /* First check whether the scrip is NSE scrip  and length is less than 9 + strlen(.NS)*/
+            $NSE_scrip = "";
+            if(0 == strcmp(substr($trans_scrip, -3), ".NS") && strlen($trans_scrip) < 12){
+              /* get the NSE symbol from trans_scrip by removing .NS */
+              $NSE_scrip = substr($trans_scrip, 0, -3);
+            }else{
+              $NSE_scrip = NULL;
+            }
+            $scrip_insert_query = "INSERT INTO portfolio_scrips VALUES(null,'".$trans_scrip."','".$NSE_scrip."','".$trans_qscrip."')";
             $scrip_insert_result = mysql_query($scrip_insert_query);
             if($scrip_insert_result){
                 $scrip_id = mysql_insert_id();
@@ -217,9 +227,23 @@
                     mysql_close($con);
                     return;
                 }
+            }else{
+              /* portfolio_scrip failed to update. can't proceed */
+              /* Rollback transaction */
+              @mysql_query("ROLLBACK");
+              @mysql_query("SET autocommit=1");
+              header('Content-type: application/json');
+              if(strstr($_SERVER["HTTP_USER_AGENT"],"MSIE")==false) {
+                header("Cache-Control: no-cache");
+                header("Pragma: no-cache");
+              }
+              $response = array("status" => '0', "error" => "Unable to update scrip.");
+              echo json_encode($response);
+              mysql_close($con);
+              return;
             }
         }
-        $new_trade_query = "INSERT INTO portfolio_trades VALUES(null,".$portfolio_id.",NOW(),null,'".$scrip_id."',0,0)";
+        $new_trade_query = "INSERT INTO portfolio_trades VALUES(null,".$portfolio_id.",NOW(),null,".$scrip_id.",0,0)";
         $new_trade_result = mysql_query($new_trade_query);
         if($new_trade_result){
             $trade_id = mysql_insert_id();
@@ -281,10 +305,12 @@
         }
         /* Update the trade quantity */
         $update_qty = $trade_qty + $trans_qty;
+        $update_avg_buy = $trade_avg_buy;
+        
         if($update_qty && $trans_qty > 0){
             /* Update the average buy price */
-            $trade_avg_buy = (($trade_avg_buy*$trade_qty) + ($trans_price*$trans_qty))/$update_qty;
-            $update_qty_query = "UPDATE portfolio_trades SET trade_qty=".$update_qty.", trade_avg_buy=".$trade_avg_buy." WHERE trade_id=".$trade_id;
+            $update_avg_buy = (($trade_avg_buy*$trade_qty) + ($trans_price*$trans_qty))/$update_qty;
+            $update_qty_query = "UPDATE portfolio_trades SET trade_qty=".$update_qty.", trade_avg_buy=".$update_avg_buy." WHERE trade_id=".$trade_id;
         }else if($update_qty && $trans_qty <= 0){
             $update_qty_query = "UPDATE portfolio_trades SET trade_qty=".$update_qty." WHERE trade_id=".$trade_id;
         }else{
@@ -396,7 +422,9 @@
         header("Cache-Control: no-cache");
         header("Pragma: no-cache");
     }
-    $response = array("status" => '1', "qname"=> $trans_qscrip, "new_trade" => $newtrade, "trade_qty" => $update_qty, "avg_buy" => $trade_avg_buy, "ltp" => $stockfound, "stockchg" => $stockchg, "target_updated" => $target_updated, "sl_updated" => $sl_updated);
+    /* to provide undo option, i need to send the old average buy and old quantity. This will reduce the number of queries in undo operation */
+    $response = array("status" => '1', "qname"=> $trans_qscrip, "trans_id" => $trans_id, "trans_buy" =>$trans_price, "trans_qty" => $trans_qty, "new_trade" => $newtrade, "trade_id" => $trade_id, "trade_qty" => $update_qty, "avg_buy" => $update_avg_buy, 
+                      "ltp" => $stockfound, "stockchg" => $stockchg, "target_updated" => $target_updated, "sl_updated" => $sl_updated, "old_avg_buy" => $trade_avg_buy, "old_qty" => $trade_qty);
     echo json_encode($response);
     mysql_close($con);
     return;

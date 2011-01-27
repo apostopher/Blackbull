@@ -1,7 +1,14 @@
-<h2>Heil RBI</h2>
-<p>The monetary policy unveiled by RBI yesterday reveals the prudent and conservative policy management of the central bank. The key takeaways from the policy were:</p>
-<p>Repo rate increased to 6.25% and reverse repo rate increased to 5.25%. This move is designed to tame inflation that sits above the comfort levels. The logic is that RBI by raising rates makes it attractive for banks to park cash with RBI thus reducing the amount available for credit. This is a classical way of controlling liquidity.</p>
-<p>RBI said that it will manage liquidity prudently. This is slightly contrarily to the above point but must be seen in the light of the financial system. There has been a huge demand for cash in the wake of the Coal India IPO and increased inflow of foreign money. The foreign inflows raise the demand for rupee thus straightening it. Thus the rampant demand for rupee can potentially create a liquidity crisis. RBI wants to avert the same.</p>
-<p>The loan to value ratio for house loans capped at 80%. This means that if you want to buy a house worth INR 100, you can at max borrow INR 80 from the banks. This thus prevents the real estate bubble to form in India but is bad for real estate companies.</p>
-<p>All financial conglomerates like banks will have to make extra provisions for their subsidiary and affiliate investments. This is a great move and will present the true picture of the banks. This may take some sheen off the robust balance sheets of banks but is a very good move to increase transparency.</p>
-<p class="last">In summary, RBI has once again kept its head above its shoulders and delivered. The investors and the markets have not reacted since the interest rate hike was already factored in the prices. Going forward, the housing prices will come down by 15% to 25%.</p>
+<h2>Happy New Year!</h2>
+<p>BlackBull Investment Company wishes all its clients a very happy and prosperous new year 2011. May you be blessed with the choicest blessings and prosper in health and wealth.</p>
+<p>We firmly believe that speculation is root of all bad decisions but still a little though about the coming year is in order. There are many analysts trying to predict the future and we have possible scenarios of both gloom and doom. You can pick up any newspaper or finance magazine to read about these unnamed and unsure analysts.</p>
+<p>But what should you do as a retail investor? Should you start buying or book profits or just run to the safe haven of fixed deposits and bonds? The answer lies in a simple thought framework: Think like a Businessman.</p>
+<p>A businessman is never worried about the price that other people are putting on its business. He is more concerned to reign in the costs, improve market share and financing the business. As shareholders, it will be a good New Year resolution to understand the business models of all the companies that we hold in our portfolios. The following are the few steps that you may follow to understand your businesses:</p>
+<ul style="list-style-position:inside;">
+<li>Download the annual report of the last three years of the company.</li>
+<li>Make yourself some good coffee or tea and settle down to do some heavy reading.</li>
+<li>Start with the Director&#8217;s Speech. Read the three years&#8217; speeches to see how the company has been doing. Take notes &#8211; ALWAYS.</li>
+<li>Then begin reading the MD&A section of the annual report. If you do not understand the business model after reading this, you either need to learn the business from someone who knows or SELL THE STOCK. You are not a good businessman to have stay invested in a business you have no idea about.</li>
+<li>This exercise will allow you to rank the businesses by the most important metric: Your understanding of the business. It will now be the time to look at the financial statements.</li>
+<li>We will soon be posting a tutorial on how to read the different financial statements. But just to keep it interesting, it will only be available to people who successfully finish the above three steps.</li>
+</ul>
+<p>HAPPY NEW YEAR.</p>

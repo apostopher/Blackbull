@@ -77,5 +77,6 @@ conditions as part of normal business operations under confidentiality agreement
 </div>
 <div class="logo_holder"><a href="index.php"><img src="images/legal_logo.png" width="145" height="45" alt="Blackbull Logo"/></a></div>
 </div>
+<?php require_once("analyticstracking.php"); ?>
 </body>
 </html>

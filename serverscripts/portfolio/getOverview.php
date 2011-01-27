@@ -121,6 +121,7 @@ if($pagefound == false){
    DATA2: all the targets
    DATA3: all the stop losses
    DATA4: all the close prices for last month
+   DATA5: all the fundamental data from yahoo
 */
 
 /*DATA1*/
@@ -205,13 +206,42 @@ $closeresult = mysql_query($closequery);
 if($closeresult){
   if(mysql_num_rows($closeresult) > 0){
     while($closerow = mysql_fetch_array($closeresult)) {
-      $closes[$closecount] = array("c" => $closerow['CLOSE'], "d" => date("j-M-Y", strtotime($closerow['TIMESTAMP'])), "jd" => date("F j, Y", strtotime($closerow['TIMESTAMP'])));
+      $closes[$closecount] = array("c" => $closerow['CLOSE'], "d" => date("j-M-Y", strtotime($closerow['TIMESTAMP'])), "jd" => date("F j, Y", strtotime($closerow['TIMESTAMP'])), "xd" => date("j-M", strtotime($closerow['TIMESTAMP'])));
       $closecount = $closecount +1;
     }
   }
 }
 }
+/* DATA5 */
+/* Get the fundamental analysis data from yahoo.
+j 52-week low
+k 52-week high
+e earning/share
+r P/E ratio
+y dividend
+e7 EPS estimate this year
+e8 EPS estimate next year
+e9 EPS estimate next quarter
+f6 float shares
+l1 last trade
+c change and per change
+*/
 
+$yahoofile   = fopen("http://download.finance.yahoo.com/d/quotes.csv?s=".$trade_symbol."&f=l1d1c1ohg&e=.csv","r");
+if($yahoofile){
+  while($stock = fgetcsv($yahoofile)){
+    $lasttrade = $stock[0];
+    $datev = $stock[1];
+    $valchange = $stock[2];
+    $openv = $stock[3];
+    $highv = $stock[4];
+    $lowv = $stock[5];
+    break;
+  }
+}
+/* Close the file. */
+fclose($yahoofile);
+            
 header('Content-type: application/json');
 if(strstr($_SERVER["HTTP_USER_AGENT"],"MSIE")==false) {
     header("Cache-Control: no-cache");
@@ -219,7 +249,8 @@ if(strstr($_SERVER["HTTP_USER_AGENT"],"MSIE")==false) {
 }
 $response = array("pagefound" => '1', "trade_symbol" => $trade_symbol, "trade_name" => $scrip_name, "avg_buy" => $trade_avg_buy, "totalqty" => $trade_qty, "trade_symbol" => $trade_symbol,
                   "transtotal" => $transcount, "trans" => $trans, "targetstotal" => $targetscount, "targets" => $targets,
-                  "sltotal" => $slscount, "sls" => $sls, "closetotal" => $closecount, "close" => $closes);
+                  "sltotal" => $slscount, "sls" => $sls, "closetotal" => $closecount, "close" => $closes, "last" => $lasttrade, "change" => $valchange,
+                  "open" => $openv, "high" => $highv, "low" => $lowv, "date" => $datev);
 echo json_encode($response);
 mysql_close($con);
 return;

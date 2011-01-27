@@ -31,14 +31,14 @@ if (!isset($_POST['username']) || !isset($_POST['password'])) {
 // The password is encrypted using jCryption plugin v1.1
 // Call the decrypt method to get plaintext password
 /*$pass = $jCryption->decrypt($_POST['password'], $_SESSION["d"]["int"], $_SESSION["n"]["int"]);*/
-$pass = $_POST['password'];
+$pass = trim(mysql_real_escape_string($_POST['password']));
 
 // We dont need the keys now. delete them
 /*unset($_SESSION["e"]);
 unset($_SESSION["d"]);
 unset($_SESSION["n"]);*/
 
-$user = strtolower(addslashes($_POST['username']));
+$user = strtolower(trim(mysql_real_escape_string($_POST['username'])));
 
 // Query the users table to authenticate
 $result = mysql_query("select * from users where id='".$user."' AND pass=PASSWORD('".$pass."')");

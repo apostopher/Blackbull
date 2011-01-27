@@ -119,6 +119,19 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <p>So that concludes our first take on the journey of a novice into the world of trading and equities. Trading is not gamble. It is a well calculated mathematics of statistics and companies performance.</p> 
 <p class="last">Keep an eye here, and we might help you in taking steps onto the success ladder in this world of trading with our future articles.</p>
 </section>
+<div id="knowads">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2413414539580695";
+/* knowledgeleader */
+google_ad_slot = "1089262443";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
 <footer>
 <h3>resources</h3>
 <ul>
@@ -134,15 +147,6 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </div>
 <?php require_once("../_partial_footer.php"); ?>
 <?php require_once("../jslibs.php"); ?>
-<script>
-   var _gaq = [['_setAccount', 'UA-11011315-1'], ['_trackPageview']];
-   (function(d, t) {
-    var g = d.createElement(t),
-        s = d.getElementsByTagName(t)[0];
-    g.async = true;
-    g.src = '//www.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g, s);
-   })(document, 'script');
-</script>
+<?php require_once("../analyticstracking.php"); ?>
 </body>
 </html>

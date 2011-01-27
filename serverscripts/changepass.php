@@ -1,24 +1,24 @@
 <?php
 require_once('dba.php');
-if(!isset($_POST['bb_id'])){
+if(!isset($_POST['id'])){
 mysql_close($con);
 echo "iderror";
 return;
 }
-if(!isset($_POST['bb_opsw'])){
+if(!isset($_POST['opsw'])){
 mysql_close($con);
 echo "iderror";
 return;
 }
-if(!isset($_POST['bb_psw'])){
+if(!isset($_POST['psw'])){
 mysql_close($con);
 echo "iderror";
 return;
 }
 
-$id = $_POST['bb_id'];
-$pass = $_POST['bb_opsw'];
-$newpass = $_POST['bb_psw'];
+$id = trim(mysql_real_escape_string($_POST['id']));
+$pass = trim(mysql_real_escape_string($_POST['opsw']));
+$newpass = trim(mysql_real_escape_string($_POST['psw']));
 
 $query = "SELECT fname FROM users WHERE id='".$id."' AND pass=PASSWORD('".$pass."')";
 $result = mysql_query($query);

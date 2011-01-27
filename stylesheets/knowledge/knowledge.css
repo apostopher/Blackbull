@@ -114,3 +114,9 @@ table.datatable tr td {
 	padding:10px 20px;
 	text-align:center;
 }
+
+#knowads{
+        width:730px;
+        margin:10px auto;
+        padding:0;
+}

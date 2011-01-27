@@ -23,6 +23,19 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 <div id="fiidii">
 <h1>Institutional Investments</h1>
 <p>These charts show cumulative investment of FII(Foreign Institutional Investors) &amp; DII(Domestic Institutional Investors) in india over last 30 trading days.</p>
+<div id="fiiadholder">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2413414539580695";
+/* fiileader2 */
+google_ad_slot = "2778153379";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
 <div id="ulholder">
 <div id="tabhelp">Select tab to view corresponding chart.</div>
 <div class="spacer">&nbsp;</div>
@@ -111,15 +124,6 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <?php require_once("../jslibs.php"); ?>
 <script src="../javascripts/lib/highcharts.js"></script>
 <script src="../javascripts/tools/fiidii.js?v=1"></script>
-<script>
-   var _gaq = [['_setAccount', 'UA-11011315-1'], ['_trackPageview']];
-   (function(d, t) {
-    var g = d.createElement(t),
-        s = d.getElementsByTagName(t)[0];
-    g.async = true;
-    g.src = '//www.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g, s);
-   })(document, 'script');
-</script>
+<?php require_once("../analyticstracking.php"); ?>
 </body>
 </html>

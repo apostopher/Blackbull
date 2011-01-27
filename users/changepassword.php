@@ -47,15 +47,6 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 <?php require_once("../_partial_footer.php"); ?>
 <?php require_once("../jslibs.php"); ?>
 <script src="../javascripts/users/changepassword.js"></script>
-<script>
-   var _gaq = [['_setAccount', 'UA-11011315-1'], ['_trackPageview']];
-   (function(d, t) {
-    var g = d.createElement(t),
-        s = d.getElementsByTagName(t)[0];
-    g.async = true;
-    g.src = '//www.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g, s);
-   })(document, 'script');
-</script>
+<?php require_once("../analyticstracking.php"); ?>
 </body>
 </html>

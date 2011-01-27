@@ -3,7 +3,7 @@
 require_once('dba.php');
 require_once('Mail.php');
 
-$query = "SELECT activate FROM pending WHERE id='".trim($_GET['resend'])."'";
+$query = "SELECT activate FROM pending WHERE id='".trim(mysql_real_escape_string($_GET['resend']))."'";
 $resendid = mysql_query($query);
 
 if(mysql_num_rows($resendid) == 0){

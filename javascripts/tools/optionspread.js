@@ -1,5 +1,5 @@
 $(function(){
-	getSpread('NIFTY',"dec-2010");
+	getSpread('NIFTY',"jan-2011");
 });
 
 function getSpread(symbol, expiry){

@@ -43,7 +43,7 @@
 </ul>
 </div>
 <header id="siteheader" class="png_bg clearfix">
-<a href="/index.php" id="logo"><img src="/images/logo.png" width="314" height="26" alt="Company logo"/></a>     
+<h1><a href="/index.php" id="logo"><img src="/images/logo.png" width="314" height="26" alt="Blackbull Investment Company"/></a></h1>     
 </header>
 <div id="light"><!-- --></div>
 <nav id="sitenavigation">
@@ -64,44 +64,44 @@
 <span class="liname png_bg">Services</span>
 <span class="arrow hide png_bg"></span>
 <ul class="submenu hide">
-<li><a href="/services/queries.php" rel="prefetch"><h6>Blackbull Queries</h6><p>Get your questions answered.</p></a></li>
-<li><a href="/services/portfolio.php" rel="prefetch"><h6>Blackbull Portfolio</h6><p>The market positions that we have.</p></a></li>
+<li><a href="/services/queries.php" rel="prefetch"><span class="sublihead">Blackbull Queries</span><span class="sublidesc">Get your questions answered.</span></a></li>
+<li><a href="/services/portfolio.php" rel="prefetch"><span class="sublihead">Blackbull Portfolio</span><span class="sublidesc">The market positions that we have.</span></a></li>
 </ul>
 </li>
 <li class="menuitem wall png_bg" data-tab-name="Articles">
 <span class="liname png_bg">Articles</span>
 <span class="arrow hide png_bg"></span>
 <ul class="submenu hide">
-<li><a href="/articles/dragonEmpire.php"><h6>Dragon Empire</h6><p>US-China trade relations.</p></a></li>
-<!-- li><h6>Mix the perfect cocktail</h6><p>Use of fundamental &amp; technical analysis in investment decisions.</p></li -->
-<li><a href="/articles/unlockTheCycle.php"><h6>Unlock the cycle</h6><p>The cyclic nature of stocks</p></a></li>
-<li><a href="/articles/smallIsBeautiful.php"><h6>Small is beautiful</h6><p>Investment techniques in smallcaps.</p></a></li>
+<li><a href="/articles/dragonEmpire.php"><span class="sublihead">Dragon Empire</span><span class="sublidesc">US-China trade relations.</span></a></li>
+<!-- li><span class="sublihead">Mix the perfect cocktail</span><span class="sublidesc">Use of fundamental &amp; technical analysis in investment decisions.</span></li -->
+<li><a href="/articles/unlockTheCycle.php"><span class="sublihead">Unlock the cycle</span><span class="sublidesc">The cyclic nature of stocks</span></a></li>
+<li><a href="/articles/smallIsBeautiful.php"><span class="sublihead">Small is beautiful</span><span class="sublidesc">Investment techniques in smallcaps.</span></a></li>
 </ul>
 </li>
 <li class="menuitem wall png_bg" data-tab-name="Research">
 <span class="liname png_bg">Research</span>
 <span class="arrow hide png_bg"></span>
 <ul class="submenu hide">
-<li><a href="/research/coalindiaIPO.php"><h6>Coal India IPO</h6><p>The IPO analysis.</p></a></li>
-<li><a href="/research/tulip.php"><h6>TULIP telecom analysis</h6><p>The complete analysis of TULIP telecom.</p></a></li>
-<li><a href="/research/moilIPO.php"><h6>MOIL IPO analysis</h6><p>The complete analysis of MOIL IPO.</p></a></li>
+<li><a href="/research/coalindiaIPO.php"><span class="sublihead">Coal India IPO</span><span class="sublidesc">The IPO analysis.</span></a></li>
+<li><a href="/research/tulip.php"><span class="sublihead">TULIP telecom analysis</span><span class="sublidesc">The complete analysis of TULIP telecom.</span></a></li>
+<li><a href="/research/moilIPO.php"><span class="sublihead">MOIL IPO analysis</span><span class="sublidesc">The complete analysis of MOIL IPO.</span></a></li>
 </ul>
 </li>
 <li class="menuitem wall png_bg" data-tab-name="Knowledge">
 <span class="liname png_bg">Knowledge</span>
 <span class="arrow hide png_bg"></span>
 <ul class="submenu hide">
-<li><a href="/knowledge/introStockMarket.php"><h6>The stock market</h6><p>The basics of stock market.</p></a></li>
-<li><a href="/knowledge/stockMarketTrading.php"><h6>The stock market trading</h6><p>trading fundamentals.</p></a></li>
-<li><a href="/knowledge/auction.php"><h6>The auction trading</h6><p>Basics of auctions.</p></a></li>
+<li><a href="/knowledge/introStockMarket.php"><span class="sublihead">The stock market</span><span class="sublidesc">The basics of stock market.</span></a></li>
+<li><a href="/knowledge/stockMarketTrading.php"><span class="sublihead">The stock market trading</span><span class="sublidesc">trading fundamentals.</span></a></li>
+<li><a href="/knowledge/auction.php"><span class="sublihead">The auction trading</span><span class="sublidesc">Basics of auctions.</span></a></li>
 </ul>
 </li>
 <li class="menuitem wall png_bg" data-tab-name="Tools">
 <span class="liname png_bg">Tools</span>
 <span class="arrow hide png_bg"></span>
 <ul class="submenu hide">
-<li><a href="/tools/fiidii.php"><h6>Institutional investments</h6><p>A chart of foreign &amp; domestic investments.</p></a></li>
-<li><a href="/tools/optionspread.php"><h6>Options Spread</h6><p>An overview of NIFTY put and call options.</p></a></li>
+<li><a href="/tools/fiidii.php"><span class="sublihead">Institutional investments</span><span class="sublidesc">A chart of foreign &amp; domestic investments.</span></a></li>
+<li><a href="/tools/optionspread.php"><span class="sublihead">Options Spread</span><span class="sublidesc">An overview of NIFTY put and call options.</span></a></li>
 </ul>
 </li>
 </ul>

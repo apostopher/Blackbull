@@ -17,7 +17,7 @@
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link href='http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="css/trackerlogin.min.css?v=5">
+  <link rel="stylesheet" href="css/trackerlogin.css?v=5">
   <script src="js/libs/modernizr-1.6.min.js"></script>
 
 </head>

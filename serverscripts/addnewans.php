@@ -1,10 +1,10 @@
 <?php
  require_once('dba.php');
- $anstext = $_POST['text'];
- $isprivate = $_POST['private'];
- $owner = $_POST['owner'];
- $postid = $_POST['id'];
- $postopen = $_POST['open'];
+ $anstext = trim(mysql_real_escape_string($_POST['text']));
+ $isprivate = trim(mysql_real_escape_string($_POST['private']));
+ $owner = trim(mysql_real_escape_string($_POST['owner']));
+ $postid = trim(mysql_real_escape_string($_POST['id']));
+ $postopen = trim(mysql_real_escape_string($_POST['open']));
  
 if(!$postopen){
   $updatequery = "UPDATE queries SET isopen=0 where q_id = $postid";

@@ -1,8 +1,8 @@
 <?php
 require_once('dba.php');
 $id = $_POST['id'];
-$tpass = $_POST['tpassword'];
-$newpass = $_POST['upassword'];
+$tpass = trim(mysql_real_escape_string($_POST['tpassword']));
+$newpass = trim(mysql_real_escape_string($_POST['upassword']));
 
 $query = "SELECT * FROM pendingpass WHERE id='".$id."' AND pass=PASSWORD('".$tpass."')";
 $result = mysql_query($query);

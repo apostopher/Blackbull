@@ -29,7 +29,6 @@ RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
   </IfModule>
 </FilesMatch>
 
-
 # video
 AddType video/ogg  ogg ogv
 AddType video/mp4  mp4

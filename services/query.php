@@ -56,15 +56,6 @@ if(isset($_SESSION['user'])){
 <script src="../javascripts/lib/jquery.dateFormat-1.0.js"></script>
 <script src="../javascripts/lib/jquery.url.js"></script>
 <script src="../javascripts/services/query.js"></script>
-<script>
-   var _gaq = [['_setAccount', 'UA-11011315-1'], ['_trackPageview']];
-   (function(d, t) {
-    var g = d.createElement(t),
-        s = d.getElementsByTagName(t)[0];
-    g.async = true;
-    g.src = '//www.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g, s);
-   })(document, 'script');
-</script>
+<?php require_once("../analyticstracking.php"); ?>
 </body>
 </html>

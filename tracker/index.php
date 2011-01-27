@@ -33,9 +33,20 @@ $_SESSION['csrf'] = $key;
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link href='http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/_tracker_header.css?v=2">
   <link rel="stylesheet" href="css/style.css?v=2">
+  <script src="http://platform.twitter.com/anywhere.js?id=6sc7IQII9HjLH9dXJKCUw&amp;v=1"></script>
+  <script type="text/javascript">
+
+  twttr.anywhere(function (T) {
+    T("#twitterfollow").hovercards({
+      username: function(node) {
+        return node.title;
+      }
+    });
+  });
+
+</script>
   <!--script type="text/javascript">
     var cjsscript = document.createElement('script');
     cjsscript.src = "/tracker/js/mylibs/control.js";
@@ -53,6 +64,7 @@ $_SESSION['csrf'] = $key;
     <div id="main">
       <div id="marketholder" class="clearfix">
         <h1>Portfolio Manager</h1>
+        <div id="marketdivs">
         <div id="sensex" class="market">
           <h3>Sensex</h3>
           <div class="indexvalue">&nbsp;</div>
@@ -63,7 +75,7 @@ $_SESSION['csrf'] = $key;
           <div class="indexvalue">&nbsp;</div>
           <div class="indexchange">&nbsp;</div>
         </div>
-        <div id="welcomediv">Welcome&nbsp;<?php echo $_SESSION['user']; ?></div>
+        </div>
       </div>
       <div id="foliosummary" class="clearfix" rel="<?php echo $_SESSION['portfolio_id']; ?>">
         <div class="summarysection">
@@ -87,10 +99,27 @@ $_SESSION['csrf'] = $key;
           </div>
         </div>
       </div>
-      <div id="formholder" class="clearfix">
-        <span id="addtransa"><a href="javascript:void(0);">Add Transaction</a><span>&nbsp;</span></span>
-        <span id="nullspan">&nbsp;</span>
-        <span id="managecasha"><a href="javascript:void(0);">Manage Cash</a><span>&nbsp;</span></span>
+      <div id="leaderads">
+        <script type="text/javascript"><!--
+          google_ad_client = "ca-pub-2413414539580695";
+          /* portfolio_index */
+          google_ad_slot = "3930248789";
+          google_ad_width = 728;
+          google_ad_height = 90;
+          //-->
+        </script>
+        <script type="text/javascript"
+          src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+        </script>
+      </div>
+      <div id="formholder">
+      <div id="transcashulholder">
+        <ul id="transcashul">
+         <li><a id="addtransa" href="javascript:void(0);">Add Transaction</a></li>
+         <li><span id="nullspan">&nbsp;</span></li>
+         <li><a id="managecasha" href="javascript:void(0);">Manage Cash</a></li>
+        </ul>
+        </div>
         <div id="cashfrmholder" class="clearfix">
           <form id="managecashform" action="/serverscripts/portfolio/managecash.php" method="post">
             <input name="cashcsrf" id="cashcsrf" type="hidden" value="<?php echo $key; ?>"/>
@@ -160,20 +189,23 @@ $_SESSION['csrf'] = $key;
       </form>
       </div>
       </div>
-      <div id="porttableholder">
+      <div id="portheadback">
+      <div id="portheadholder">
         <div class="headdiv clearfix">
           <div class="first">Name</div>
           <div class="ltp">LTP<br/><span class="legend">( in Rs. )</span></div>
           <div class="avgbuy">Avg. buy price<br/><span class="legend">( in Rs. )</span></div>
-          <div class="tradeqty">Quantity</div>
-          <div class="profitloss">Gain / Loss<br/><span class="legend">( in Rs. )</span></div>
+          <div class="tradeqty">Quantity<br/><span class="legend">&nbsp;</span></div>
+          <div class="profitloss">Gain / Loss<br/><span class="legend"><span id="inRs" class="on">in Rs.</span><span id="incent">in %</span></span></div>
         </div>
       </div>
+      </div>
+      <div id="porttableholder"></div>
     </div>
     
     <footer>
       <div id="footercontent">
-        <div class="contactme"><a href="mailto:apostopher@gmail.com?Subject=Blackbull%20Portfolio">Contact me</a></div>
+        <div class="contactme"><a href="mailto:apostopher@gmail.com?Subject=Blackbull%20Portfolio">Contact me</a>&nbsp;|&nbsp;<span id="twitterfollow" title="@apostopher">Follow me</span></div>                    
         <div class="copy">&copy; 2011 Blackbull inc. | All rights reserved. |&nbsp;<a href="http://blackbull.in/legal.php">Legal</a></div>
       </div>
     </footer>
@@ -187,12 +219,12 @@ $_SESSION['csrf'] = $key;
   
   <!-- scripts concatenated and minified via ant build script-->
   <!-- script type="text/cjs" cjssrc="js/plugins.js"></script-->
-  <script src="js/script.min.js"></script>
+  <script src="js/script.js"></script>
   <!-- end concatenated and minified scripts-->
   
   
   <!--[if lt IE 7 ]>
-    <script src="js/libs/dd_belatedpng.js"></script>
+    <script src="/tracker/js/libs/dd_belatedpng.js"></script>
     <script> DD_belatedPNG.fix('img, .png_bg'); </script>
   <![endif]-->  
 </body>

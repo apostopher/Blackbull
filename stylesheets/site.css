@@ -5,7 +5,10 @@
 	font-size:1em;
 	padding:12px 24px;
 }
-
+#siteheader h1{
+	margin:0;
+	padding:0;
+}
 #logo{
 	display:block;
 	height:40px;
@@ -105,7 +108,8 @@ html>body .hide{
         border-top:1px solid #E3E3E3;
 }
 
-.submenu li h6 {
+.sublihead {
+        display:block;
         font-size:14px;
         line-height:16px;
         color:#4575B4;
@@ -113,7 +117,8 @@ html>body .hide{
         letter-spacing:1px;
         margin:0 0 2px 0;
 }
-.submenu li p {
+.sublidesc {
+        display:block;
         color:#666;
         font-style:italic;
         margin:0;

@@ -1,9 +1,9 @@
 <?php
  require_once('dba.php');
  require_once('Mail.php');
- $posttext = $_POST['text'];
- $isprivate = $_POST['private'];
- $owner = $_POST['owner'];
+ $posttext = trim(mysql_real_escape_string($_POST['text']));
+ $isprivate = trim(mysql_real_escape_string($_POST['private']));
+ $owner = trim(mysql_real_escape_string($_POST['owner']));
  $i = 0;
 
 $query = "INSERT INTO queries VALUES (NULL, '$posttext', NOW(),'$owner',true,$isprivate,'')";

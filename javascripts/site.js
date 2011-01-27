@@ -38,13 +38,13 @@ $("li.menuitem").hover(
 		function(){
 			ele = $(this);
 			ele.css("backgroundColor", "#F3F6FA");
-			ele.find("h6").css("color","#fe581a");
+			ele.find(".sublihead").css("color","#fe581a");
 			
 		},
 		function(){
 			ele = $(this);
 			ele.stop(false,true).animate({backgroundColor:"#FFF"}, "fast");
-			ele.find("h6").stop(false,true).animate({
+			ele.find(".sublihead").stop(false,true).animate({
 				color:"#4575B4"}, "fast");
      	});
 /* ====================== Header Functionality End =========================*/

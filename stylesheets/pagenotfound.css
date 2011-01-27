@@ -31,3 +31,22 @@ text-decoration:none;
 a:hover {
 color:#fe581a;
 }
+
+#goog-fixurl{
+margin-top:10px;
+padding-top:10px;
+border-top:1px solid #666;
+}
+
+.other-things, .search-goog{
+font-size:14px;
+line-height:24px;
+}
+#goog-wm-qt{
+border:1px solid #ddd;
+margin-right:5px;
+border-radius:5px;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+padding:4px;
+}

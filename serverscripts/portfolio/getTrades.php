@@ -81,7 +81,7 @@ if($trade_results){
             $j = 0;
             while($stocks = fgetcsv($file)) {
                $profitloss = $stocks[0] - $data[$j]["trade_avg_buy"];
-               array_push($data[$j],$stocks[0], $stocks[1], $profitloss);
+               array_push($data[$j],$stocks[0], $stocks[1], $profitloss*$data[$j]["trade_qty"], $profitloss/$data[$j]["trade_avg_buy"]);
                $j = $j +1;
             }
             fclose($file);

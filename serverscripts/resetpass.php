@@ -8,7 +8,7 @@ mysql_close($con);
 return;
 }
 
-$id = $_POST['id'];
+$id = trim(mysql_real_escape_string($_POST['id']));
 $vowels = 'aeuyAEUY';
 $consonants = 'bdghjmnpqrstvzBDGHJLMNPQRSTVWXZ23456789@#$%';
 $newpass = '';
