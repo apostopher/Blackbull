@@ -35,9 +35,6 @@
         user_id = $("#container").attr("class"),
         ureturndiv = $("#ureturn"),
         nettvalue = $("#netvalue"),
-        incent = $("#incent"),
-        inrs = $("#inRs"),
-        absval = $(".abs"),
         ureturns = 0,
         net_value = 0,
         scripavgbuy,
@@ -55,7 +52,7 @@
         var scrips = scripnames.attr("data-symbols");
         if (scrips.length > 0) {
             $.getJSON("/serverscripts/portfolio/getLTP.php?user=" + user_id + "&scrips=" + scrips, function (jsonLTP) {
-            	  ureturns = net_value = 0;
+            	ureturns = net_value = 0;
                 for (count = 0; count < jsonLTP.total; count += 1) {
                     scripsymbol = "#" + jsonLTP.data[count].symbol.replace('.', '_');
                     $(scripsymbol + " .ltpval").html(jsonLTP.data[count].ltp);
@@ -165,27 +162,27 @@
         }
         return false;
     }); /* abs vs percent profit loss buttons */
-    inrs.click(function () {
+    $("#inRs").click(function () {
         if (!$(this).hasClass("on")) {
             $(this).addClass("on");
-            if (incent.hasClass("on")) {
-                incent.removeClass("on");
+            if ($("#incent").hasClass("on")) {
+                $("#incent").removeClass("on");
             }
-            if (absval.css('marginTop') !== "0px") {
-                absval.animate({
+            if ($(".abs").css('marginTop') !== "0px") {
+                $(".abs").animate({
                     marginTop: "0"
                 }, 'fast');
             }
         }
     });
-    incent.click(function () {
+    $("#incent").click(function () {
         if (!$(this).hasClass("on")) {
             $(this).addClass("on");
-            if (inrs.hasClass("on")) {
-                inrs.removeClass("on");
+            if ($("#inRs").hasClass("on")) {
+                $("#inRs").removeClass("on");
             }
-            if (absval.css('marginTop') === "0px") {
-                absval.animate({
+            if ($(".abs").css('marginTop') === "0px") {
+                $(".abs").animate({
                     marginTop: "-20"
                 }, 'fast');
             }
@@ -202,7 +199,8 @@
         /* Declare local variables */
         var scrip_symbols = "",
             invested_value = 0,
-            trade_array = []; /* Run the for loop on all the trades returned by PHP and generate HTML */
+            trade_array = [],
+            count; /* Run the for loop on all the trades returned by PHP and generate HTML */
         for (count = 0; count < jsontrades.total; count += 1) {
             trade_array.push("<div class=\"bodydiv clearfix\" id=\"");
             trade_array.push(jsontrades.data[count].scrip_symbol.replace('.', '_'));
@@ -259,7 +257,7 @@
         tradesbody.append(trade_array.join(''));
 /* I keep the list of all the yahoo stock symbols received from PHP in a data-symbol
      * attribute so that the LTP can be obtained periodically. */
-        tradesbody.attr("data-symbols", scrip_symbols); /* do some animation.*/
+        tradesbody.attr("data-symbols", scrip_symbols); /* do some animation. I love this effect! */
         $(".bodydiv").slideDown("slow"); /* Do some extra hover effects (optional) */
         /*$(".bodydiv").hover(function(){$(this).css("backgroundColor","#F9F9F9");},function(){$(this).css("backgroundColor","#FFF");});*/
         /* Trigger functions to update the page periodically */
@@ -270,40 +268,43 @@
     scrip_name.blur(function () {
         if (hovered === false) {
             result.addClass("hidden");
+            result.html("");
         }
         return false;
     }); /* Auto suggest feature */
     scrip_name.keyup(function (event) {
-        var schtml_array;
+        var schtml,
+            i = 0;
         if (!(event.which >= 16 && event.which <= 18) && !(event.which >= 112 && event.which <= 123) && event.which !== 27) {
             if (scrip_name.val().length >= 3) {
                 if (jsonRsp) {
                     jsonRsp.abort();
                     jsonRsp = null;
                 }
-                result.html("loading...");
                 result.removeClass("hidden");
+                result.html("loading...");
                 jsonRsp = $.getJSON("/serverscripts/symbollookup.php?scrip=" + scrip_name.val(), function (json) {
-                    schtml_array = []; /* create div of all the auto suggested scrips from PHP */
-                    for (count = 0; count < json.ResultSet.Result.length; count += 1) { /* on 24-dec-2010 I only allow indian equity markets. thus this 'IF' condition.*/
-                        if ((json.ResultSet.Result[count].symbol.toUpperCase().indexOf(".BO") !== -1 || json.ResultSet.Result[count].symbol.toUpperCase().indexOf(".NS") !== -1) && (json.ResultSet.Result[count].symbol.toUpperCase().indexOf("_A.") === -1) && (json.ResultSet.Result[count].name.toUpperCase().indexOf("FUTURE") === -1)) {
-                            schtml_array.push('<div class="result_item clearfix"><div class="scrip_name" data-name="');
-                            schtml_array.push(json.ResultSet.Result[count].symbol);
-                            schtml_array.push('" data-qname="');
-                            schtml_array.push(json.ResultSet.Result[count].name);
-                            schtml_array.push('">');
-                            schtml_array.push(json.ResultSet.Result[count].name);
-                            schtml_array.push('</div><div class="scrip_symbol">');
-                            schtml_array.push(json.ResultSet.Result[count].symbol);
-                            schtml_array.push('</div><div class="scrip_xchange">');
-                            schtml_array.push(json.ResultSet.Result[count].exch);
-                            schtml_array.push('</div></div>');
+                    result.html("");
+                    schtml = ""; /* create div of all the auto suggested scrips from PHP */
+                    for (i = 0; i < json.ResultSet.Result.length; i += 1) { /* on 24-dec-2010 I only allow indian equity markets. thus this 'IF' condition.*/
+                        if ((json.ResultSet.Result[i].symbol.toUpperCase().indexOf(".BO") !== -1 || json.ResultSet.Result[i].symbol.toUpperCase().indexOf(".NS") !== -1) && (json.ResultSet.Result[i].symbol.toUpperCase().indexOf("_A.") === -1) && (json.ResultSet.Result[i].name.toUpperCase().indexOf("FUTURE") === -1)) {
+                            schtml += '<div class="result_item clearfix">';
+                            schtml += '<div class="scrip_name" data-name="' + json.ResultSet.Result[i].symbol + '" data-qname="' + json.ResultSet.Result[i].name + '">';
+                            schtml += json.ResultSet.Result[i].name;
+                            schtml += '</div>';
+                            schtml += '<div class="scrip_symbol">';
+                            schtml += json.ResultSet.Result[i].symbol;
+                            schtml += '</div>';
+                            schtml += '<div class="scrip_xchange">';
+                            schtml += json.ResultSet.Result[i].exch;
+                            schtml += '</div>';
+                            schtml += '</div>';
                         }
                     }
-                    if (schtml_array.length === 0) {
-                        schtml_array.push("Symbol not found.");
+                    if (schtml === "") {
+                        schtml = "Symbol not found.";
                     }
-                    result.html(schtml_array.join('')); /* Some visual effects */
+                    result.html(schtml); /* Some visual effects */
                     result.hover(function () {
                         hovered = true;
                     }, function () {
@@ -318,10 +319,12 @@
                         scrip_name.val($(this).children(".scrip_name").attr("data-name"));
                         scrip_qname.val($(this).children(".scrip_name").attr("data-qname"));
                         result.addClass("hidden");
+                        result.html("");
                     });
                 });
             } else {
                 result.addClass("hidden");
+                result.html("");
             }
         }
         return false;
@@ -494,7 +497,7 @@
                 var datatrid = 0,
                     scrip_symbols,
                     market_value,
-                    new_row_array = [],
+                    new_row,
                     editrow;
                 if ($("#resulttxt").hasClass("hidden")) {
                     $("#resulttxt").removeClass("hidden");
@@ -502,41 +505,22 @@
                 if (response.status === "1") {
                     if (response.new_trade === "1") { /* This is a new trade we need to add a new div element */
                         datatrid = response.trade_id;
-                        new_row_array.push("<div class=\"bodydiv clearfix\" id=\"");
-                        new_row_array.push(scripdivid);
-                        new_row_array.push("\"><div class=\"first\"");
-                        new_row_array.push("<a href=\"http://blackbull.in/finance/overview?bbid=");
-                        new_row_array.push(user_id);
-                        new_row_array.push("&pfid=");
-                        new_row_array.push(portfolio_id);
-                        new_row_array.push("&trid=");
-                        new_row_array.push(response.trade_id);
-                        new_row_array.push("\">");
-                        new_row_array.push(response.qname);
-                        new_row_array.push("</a><div class=\"subrow clearfix\"><span class=\"symbolname\">");
-                        new_row_array.push(scrip_name.val());
-                        new_row_array.push("</span></div></div>");
-                        new_row_array.push("<div class=\"ltp\"><div class=\"ltpval\">");
-                        new_row_array.push(response.ltp);
-                        new_row_array.push("</div>");
+                        new_row = "<div class=\"bodydiv clearfix\" id=\"" + scripdivid + "\"><div class=\"first\"";
+                        new_row += "<a href=\"http://blackbull.in/finance/overview?bbid=" + user_id + "&pfid=" + portfolio_id + "&trid=" + response.trade_id + "\">";
+                        new_row += response.qname + "</a><div class=\"subrow clearfix\"><span class=\"symbolname\">" + scrip_name.val() + "</span></div></div>";
+                        new_row += "<div class=\"ltp\"><div class=\"ltpval\">" + response.ltp + "</div>";
                         if (response.stockchg < 0) {
-                            new_row_array.push("<div class=\"pchange negative\">");
-                            new_row_array.push(response.stockchg);
-                            new_row_array.push("</div></div>");
+                            new_row += "<div class=\"pchange negative\">" + response.stockchg + "</div></div>";
                         } else {
-                            new_row_array.push("<div class=\"pchange\">");
-                            new_row_array.push(response.stockchg);
-                            new_row_array.push("</div></div>");
+                            new_row += "<div class=\"pchange\">" + response.stockchg + "</div></div>";
                         }
-                        new_row_array.push("<div class=\"avgbuy\">");
-                        new_row_array.push(response.avg_buy);
-                        new_row_array.push("</div><div class=\"tradeqty\">");
-                        new_row_array.push(response.trade_qty);
-                        new_row_array.push("</div><div class=\"profitloss\">loading&hellip;</div></div>");
+                        new_row += "<div class=\"avgbuy\">" + response.avg_buy + "</div>";
+                        new_row += "<div class=\"tradeqty\">" + response.trade_qty + "</div>";
+                        new_row += "<div class=\"profitloss\">loading&hellip;</div></div>";
                         scrip_symbols = tradesbody.attr("data-symbols");
                         scrip_symbols = scrip_symbols + scrip_name.val() + "+";
                         tradesbody.attr("data-symbols", scrip_symbols);
-                        tradesbody.append(new_row_array.join(''));
+                        tradesbody.append(new_row);
                         $("#" + scripdivid).slideDown("slow"); /* TODO: add conditional to handle BUY SELL */
                         market_value = parseFloat($("#marketvalue").html()) + parseFloat(response.avg_buy * response.trade_qty);
                         $("#marketvalue").html(market_value); /*$(".bodydiv").hover(function(){$(this).css("backgroundColor","#F9F9F9");},function(){$(this).css("backgroundColor","#FFF");});*/

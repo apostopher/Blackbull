@@ -6,7 +6,9 @@
 
 #article h1 {
 	color: #D13236;
-	font: normal normal normal 40px/60px Cambria, Georgia, 'Times New Roman', Times, serif;
+	font-size:40px;
+	line-height:60px;
+	font-weight:400;
 	margin:54px 0;
 	width:50%
 }
@@ -26,7 +28,6 @@
 }
 
 #article p{
-	font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
 	font-size:14px;
 	line-height:24px;
 	color:#333;
@@ -41,7 +42,9 @@
 
 #article h3{
 	color: #D13236;
-	font: normal normal normal 18px/26px Cambria, Georgia, 'Times New Roman', Times, serif;
+	font-size:18px;
+	line-height:26px;
+	font-weight:400;
 }
 
 span.dropcap {

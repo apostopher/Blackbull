@@ -141,7 +141,7 @@ if($tradetransresult){
       }
       $transdate = date("j-M-Y", strtotime($transrow['trans_date']));
       $transjdate = date("F j, Y", strtotime($transrow['trans_date']));
-      $trans[$transcount] = array("trans_price" => $transrow['trans_price'], "trans_date" => $transdate, "trans_jdate" =>$transjdate, "trans_qty" => $trans_qty, "trans_type" => $trans_type);
+      $trans[$transcount] = array("trans_price" => $transrow['trans_price'], "trans_date" => $transdate, "trans_jdate" =>$transjdate, "trans_qty" => $trans_qty, "trans_type" => $trans_type, "trans_notes" => $transrow['trans_notes']);
       $transcount = $transcount +1;
     }
   }

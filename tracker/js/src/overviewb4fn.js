@@ -6,9 +6,15 @@
         scrip_name = $("#trans_scrip"),
         scrip_price = $("#trans_price"),
         user_id = $("#container").attr("class"),
+        transcount = 0,
+        curr_date = 0,
+        close_date = 0,
+        curr_type = 0,
+        ctrans_date = 0,
         trans_left = 1,
         requestInProcess = false,
         chartdata = [],
+        closevalue = 0,
         transhtml = "",
         targethtml = "",
         slhtml = "",
@@ -16,135 +22,12 @@
         activevalue = 0,
         maxValue = 0,
         minValue = 0,
-        arrayelement, 
-        chartfd,
-        minseries = 0,
-        maxseries = 0,
-        getChartData = function (jsontrades, closeoptions) {
-            var closei = 0,
-                curr_date = 0,
-                curr_type = 0,
-                closevalue = 0,
-                idtxt = '',
-                transcount = 0,
-                first_run = true,
-                transpoint, 
-                close_date = 0,
-                ctrans_date = 0,
-                old_curr_date;
-/* set the initial values of curr_date and curr_type variables.
-             * these variables are used to display BUY and SELL markers on the chart */
-            if (jsontrades.transtotal > 0) { /* user has transactions. get the latest transaction details */
-                curr_date = jsontrades.trans[transcount].trans_date;
-                curr_type = jsontrades.trans[transcount].trans_type;
-            }
-            for (closei = 0; closei < jsontrades.closetotal; closei += 1) { /* get the close value */
-                closevalue = parseFloat(jsontrades.close[closei].c);
-                if (minseries === 0) {
-                    minseries = closevalue;
-                }
-/* Need to search whether there is any transaction on this date
-          * This can also be done in PHP. but it will not be simpler than this.
-          * so why put load on my server? let client CPU do it. 
-          * the PHP script sends the transactions in desc order.
-          * I save the latest date and type in local variables. if the dates match then
-          * update the local variables to next trans value.
-          */
-                if (jsontrades.close[closei].d === curr_date) { /* found a match. */
-                    /*check whether we have processed all trans */
-                    if (transcount + 1 < jsontrades.transtotal) { /* there are more transactions to be processed. update the local variables.*/
-                        /* I use while loop because there can be more than one transactions on a day */
-                        while (jsontrades.close[closei].d === curr_date) {
-/* If I find BUY and SELL transactions on same day then i set curr_type to 2.
-              * but need to reset this to normal */
-                            if (transcount > 0) {
-/* if the consecutive transactions are different and if this is not a first_run then set the curr_type to 2
-                first run is required because the comparison must be made between transactions that occured on same day. */
-                                if ((jsontrades.trans[transcount - 1].trans_type !== jsontrades.trans[transcount].trans_type) && !first_run) {
-                                    curr_type = 2;
-                                }
-                            }
-                            idtxt = idtxt + closei + "_" + jsontrades.trans[transcount].trans_price;
-                            idtxt = idtxt + "_" + jsontrades.trans[transcount].trans_qty + "_" + jsontrades.trans[transcount].trans_type + "_";
-                            transcount = transcount + 1;
-                            curr_date = jsontrades.trans[transcount].trans_date; /* First run is over so set the flag to false */
-                            first_run = false;
-                        }
-                        if (curr_type !== 2) {
-                            curr_type = jsontrades.trans[transcount - 1].trans_type;
-                        }
-                    } else { /* all transactions are done */
-                        /* Update the id text */
-                        idtxt = idtxt + closei + "_" + jsontrades.trans[transcount].trans_price;
-                        idtxt = idtxt + "_" + jsontrades.trans[transcount].trans_qty + "_" + jsontrades.trans[transcount].trans_type + "_";
-                        trans_left = 0;
-                        curr_date = '';
-                    }
-                    if (curr_type === 1) { /* It is a BUY transaction */
-                        transpoint = {
-                            y: closevalue,
-                            marker: {
-                                symbol: "url(http://blackbull.in/tracker/images/buy.png)"
-                            },
-                            id: idtxt
-                        };
-                    } else if (curr_type === -1) { /* It is a SELL transaction */
-                        transpoint = {
-                            y: closevalue,
-                            marker: {
-                                symbol: "url(http://blackbull.in/tracker/images/sell.png)"
-                            },
-                            id: idtxt
-                        };
-                    } else { /* It is a BUY+SELL transaction */
-                        transpoint = {
-                            y: closevalue,
-                            marker: {
-                                symbol: "url(http://blackbull.in/tracker/images/buysell.png)"
-                            },
-                            id: idtxt
-                        };
-                    }
-                    chartdata.push(transpoint); /* now reset the curr_type */
-                    curr_type = jsontrades.trans[transcount].trans_type;
-                } else { /* no transactions match this date */
-/* Check whether the CLOSE array date is smaller than trans date 
-            * This means user added a transaction on a holiday. :-) so we need to fix curr_date */
-                    close_date = new Date(Date.parse(jsontrades.close[closei].jd));
-                    ctrans_date = new Date(Date.parse(jsontrades.trans[transcount].trans_jdate));
-                    if (close_date < ctrans_date && trans_left) { /* go to next curr_date */
-                        old_curr_date = curr_date;
-                        transcount = transcount + 1;
-                        curr_date = jsontrades.trans[transcount].trans_date;
-                        curr_type = jsontrades.trans[transcount].trans_type;
-                        while (old_curr_date === curr_date) {
-                            transcount = transcount + 1;
-                            curr_date = jsontrades.trans[transcount].trans_date;
-                            curr_type = jsontrades.trans[transcount].trans_type;
-                        } /* Now curr_date is a new date. but check whether it matches the current CLOSE date */
-                        if (curr_date === jsontrades.close[closei].d) { /* Need to run the loop again */
-                            closei -= 1;
-                            continue;
-                        }
-                    }
-                    chartdata.push(closevalue);
-                } /* Add X- Axis labels */
-                if (closeoptions !== undefined) {
-                    closeoptions.xAxis.categories.push(jsontrades.close[closei].xd);
-                }
-                if (minseries > jsontrades.close[closei].c) {
-                    minseries = closevalue;
-                }
-                if (maxseries < jsontrades.close[closei].c) {
-                    maxseries = closevalue;
-                }
-            }
-        },
+        arrayelement,
         getLTP = function (scrips, user_id) {
             if (scrips.length > 0) {
                 $.getJSON("/serverscripts/portfolio/getLTP.php?user=" + user_id + "&scrips=" + scrips, function (jsonLTP) {
                     var count = 0,
-                        unret, 
+                        unret,
                         avg_buy = $("#avg_price_div").html(),
                         buy_qty = $("#buy_qty_div").html(),
                         sell_qty = $("#sell_qty_div").html(),
@@ -303,8 +186,12 @@
         return false;
     }); /* once the page is loaded, get all the data from PHP */
     $.getJSON("/serverscripts/portfolio/getOverview.php?pfid=" + pfid + "&trid=" + trid + "&uuid=" + user_id, function (jsontrades) {
-        var count = 0,
+        var closei = 0,
+            count = 0,
+            transpoint,
             user_id = $("#container").attr("class"),
+            minseries = 0,
+            maxseries = 0,
             /* highcharts version used: 2.1.1 on 24-dec-2010 */
             /* declare Highcharts options */
             closeoptions = {
@@ -423,8 +310,12 @@
             sellqty = 0,
             rreturns = 0,
             urreturns = 0,
-            rreturnsstr, 
-            urreturnsstr;
+            rreturnsstr,
+            urreturnsstr,
+            idtxt = '',
+            first_run = true,
+            old_curr_date, 
+            chartfd;
         getLTP(jsontrades.trade_symbol, user_id);
         if (jsontrades.pagefound === "1") {
             $("#trade_name").html(jsontrades.trade_name);
@@ -441,7 +332,111 @@
                     $("#trade_ltp").removeClass("down");
                 }
             }
-            getChartData(jsontrades, closeoptions);
+            /* set the initial values of curr_date and curr_type variables.
+             * these variables are used to display BUY and SELL markers on the chart */
+            if (jsontrades.transtotal > 0) { /* user has transactions. get the latest transaction details */
+                curr_date = jsontrades.trans[transcount].trans_date;
+                curr_type = jsontrades.trans[transcount].trans_type;
+            }
+            for (closei = 0; closei < jsontrades.closetotal; closei += 1) { /* get the close value */
+                closevalue = parseFloat(jsontrades.close[closei].c);
+                if (minseries === 0) {
+                    minseries = closevalue;
+                }
+          /* Need to search whether there is any transaction on this date
+          * This can also be done in PHP. but it will not be simpler than this.
+          * so why put load on my server? let client CPU do it. 
+          * the PHP script sends the transactions in desc order.
+          * I save the latest date and type in local variables. if the dates match then
+          * update the local variables to next trans value.
+          */
+                if (jsontrades.close[closei].d === curr_date) { /* found a match. */
+                    /*check whether we have processed all trans */
+                    if (transcount + 1 < jsontrades.transtotal) { /* there are more transactions to be processed. update the local variables.*/
+                        /* I use while loop because there can be more than one transactions on a day */
+                        while (jsontrades.close[closei].d === curr_date) {
+/* If I find BUY and SELL transactions on same day then i set curr_type to 2.
+              * but need to reset this to normal */
+                            if (transcount > 0) {
+/* if the consecutive transactions are different and if this is not a first_run then set the curr_type to 2
+                first run is required because the comparison must be made between transactions that occured on same day. */
+                                if ((jsontrades.trans[transcount - 1].trans_type !== jsontrades.trans[transcount].trans_type) && !first_run) {
+                                    curr_type = 2;
+                                }
+                            }
+                            idtxt = idtxt + closei + "_" + jsontrades.trans[transcount].trans_price;
+                            idtxt = idtxt + "_" + jsontrades.trans[transcount].trans_qty + "_" + jsontrades.trans[transcount].trans_type + "_";
+                            transcount = transcount + 1;
+                            curr_date = jsontrades.trans[transcount].trans_date; /* First run is over so set the flag to false */
+                            first_run = false;
+                        }
+                        if (curr_type !== 2) {
+                            curr_type = jsontrades.trans[transcount - 1].trans_type;
+                        }
+                    } else { /* all transactions are done */
+                        /* Update the id text */
+                        idtxt = idtxt + closei + "_" + jsontrades.trans[transcount].trans_price;
+                        idtxt = idtxt + "_" + jsontrades.trans[transcount].trans_qty + "_" + jsontrades.trans[transcount].trans_type + "_";
+                        trans_left = 0;
+                        curr_date = '';
+                    }
+                    if (curr_type === 1) { /* It is a BUY transaction */
+                        transpoint = {
+                            y: closevalue,
+                            marker: {
+                                symbol: "url(http://blackbull.in/tracker/images/buy.png)"
+                            },
+                            id: idtxt
+                        };
+                    } else if (curr_type === -1) { /* It is a SELL transaction */
+                        transpoint = {
+                            y: closevalue,
+                            marker: {
+                                symbol: "url(http://blackbull.in/tracker/images/sell.png)"
+                            },
+                            id: idtxt
+                        };
+                    } else { /* It is a BUY+SELL transaction */
+                        transpoint = {
+                            y: closevalue,
+                            marker: {
+                                symbol: "url(http://blackbull.in/tracker/images/buysell.png)"
+                            },
+                            id: idtxt
+                        };
+                    }
+                    chartdata.push(transpoint); /* now reset the curr_type */
+                    curr_type = jsontrades.trans[transcount].trans_type;
+                } else { /* no transactions match this date */
+/* Check whether the CLOSE array date is smaller than trans date 
+            * This means user added a transaction on a holiday. :-) so we need to fix curr_date */
+                    close_date = new Date(Date.parse(jsontrades.close[closei].jd));
+                    ctrans_date = new Date(Date.parse(jsontrades.trans[transcount].trans_jdate));
+                    if (close_date < ctrans_date && trans_left) { /* go to next curr_date */
+                        old_curr_date = curr_date;
+                        transcount = transcount + 1;
+                        curr_date = jsontrades.trans[transcount].trans_date;
+                        curr_type = jsontrades.trans[transcount].trans_type;
+                        while (old_curr_date === curr_date) {
+                            transcount = transcount + 1;
+                            curr_date = jsontrades.trans[transcount].trans_date;
+                            curr_type = jsontrades.trans[transcount].trans_type;
+                        } /* Now curr_date is a new date. but check whether it matches the current CLOSE date */
+                        if (curr_date === jsontrades.close[closei].d) { /* Need to run the loop again */
+                            closei -= 1;
+                            continue;
+                        }
+                    }
+                    chartdata.push(closevalue);
+                } /* Add X- Axis labels */
+                closeoptions.xAxis.categories.push(jsontrades.close[closei].xd);
+                if (minseries > jsontrades.close[closei].c) {
+                    minseries = closevalue;
+                }
+                if (maxseries < jsontrades.close[closei].c) {
+                    maxseries = closevalue;
+                }
+            }
             closevals.data = chartdata;
             closeoptions.series.push(closevals); /* add transactions */
             transhtml = "";

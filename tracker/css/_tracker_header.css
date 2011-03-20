@@ -8,6 +8,6 @@
           height:20px; line-height:20px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; margin:0;}
 #srchsubmit{position:absolute; right:0; height:22px; line-height:22px; width:22px; z-index:200; border:0; margin:0;
             background:url("/tracker/images/search.png") no-repeat right center; margin-right:10px;}
-#welcomediv{float:right; clear:right; color:#fff; font: 18px/26px Cambria,Georgia,'Times New Roman',Times,serif;
+#welcomediv{float:right; clear:right; color:#fff; font: 18px/26px "minion-pro-1","minion-pro-2", Cambria,Georgia,'Times New Roman',Times,serif;
             height:26px; width:200px; text-align:right; padding:12px 0px;}
 /* header style end */

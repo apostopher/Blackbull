@@ -94,6 +94,7 @@
 <li><a href="/knowledge/introStockMarket.php"><span class="sublihead">The stock market</span><span class="sublidesc">The basics of stock market.</span></a></li>
 <li><a href="/knowledge/stockMarketTrading.php"><span class="sublihead">The stock market trading</span><span class="sublidesc">trading fundamentals.</span></a></li>
 <li><a href="/knowledge/auction.php"><span class="sublihead">The auction trading</span><span class="sublidesc">Basics of auctions.</span></a></li>
+<li><a href="/knowledge/wh/mfbasics.php"><span class="sublihead">Mutual funds</span><span class="sublidesc">Basics of mutual fund investment.</span></a></li>
 </ul>
 </li>
 <li class="menuitem wall png_bg" data-tab-name="Tools">

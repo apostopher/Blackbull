@@ -1,18 +1,18 @@
 #mfknowledge{width:950px;}
 #adholder{ float:left; margin-right:10px; padding:95px 10px 10px; width:160px;}
-#articlecontent{float:left; width:760px; margin:0; padding:0; color:#444; font-family: Verdana, Geneva, Tahoma, sans-serif;}
-#articlecontent h1, #articlecontent h2, #articlecontent h3, #articlecontent h6{color:#a92252;}
-#articlecontent h1{font: normal normal normal 32px/48px Cambria, Georgia, 'Times New Roman', Times, serif;}
-#articlecontent h3{font: normal normal normal 18px/24px Cambria, Georgia, 'Times New Roman', Times, serif; margin-bottom:0;}
+#articlecontent{float:left; width:760px; margin:0; padding:0; color:#444;}
+#articlecontent h1, #articlecontent h2, #articlecontent h3, #articlecontent h6{color:#a92252; font-weight:400;}
+#articlecontent h1{font-size: 32px; line-height:48px;}
+#articlecontent h3{font-size: 18px; line-height:24px; margin-bottom:0;}
 #articlecontent h5{font-size:13px; color #222; font-weight:bold; margin:0; display:inline-block;}
-#articlecontent p{color:#444; margin-top:4px; font-size:13px; line-height:22px; text-align:justify;}
+#articlecontent p{color:#444; margin-top:4px; font-size:14px; line-height:22px; text-align:justify;}
 #articlecontent p b{color:#222;}
 #mfpic{margin:20px auto 10px; display:block;}
 #articlecontent table{margin-bottom:10px;}
-#articlecontent td{padding:5px; font-size:13px; line-height:22px; border:1px solid #ddd;}
+#articlecontent td{padding:5px; font-size:14px; line-height:22px; border:1px solid #ddd;}
 td.termtd{font-weight:bold; width:80px; color:#222; background:#FCFCFC; text-align:center;}
 #articlecontent ul{margin-left:14px;}
-#articlecontent li{font-size:13px; line-height:22px;}
+#articlecontent li{font-size:14px; line-height:22px;}
 #ulholder, #sqadholder{float:left;}
 #ulholder{margin-right:20px;}
 #sqadholder{width:336px; margin:0; padding:0;}

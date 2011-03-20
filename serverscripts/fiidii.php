@@ -1,8 +1,80 @@
 <?php
 //Include the database.
 require_once("dba.php");
+$dloadrequest = $_GET['req'];
+if($dloadrequest == "dl"){
+  $csvstr = "";
+  $selectclause = "";
+  $limitclause = "";
+  
+  $tperiod = $_GET['tperiod'];
+  
+  if($tperiod == "1m"){
+    $limitclause = "LIMIT 25";
+  }else if($tperiod == "3m"){
+    $limitclause = "LIMIT 75";
+  }else if($tperiod == "6m"){
+    $limitclause = "LIMIT 150";
+  }else if($tperiod == "12m"){
+    $limitclause = "LIMIT 300";
+  }else if($tperiod == "all"){
+    $limitclause = "";
+  }else{
+    $limitclause = "LIMIT 25"; /* default to 1 month */
+  }
+  
+  $ctype = $_GET['ctype'];
+  
+  if($ctype == "both"){
+    $selectclause = "fii,dii";
+  }else if($ctype == "fii"){
+    $selectclause = "fii";
+  }else if($ctype == "dii"){
+    $selectclause = "dii";
+  }else{
+    $selectclause = "fii,dii"; /* Default is both*/
+  }
+  $dload_query = "SELECT fiidii_date,".$selectclause." FROM fiidii ORDER BY fiidii_date DESC ".$limitclause;
+  $dlresult = mysql_query($dload_query);
+  if($dlresult){
+    /* write headers */
+    $csvstr = "Cumulative institutional investment in India\n";
+    $csvstr = $csvstr."In Rs. crore\n";
+    $csvstr = $csvstr."date,".$selectclause."\n";
+    while($dlrow = mysql_fetch_array($dlresult)){
+      if($selectclause == "fii"){
+        $csvstr = $csvstr.$dlrow['fiidii_date'].",".$dlrow['fii']."\n";
+      }else if($selectclause == "dii"){
+        $csvstr = $csvstr.$dlrow['fiidii_date'].",".$dlrow['dii']."\n";
+      }else{
+        $csvstr = $csvstr.$dlrow['fiidii_date'].",".$dlrow['fii'].",".$dlrow['dii']."\n";
+      }
+    }
+    $csvstr = $csvstr."=HYPERLINK(\"http://blackbull.in/tools/fiidii.php\")\n";
+  }else{
+    $csvstr = "Sorry. Some error occured. :(";
+  }
+  header('Content-type: text/csv');
+  header("Content-Disposition: attachment;filename=Blackbull_chartdata.csv");
+  if(strstr($_SERVER["HTTP_USER_AGENT"],"MSIE")==false) {
+    header("Cache-Control: no-cache");
+    header("Pragma: no-cache");
+  }
+  echo $csvstr;
+  
+  // open log file
+  $filename = "fiidii_analytics.csv";
+  $fd = fopen($filename, "a");
+  // write string
+  fwrite($fd, date("d/m/y : H:i:s", time()).",".$limitclause.",".$ctype."\n");
+  // close file
+  fclose($fd);
 
-$query = "SELECT fii,dii,fiidii_date FROM fiidii ORDER BY fiidii_date DESC LIMIT 30";
+  mysql_close($con);
+  return true;
+}
+
+$query = "SELECT fii,dii,fiidii_date FROM fiidii ORDER BY fiidii_date DESC LIMIT 360";
 $result = mysql_query($query);
 if($result){
 	$i = 0;

@@ -71,6 +71,19 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <p>Now if you take a minute and imagine this whole scheme of things, you will realize the helplessness of the US. The US companies have been badly bruised by the sub prime crisis. So they need to cut costs desperately. This makes them rely on the cheap Chinese imports. Given the weak Yuan, these Chinese imports become very cost competitive to US companies. This creates a guaranteed supply of dollars to China. Now, the US government has already issued close to $700 bn stimulus. This has weakened the government financial health. The US government would soon have to suck this money back. For this to happen sooner, the US consumer and the corporates must return to normalcy. Hence, the US can't ban the cheap Chinese imports. Secondly, the Chinese government in turn go and buy more dollars from the market to exert further pressure on the dollar. Moreover, the Chinese government also goes and invests the dollars earned in the US Treasury bonds. This makes those dollars earn even more dollars in interest. So you see, it is a vicious circle that feeds on itself and keeps the yuan undervalued.</p>
 <p class="last">So, the next time you witness US frustration over Chinese currency, you know what they are talking about!</p>
 </section>
+<div class="exitpathad">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2413414539580695";
+/* exitpath */
+google_ad_slot = "2541551012";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
 </article>
 <div class="spacer">&nbsp;</div>
 </div>

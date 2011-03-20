@@ -27,24 +27,13 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 <body>
 <?php require_once("_partial_header.php"); ?>
 <div id="content" class="clearfix">
-<div id="homeadunits">
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-2413414539580695";
-/* homepagelinks */
-google_ad_slot = "6996630614";
-google_ad_width = 728;
-google_ad_height = 15;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-</div>
 <div id="leftpane">
 <a class="next hide"></a>
 <div id="scrollable">
 <article id="slides">
 <!--section class="items"><a href="articles/cocktail.php"><img src="http://assets.blackbull.in/articleCocktail.jpg" height="400" width="624"/></a></section-->
+<section class="items"><a href="tools/fiidii.php"><img src="http://assets.blackbull.in/fiidii.jpg" height="400" width="624"/></a></section>
+<section class="items"><a href="knowledge/wh/mfbasics.php"><img src="http://assets.blackbull.in/mfinvest.jpg" height="400" width="624"/></a></section>
 <section class="items"><a href="articles/dragonEmpire.php"><img src="http://assets.blackbull.in/articleChina.jpg" height="400" width="624"/></a></section>
 <section class="items"><a href="articles/unlockTheCycle.php"><img src="http://assets.blackbull.in/articleCycle.jpg" height="400" width="624"/></a></section>
 </article>

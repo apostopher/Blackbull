@@ -5,22 +5,32 @@
 	width:900px;
 }
 
+#fiidii a{
+        color:#2A7090;
+}
+
 #fiidii h1 {
 	color: #D13236;
-	font: normal normal normal 32px/48px Cambria, Georgia, 'Times New Roman', Times, serif;
-	margin:0 0 48px 0;
-	width:50%
+	font: 26px/1.5 "chaparral-pro-1","chaparral-pro-2",Georgia,"Times New Roman",Times,serif;
+    	font-weight:400;
+    	font-style:normal;
+	margin-bottom:0.5em;
+	width:50%;
 }
 
 #fiidii p{
 	color: #333;
-    	font: normal normal normal 18px/26px Cambria, Georgia, 'Times New Roman', Times, serif;
+    	font: 18px/1.5 "chaparral-pro-1","chaparral-pro-2",Georgia,"Times New Roman",Times,serif;
+    	font-weight:400;
+    	font-style:normal;
 	text-align:justify;
 }
 
 #fiidii h3{
 	color: #D13236;
-    	font: normal normal normal 21px/24px Cambria, Georgia, 'Times New Roman', Times, serif;
+    	font: 21px/1.5 "chaparral-pro-1","chaparral-pro-2",Georgia,"Times New Roman",Times,serif;
+    	font-weight:400;
+    	font-style:normal;
     	margin-bottom:0.5em;
 }
 #daily{
@@ -35,7 +45,9 @@
 #dailymove{
 	border:0;
 	color: #333;
-        font: normal normal normal 18px/26px Cambria, Georgia, 'Times New Roman', Times, serif;	
+        font: 18px/1.5 "chaparral-pro-1","chaparral-pro-2",Georgia,"Times New Roman",Times,serif;
+    	font-weight:400;
+    	font-style:normal;
 }
 
 #dailymove td{
@@ -61,7 +73,6 @@
 
 
 #fiidiidate{
-	display:inline-block;
 	text-align:left;
 	font-weight:normal;
 	letter-spacing:1px;
@@ -73,7 +84,6 @@
 }
 
 #spanright{
-	display:inline-block;
 	text-align:right;
 	font-weight:normal;
 	letter-spacing:1px;
@@ -81,7 +91,10 @@
 	font-size:12px;
 	font-style:italic;
 	padding:0px 5px;
-	float:right;
+}
+
+#perown{
+	color: #D13236;
 }
 
 #dailymove td.noright{
@@ -132,19 +145,27 @@
 	margin:0;
 	padding:0;
 }
-#charttype li{
-	float:left;
+
+#chartperiod{
+        display:inline-block;
+	float:right;
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+#charttype li, #chartperiod li{
 	position:relative;
 	display:inline-block;
 	margin:0;
-	margin-right:5px;
 	padding:0;
-	width:100px;
 	border:1px solid #ddd;
 	border-bottom:0;
 	background:#f1f1f1;
 	text-align:center;
-	font: normal normal normal 18px/26px Cambria, Georgia, 'Times New Roman', Times, serif;
+	font: 18px/1.5 "chaparral-pro-1","chaparral-pro-2",Georgia,"Times New Roman",Times,serif;
+    	font-weight:400;
+    	font-style:normal;
 	-moz-border-radius-topleft:10px;
 	-webkit-border-top-left-radius:10px;
 	border-top-left-radius:10px;
@@ -152,8 +173,10 @@
 	-webkit-border-top-right-radius:10px;
 	border-top-right-radius:10px
 }
+#charttype li{float:left; width:100px; margin-right:5px;}
+#chartperiod li{float:right; width:40px; margin-left:5px;}
 
-#charttype li a, #charttype li a:hover{
+#charttype li a, #charttype li a:hover, #chartperiod li a, #chartperiod li a:hover{
 	text-decoration:none;
 	color:#999;
 	border:0;
@@ -161,45 +184,39 @@
 	padding:4px 8px;
 }
 
-#charttype li.active{
+#charttype li.active, #chartperiod li.active{
 	background:#FFF;
 }
 
-#charttype li.hovered{
+#charttype li.hovered, #chartperiod li.hovered{
 	background:#F9F9F9;
 }
 
-#charttype li.hovered a{
+#charttype li.hovered a, #chartperiod li.hovered a{
 	color:#000;
 	border:0;
 }
 
-#charttype li.active a, #charttype li.active a:hover{
+#charttype li.active a, #charttype li.active a:hover, #chartperiod li.active a, #chartperiod li.active a:hover{
 	text-decoration:none;
 	color:#D13236;
 	border:0;
 }
 #ulholder{
-	position:relative;
 	display:block;
 	padding:0px 20px;
-	width:321px;
-	margin:0 auto;
+	margin:0;
 }
 
-#tabhelp{
-	position:absolute;
-	left:0;
-	top:0;
-	margin-left:340px;
+#tabhelp, #periodhelp{
 	font-size:12px;
 	line-height:18px;
 	color:#666;
-	padding-left:18px;
-	background:url("/images/tabhelp.png") left center no-repeat;
 	font-style:italic;
-	width:120px;
+	width:140px;
 }
+#tabhelp{ float:left; padding-left:18px; background:url("/images/tabhelp.png") left center no-repeat;}
+#periodhelp{ float:right; text-align:right; padding-right:18px; background:url("/images/tabhelpright.png") right center no-repeat;}
 
 .filler{
     display:none;
@@ -233,6 +250,48 @@ span.visible{
 	width:728px;
 	margin:24px auto;
 	display:block;
+}
+
+#dloadthis{
+        float:left;
+	display:block;
+	width:180px;
+	border:1px solid #ddd;
+	border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	background:#F9F9F9;
+	padding:10px 0px;
+}
+
+#dloadthis p{
+        color:#D13236;
+        padding:0;
+	margin:0;
+	font-size:18px;
+	line-height:24px;
+	text-align:center;
+}
+
+#dloadthis select{
+        display:block;
+        width:85px;
+        margin:0 auto;      
+}
+
+#dloadthis h6{
+        font-size:14px;
+	line-height:18px;
+	text-align:center;
+	font-weight:normal;
+	margin:15px 0px 4px;
+	padding:0;
+}
+
+#dloaddata{
+        display:block;
+        width:85px;
+        margin:20px auto 0px;
 }
 
 #twitthis{

@@ -67,7 +67,6 @@ function updatefiidii($url, $sqldate){
     			*/
     			$twit = "Beautiful charts of #FII & #DII trading activity on #NSE and #BSE as on ".date("j-M-Y")." visit http://blck.in/d2FC3F on #blackbull";
     			$connection->post('statuses/update', array('status' => $twit));
-    			error_log("twit posted");
 		}else{
 			echo "FII update failed.\n";
 		}

@@ -30,6 +30,7 @@
     </header>
     
     <div id="main">
+     <div id="backdrop">
       <div id="mainholder">
         <h1 class="png_bg">Portfolio Tracker</h1>
         <div id="loginformholder">
@@ -56,6 +57,7 @@
           </form>
         </div>
       </div>
+     </div>
     </div>
     
     <footer>

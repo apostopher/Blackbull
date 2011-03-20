@@ -1,6 +1,7 @@
 $(function() {
 
         // Select the active tab
+        var ele;
         var activetab = $('div#content').attr("data-type");
         if(activetab){
         	$('li.menuitem[data-tab-name|='+activetab+'] span.liname').addClass("active");
@@ -159,17 +160,17 @@ $("#opaque").css('height', $(document).height());
 						'remember':$("#remember").attr('checked')?1:0}),
 					dataType: "json",
 					success: function(response){
-						if(response.id != '0'){
+						if(response.id !== '0'){
 							$("#username").val('');
 							$("#password").val('');
 							$("#uname").html(response.id);
 							$("#loadingdiv").hide();
 							$("#logout_menu").removeClass("invisible");
-							if(response.redirect != '0'){
+							if(response.redirect !== '0'){
 								window.location.replace("http://www.blackbull.in"+ response.redirect);
 							}
 							// Enable editing if user has admin rights
-							if(response.admin=="1"){
+							if(response.admin==="1"){
 								$("article#news section.bbnews").attr("contenteditable","true");
 								$("#lisave").show();
 								$("#lipreview").show();

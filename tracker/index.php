@@ -219,7 +219,9 @@ $_SESSION['csrf'] = $key;
   
   <!-- scripts concatenated and minified via ant build script-->
   <!-- script type="text/cjs" cjssrc="js/plugins.js"></script-->
-  <script src="js/script.js"></script>
+  <script src="js/script.js?v=2"></script>
+  <script type="text/javascript" src="http://use.typekit.com/lyw4lvu.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   <!-- end concatenated and minified scripts-->
   
   

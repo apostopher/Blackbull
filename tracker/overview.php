@@ -89,74 +89,109 @@ $_SESSION['csrf'] = $key;
         </div>
        </div>
       </div>
-      <div id="sidebar">
-        <div id="adholder">
-        <script type="text/javascript"><!--
+      <div id="chartholder" class="hidden"></div>
+      <div id="waitscreen">Loading trade details. Please wait&hellip;</div>
+      <div id="transholder" class="clearfix">
+        <div id="transdiv">
+          <a id="addtransa" class="abtn" href="javascript:void(0);">+ Add<span class="filler">&nbsp;</span><span class="roundc">&nbsp;</span></a>
+          <h4>Transactions summary</h4>
+          <div id="formslide" class="clearfix">
+        <form id="addTransform" action="/serverscripts/portfolio/addTransaction.php" method="post">
+          <input name="csrf" id="csrf" type="hidden" value="<?php echo $key; ?>"/>
+          <input name="user_id" id="user_id" type="hidden" value="<?php echo $_SESSION['user_id']; ?>"/>
+          <input name="trans_scrip" id="trans_scrip" type="hidden"/>
+          <div class="formsection posrel firstsection">
+            <label for="trans_type">Type</label>
+            <select name="trans_type" id="trans_type">
+              <option value="1">BUY</option>
+              <option value="-1">SELL</option>
+            </select>
+            <div id="deductcash" class="clearfix">
+              <input type="checkbox" name="includecash" id="includecash"/>
+              <span id="includetxt">Deduct from cash</span>
+            </div>
+            <label for="trans_date">Date</label>
+            <input name="trans_date" id="trans_date" type="date" class="dateinput" value="<?php echo date('Y-m-d'); ?>"/>
+            <label for="trans_price">Stock Price (<a id="cmpa" href="javascript:void();">Get Price</a>)</label>
+            <input name="trans_price" id="trans_price" type="text" class="rupee"/>
+          </div>
+          <div class="formsection">
+            <label for="trans_qty">Quantity</label>
+            <input name="trans_qty" id="trans_qty" type="text"/>
+            <label for="trans_notes">Notes (optional)</label>
+            <textarea name="trans_notes" id="trans_notes" type="text" placeholder="Transaction notes"></textarea>
+            <div class="clearfix">
+              <input id="submitbtn" type="submit" value="Add"/>
+              <input id="cancelbtn" type="reset" value="Clear"/>
+            </div>
+          </div>
+          <div class="formsection lastsection">
+            <div id="resulttxt">&nbsp;</div>
+          </div>
+      </form>
+      </div>
+          <table id="transtbody" cellspacing="0" cellpadding="0">
+          <thead id="transheaddiv">
+            <tr class="headdiv clearfix">
+              <th class="srno">&nbsp;</th>
+              <th class="ttype">Type</th>
+              <th class="tdate">Date</th>
+              <th class="tprice">Price</th>
+              <th class="tqty">Quantity</th>
+              <th class="notes">Notes</th>
+              <th class="trcontrol lastcell">&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody id="transbody"></tbody>
+          </table>
+        </div>
+        <div id="subdiv">
+          <div id="sltarget" class="clearfix">
+            <div id="stoplossdiv">
+              <a id="addsla" class="abtn" href="javascript:void(0);">+ Add<span class="filler">&nbsp;</span></a>
+              <h4>Stop losses</h4>
+              <table id="sltbody" cellspacing="0" cellpadding="0">
+              <thead id="slheaddiv">
+                <tr class="headdiv clearfix">
+                  <th class="srno">&nbsp;</th>
+                  <th class="trvalue">Stop loss</th>
+                  <th class="trcontrol lastcell">&nbsp;</th>
+                </tr>
+              </thead>
+              <tbody id="slbody">
+                <tr class="bodydivlast"><td colspan="3" class="loadmsg">Loading&hellip;</td></tr>
+              </tbody>
+              </table>
+            </div>
+            <div id="targetsdiv">
+              <a id="addtrgta" class="abtn" href="javascript:void(0);">+ Add<span class="filler">&nbsp;</span></a>
+              <h4>Targets</h4>
+              <table id="targettbody" cellspacing="0" cellpadding="0">
+              <thead id="targetheaddiv">
+                <tr class="headdiv clearfix">
+                  <th class="srno">&nbsp;</th>
+                  <th class="trvalue">Target</th>
+                  <th class="trcontrol lastcell">&nbsp;</th>
+                </tr>
+              </thead>
+              <tbody id="targetbody">
+                <tr class="bodydivlast"><td colspan="3" class="loadmsg">Loading&hellip;</td></tr>
+              </tbody>
+              </table>
+            </div>
+          </div>
+          <div id="overviewad">
+          <script type="text/javascript"><!--
 google_ad_client = "ca-pub-2413414539580695";
-/* overview_sky */
-google_ad_slot = "6369495707";
-google_ad_width = 160;
-google_ad_height = 600;
+/* port_overview_med */
+google_ad_slot = "3742997887";
+google_ad_width = 300;
+google_ad_height = 250;
 //-->
 </script>
 <script type="text/javascript"
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
-        </div>
-      </div>
-      <div id="chartholder" class="hidden"></div>
-      <div id="waitscreen">Loading trade details. Please wait&hellip;</div>
-      <div id="transholder" class="clearfix">
-        <div id="transdiv">
-          <div id="transmenu" class="clearfix">
-            <h4>Transactions summary</h4>
-          </div>
-          <div id="transtbody">
-          <div id="transheaddiv">
-            <div class="headdiv clearfix">
-              <div class="srno">&nbsp;</div>
-              <div class="ttype">Type</div>
-              <div class="tdate">Date</div>
-              <div class="tprice">Price</div>
-              <div class="tqty">Quantity</div>
-              <div class="trcontrol lastcell">&nbsp;</div>
-            </div>
-          </div>
-          <div id="transbody"></div>
-          </div>
-        </div>
-        <div id="subdiv">
-          <div id="sltarget" class="clearfix">
-            <div id="stoplossdiv">
-              <h4>Stop losses</h4>
-              <div id="sltbody">
-              <div id="slheaddiv">
-                <div class="headdiv clearfix">
-                  <div class="srno">&nbsp;</div>
-                  <div class="trvalue">Stop loss</div>
-                  <div class="trcontrol lastcell">&nbsp;</div>
-                </div>
-              </div>
-              <div id="slbody">
-                <div class="bodydivlast"><div class="loadmsg">Loading&hellip;</div></div>
-              </div>
-              </div>
-            </div>
-            <div id="targetsdiv">
-              <h4>Targets</h4>
-              <div id="targettbody">
-              <div id="targetheaddiv">
-                <div class="headdiv clearfix">
-                  <div class="srno">&nbsp;</div>
-                  <div class="trvalue">Target</div>
-                  <div class="trcontrol lastcell">&nbsp;</div>
-                </div>
-              </div>
-              <div id="targetbody">
-                <div class="bodydivlast"><div class="loadmsg">Loading&hellip;</div></div>
-              </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -170,7 +205,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
   </div> <!-- end of #container -->
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
   <script>!window.jQuery && document.write(unescape('%3Cscript src="js/libs/jquery-1.4.4.min.js"%3E%3C/script%3E'))</script>
   <script src="http://cdn.jquerytools.org/1.2.5/all/jquery.tools.min.js"></script>
   <script src="/tracker/js/mylibs/sprintf-0.6.js"></script>
@@ -179,6 +214,8 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
   <!-- script type="text/cjs" cjssrc="js/plugins.js"></script-->
   <script src="http://blackbull.in/tracker/js/libs/highcharts.js"></script>
   <script src="http://blackbull.in/tracker/js/overview.js"></script>
+  <script type="text/javascript" src="http://use.typekit.com/lyw4lvu.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   <!-- end concatenated and minified scripts-->
   
   

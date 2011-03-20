@@ -83,7 +83,7 @@ button {  width: auto; overflow: visible; }
  */
 
 body{ font:14px/20px sans-serif; background-color: #F5F6F6;}
-h1, h2, h3, h4 { font-family: Cambria,Georgia,'Times New Roman',Times,serif;}
+h1, h2, h3, h4 { font-family: "minion-pro-1","minion-pro-2",Cambria,Georgia,'Times New Roman',Times,serif;}
 #container{background: #F5F6F6 url("/tracker/images/trackerback.jpg") left 48px repeat-x;}
 h2{ font-weight:normal; font-size:16px; color:#2E4987; /*color:#D13236;*/ line-height:1.25em; margin:10px 0px;}
 .posrel{position:relative;}
@@ -135,6 +135,7 @@ label { width:200px; display:block; border:0; line-height:13px; margin:0; paddin
 input, textarea{width:180px; color:#555; background:#FFF; padding:5px; margin:2px 0px 12px; border:1px solid #A0A6B3; display:block;
              border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px; line-height:16px;}
 textarea{font-size:12px; line-height:1.25em; height:51px;}
+input:focus, textarea:focus{-moz-box-shadow: 0px 0px 8px rgba(7,95,178,0.75); -webkit-box-shadow: 0px 0px 8px rgba(7,95,178,0.75); box-shadow: 0px 0px 8px rgba(7,95,178,0.75); border:1px solid #075FB2; outline:0 none;}
 #cmpa{color:#0066CC; font-size:12px; font-weight:normal; text-decoration:none; margin:0; padding:0; line-height:12px;}
 .dateinput{background:#fff url('/finance/images/calendar.png') 168px 5px no-repeat; cursor:pointer;}
 .gettingprice{color:#666; font-size:10px; line-height:16px;height:16px;}
@@ -160,8 +161,9 @@ select{float:left; width:120px; color:#555; background:#fff; padding:5px; margin
 .scrip_symbol{float:left; text-transform:uppercase; color:#999; font-size:11px; line-height:11px;}
 .scrip_xchange{float:right; text-transform:uppercase; color:#999; font-size:11px; line-height:11px;}
 /* Date input styles */
-#calroot {z-index:15000; margin-top:-10px; width:198px; padding:2px; background-color:#fff; font-size:11px; border:1px solid #A0A6B3;
-	  border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; -moz-box-shadow: 0 0 10px #666; -webkit-box-shadow: 0 0 10px #666;}
+#calroot {z-index:15000; margin-top:-10px; width:198px; padding:2px; background-color:#fff; font-size:11px; /*border:1px solid #A0A6B3;*/
+	  border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; -moz-box-shadow: 0 0 10px #666; -webkit-box-shadow: 0 0 10px #666;
+	  -moz-box-shadow: 0px 0px 8px rgba(7,95,178,0.75); -webkit-box-shadow: 0px 0px 8px rgba(7,95,178,0.75); box-shadow: 0px 0px 8px rgba(7,95,178,0.75); border:1px solid #075FB2;}
 #calhead {padding:2px 0; height:22px;} 
 #caltitle {font-size:14px; color:#075FB2; float:left; text-align:center; width:155px; line-height:20px; font-weight:bold;}
 #calnext, #calprev {display:block; width:20px; height:20px; background:transparent url('/tracker/images/prev.png') no-repeat scroll center center; float:left; cursor:pointer;}
@@ -231,7 +233,7 @@ a.caldisabled {background-color:#efefef !important;color:#ccc	!important; cursor
 .symbolname{float:left; line-height:16px; height:16px;}
 .pchange{font-size:11px; line-height:11px; display:block; text-transform:uppercase; font-weight:normal; font-style:italic;}
 .toppad{padding-top:23px;}
-.bodydiv .negative, .red{color:#D13236;}
+.bodydiv .negative, .red, .negative{color:#D13236;}
 /*portfoliotable styles - end */
 
 

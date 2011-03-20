@@ -12,9 +12,9 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
 <head>
 	<?php require_once("../metacontent.php"); ?>
 	<meta name="Description" content="Get the chart of FII and DII investment in indian markets over a month. Blackbull.in provides FII and DII investment tool to give the overview of foreign investment in india."/>
-	<title>FII & DII trading activity on NSE and BSE - Blackbull Investment Company</title>
+	<title>FII DII trading activity on NSE and BSE - Blackbull Investment Company</title>
 	<link rel="stylesheet" href="../stylesheets/site.css" media="screen">
-	<link rel="stylesheet" href="../stylesheets/tools/fiidii.css?v=7" media="screen">
+	<link rel="stylesheet" href="../stylesheets/tools/fiidii.css?v=3" media="screen">
 	<script src="../javascripts/lib/modernizr-1.6.min.js"></script>
 </head>
 <body>
@@ -93,7 +93,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </div>
 <div id="twitthis">
 <p>Liked this page?<br/>Spread the word.</p>
-<a id="twitlink" href="http://twitter.com/share" class="twitter-share-button" data-text="Ckeck this out.. Cool stock market charts for FII and DII investment in india." data-count="vertical" data-via="apostopher">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<a id="twitlink" href="http://twitter.com/share" class="twitter-share-button" data-text="Ckeck this out.. Cool stock market chart for FII and DII investment in india." data-count="vertical" data-via="apostopher">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 </div>
 <div id="dloadthis">
 <p>Liked this chart?<br/>Download data.</p>
@@ -104,7 +104,8 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
   <option value="1m">1 Month</option>
   <option value="3m" selected="selected">1 Quarter</option>
   <option value="6m">Half Year</option>
-  <option value="12m">1 Year</option>
+  <option value="12m">Year</option>
+  <option value="all">All</option>
 </select>
 <h6>Chart type:</h6>
 <select name="ctype" id="ctype">
@@ -153,31 +154,11 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <h3>How to use this information?</h3>
 <p>Upward movement of FII + DII chart indicates that the money is flowing IN the market and this means positive sentiments. Downward movement of FII + DII chart indicates that the money is flowing OUT of the market and this is the time when you should get ready with your exit strategies. Although movement of NIFTY index and this chart are almost same, sometimes this chart shows divergence and an early signal of change in market direction.</p>
 <h3>Where does this data come from?</h3>
-<p>The data source of these charts is from <a href="http://www.nseindia.com/">NSE website</a>.</p>
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'blck'; // required: replace example with your forum shortname
-
-    // The following are highly recommended additional parameters. Remove the slashes in front to use.
-    var disqus_identifier = 'fiidii';
-    var disqus_url = 'http://blackbull.in/tools/fiidii.php';
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
+<p>The data source of this chart is from <a href="http://www.nseindia.com/">NSE website</a>.</p>
 </div>
 <?php require_once("../_partial_footer.php"); ?>
 <?php require_once("../jslibs.php"); ?>
 <script src="../javascripts/lib/highcharts.js?v=3"></script>
-<script src="../javascripts/tools/fiidii.js?v=11"></script>
-<?php require_once("../analyticstracking.php"); ?>
+<script src="../javascripts/tools/fiidii.js?v=9"></script>
 </body>
 </html>

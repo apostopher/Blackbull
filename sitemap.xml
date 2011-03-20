@@ -8,74 +8,59 @@
 
 <url>
   <loc>http://blackbull.in/</loc>
-  <changefreq>always</changefreq>
 </url>
 <url>
   <loc>http://blackbull.in/users/changepassword.php</loc>
-  <changefreq>always</changefreq>
 </url>
 <url>
   <loc>http://blackbull.in/users/login.php</loc>
-  <changefreq>always</changefreq>
 </url>
 <url>
   <loc>http://blackbull.in/users/login.php?forgot=true</loc>
-  <changefreq>always</changefreq>
 </url>
 <url>
   <loc>http://blackbull.in/users/registration.php</loc>
-  <changefreq>always</changefreq>
 </url>
 <url>
   <loc>http://blackbull.in/index.php</loc>
-  <changefreq>always</changefreq>
 </url>
 <url>
   <loc>http://blackbull.in/articles/dragonEmpire.php</loc>
-  <changefreq>always</changefreq>
 </url>
 <url>
   <loc>http://blackbull.in/articles/unlockTheCycle.php</loc>
-  <changefreq>always</changefreq>
 </url>
 <url>
   <loc>http://blackbull.in/articles/smallIsBeautiful.php</loc>
-  <changefreq>always</changefreq>
 </url>
 <url>
   <loc>http://blackbull.in/research/coalindiaIPO.php</loc>
-  <changefreq>always</changefreq>
 </url>
 <url>
   <loc>http://blackbull.in/research/tulip.php</loc>
-  <changefreq>always</changefreq>
 </url>
 <url>
   <loc>http://blackbull.in/research/moilIPO.php</loc>
-  <changefreq>always</changefreq>
 </url>
 <url>
   <loc>http://blackbull.in/knowledge/introStockMarket.php</loc>
-  <changefreq>always</changefreq>
 </url>
 <url>
   <loc>http://blackbull.in/knowledge/stockMarketTrading.php</loc>
-  <changefreq>always</changefreq>
 </url>
 <url>
   <loc>http://blackbull.in/knowledge/auction.php</loc>
-  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://blackbull.in/knowledge/wh/mfbasics.php</loc>
 </url>
 <url>
   <loc>http://blackbull.in/tools/fiidii.php</loc>
-  <changefreq>always</changefreq>
 </url>
 <url>
   <loc>http://blackbull.in/tools/optionspread.php</loc>
-  <changefreq>always</changefreq>
 </url>
 <url>
   <loc>http://blackbull.in/legal.php</loc>
-  <changefreq>always</changefreq>
 </url>
 </urlset>

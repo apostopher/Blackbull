@@ -181,20 +181,30 @@ if(isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']) && isset($_COOKIE[
       </div>
       </div>
     </section>
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'blck'; // required: replace example with your forum shortname
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+    var disqus_identifier = 'mfbasics';
+    var disqus_url = 'http://blackbull.in/knowledge/wh/mfbasics.php';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
   </article>
 </div>
 </div>
 <?php require_once("../../_partial_footer.php"); ?>
 <?php require_once("../../jslibs.php"); ?>
-<script>
-   var _gaq = [['_setAccount', 'UA-11011315-1'], ['_trackPageview']];
-   (function(d, t) {
-    var g = d.createElement(t),
-        s = d.getElementsByTagName(t)[0];
-    g.async = true;
-    g.src = '//www.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g, s);
-   })(document, 'script');
-</script>
+<?php require_once("../../analyticstracking.php"); ?>
 </body>
 </html>

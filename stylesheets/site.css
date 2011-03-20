@@ -339,7 +339,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body{
 	margin:0;
 	padding:0;
-	font-family:"Segoe UI",Arial,Helvetica,sans-serif;
+	font-family: "myriad-pro-1","myriad-pro-2","Segoe UI",Arial,Helvetica,sans-serif;
 	font-size:12px;
 	line-height:20px;
 	color: #444;
@@ -352,7 +352,7 @@ article, aside, figure, footer, header,
 hgroup, nav, section { display:block; }
 
 a {
-	color:blue;
+	color:#4575B4;
 	text-decoration:none;
 	border:0;
 }
@@ -413,4 +413,14 @@ p.last:after{
 .clearfix:before, .clearfix:after {  content: "\0020"; display: block; height: 0; visibility: hidden;	 } 
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
+.exitpathad{float:right; margin:0px; width:336px;}
+.noie6 {clear: both; 
+        height: 59px; 
+        padding:0 0 0 15px; 
+        position: absolute; 
+        top:10px; 
+        right:160px;
+        z-index:5000;
+        display:none;
+}
 /* =============================== Common CSS styles - Stop =============== */

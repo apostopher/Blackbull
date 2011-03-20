@@ -80,10 +80,11 @@ button {  width: auto; overflow: visible; }
     Author: Rahul Devaskar
  */
 body{font:14px/20px 'Droid Sans', sans-serif;}
-#trackerhead{ background:#222; border-bottom:1px solid #000; padding:0; margin:0;}
+#trackerhead{ background:#333; border-bottom:1px solid #666; padding:0; margin:0;}
 #trackerhead h1{font-weight:normal; line-height:30px; font-size:14px; width:600px; margin:0 auto; text-align:center; text-shadow:1px 1px 0px #000;}
 #trackerhead h1 a{color:#fff; text-decoration:none;}
 #main{background:#000 url("/tracker/images/blackgold.png") bottom right no-repeat; margin:0; padding:0;height:500px;}
+#backdrop{background: url("/tracker/images/loginback.png") repeat-x top left;}
 #mainholder{width:600px; margin:0 auto; padding:36px 0px;}
 #mainholder h1{background:url("/tracker/images/loginlogo.png") no-repeat center center; text-indent:-9027em; color:#fff; font-size:42px; line-height:46px; height:46px; font-weight:normal; margin:36px 0 50px; text-align:center; text-shadow:1px 1px 0px #003088;}
 #mainholder p{font-size:16px; line-height:1.25em; color:#fff; text-align:center;}

@@ -166,6 +166,19 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </header>
 <p>The small caps are a land of big playoffs and spectacular failures. As a parting remark, we strongly encourage the investors to look at this uncharted universe of small caps. Remember that in each bull run, some strong small caps always graduate to become mid or large caps. These companies are the true wealth creators. This is an opportune moment to begin your search for the next big thing. Who knows your millions may be stashed in your back yard.</p>
 </section>
+<div class="exitpathad">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2413414539580695";
+/* exitpath */
+google_ad_slot = "2541551012";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
 </article>
 <div class="spacer">&nbsp;</div>
 </div>

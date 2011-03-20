@@ -83,6 +83,19 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </header>
 <p>We believe that the Indian economy is still not completely out of the woods. The valuations of most companies look stretched. The monsoon too has played a spoilsport and this again does not portend well for the economy. India also has a huge fiscal deficit which may be injected back into the economy as inflation.</p><p>The country is enjoying a period of low inflation as of now. However, one the inflation starts inching up, which it will; RBI will have no option but to harden the interest rates. This will translate into less lending by the banks and lead to a down cycle.</p><p>We in no way guarantee or predict the outcome but only anticipate the future course of the economy. Given our bearish stance, we will recommend all investors to stay away from the cyclical stocks as of now.</p>
 </section>
+<div class="exitpathad">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2413414539580695";
+/* exitpath */
+google_ad_slot = "2541551012";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
 </article>
 <div class="spacer">&nbsp;</div>
 </div>
